@@ -1,0 +1,516 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_2_5fc5dab1"
+          },
+          {
+            "text": "Date: {{slab_completion_date}}",
+            "alignment": "right",
+            "bold": true,
+            "_nodeId": "n_3_9c4c6304"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_1_761de769"
+      },
+      {
+        "stack": [
+          {
+            "text": "To,",
+            "bold": true,
+            "_nodeId": "n_5_b33e949b"
+          },
+          {
+            "text": "{{customer_name}}",
+            "bold": true,
+            "_nodeId": "n_6_794cd0c3"
+          },
+          {
+            "text": "{{customer_address}}",
+            "color": "#334155",
+            "_nodeId": "n_7_77dc4373"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_4_bb70041e"
+      },
+      {
+        "text": "Ref: Agreement for sale of Flat No. {{unit_name}} on the {{unit_floor}} Floor, Wing {{wing}} in the building known as {{project_name}}, situated on all that piece and parcel of lands bearing {{project_address}}",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_8_2702e08b"
+      },
+      {
+        "text": "Sub: Demand Letter for Payment",
+        "style": "headerTitle",
+        "_nodeId": "n_9_c8253ed7"
+      },
+      {
+        "text": "Dear Sir/ Madam,",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_a_d8a89ad2"
+      },
+      {
+        "text": "This is to inform you that {{installment_name}} Work is commenced on site for Sale Building known as {{project_name}} and certificate for Architect is enclosed herewith for your reference. As per the clause 4 of the Agreement for sale, the payment due till commencement of the above work is ₹{{pending_amount_as_per_work}}/- out of which we have received ₹{{amount_paid}}/-. So the balance amount of ₹{{total_due_amount}}/- and GST of ₹{{total_tax_amount}}/- is due.",
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_b_633bca5f"
+      },
+      {
+        "text": "Breakup of payment",
+        "bold": true,
+        "margin": [
+          0,
+          0,
+          0,
+          4
+        ],
+        "_nodeId": "n_c_db9ddb22"
+      },
+      {
+        "table": {
+          "widths": [
+            200,
+            140
+          ],
+          "body": [
+            [
+              {
+                "text": "Payment Due",
+                "style": "tableCell",
+                "_nodeId": "n_e_14789611"
+              },
+              {
+                "text": "₹{{total_due_amount_with_tds}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_f_ca2143ab"
+              }
+            ],
+            [
+              {
+                "text": "Less: TDS @ 1%",
+                "style": "tableCell",
+                "_nodeId": "n_g_bece5c20"
+              },
+              {
+                "text": "₹{{pending_tds_as_per_work}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_h_7901620d"
+              }
+            ],
+            [
+              {
+                "text": "Balance",
+                "style": "boldCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_i_26ec6a90"
+              },
+              {
+                "text": "₹{{balance_as_per_work}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_j_2b6aab6c"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_d_3bfa2cce"
+      },
+      {
+        "text": "Kindly pay online TDS of ₹{{pending_tds_as_per_work}}",
+        "bold": true,
+        "color": "#0369a1",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_k_3120927d"
+      },
+      {
+        "text": "We hereby call upon you to pay the amount of ₹{{balance_as_per_work}} and GST ₹{{total_tax_amount}}/- which is payable immediately on receipt of this letter. We further inform that under the said Agreement for sale, you shall be liable to pay interest on all amounts due and payable under the said Agreement for sale, if the same remains unpaid for 7 days or more after becoming due.",
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_l_c6c3af59"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "1. Kindly issue all 100 % of Flat Cost by RTGS/ NEFT in favour of “Dimple Realtors Pvt Ltd – WestWood – Collection Account”, A/ c no. 40794790823 State Bank of India, Backbay Reclamation (Mumbai) Branch, IFSC – SBIN0001593.",
+                "fontSize": 8.5,
+                "color": "#334155",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  4
+                ],
+                "_nodeId": "n_o_8ace4455"
+              },
+              {
+                "text": "2. Kindly issue all GST Amount by RTGS/ NEFT in favour of “Dimple Realtors Pvt Ltd Tax A/ c.” State Bank of India, Borivali (West) Branch, A/ c no – 40107382026, IFSC – SBIN0006441.",
+                "fontSize": 8.5,
+                "color": "#334155",
+                "_nodeId": "n_p_aa58f813"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_n_829a8211"
+          },
+          {
+            "stack": [
+              {
+                "text": "Thanking You,",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  2
+                ],
+                "_nodeId": "n_r_f4488e6f"
+              },
+              {
+                "text": "For Dimple Realtors Pvt. Ltd.,",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_s_94f30028"
+              },
+              {
+                "text": "Authorised Signatory",
+                "style": "signatory",
+                "_nodeId": "n_t_802b9e04"
+              }
+            ],
+            "width": 170,
+            "alignment": "right",
+            "_nodeId": "n_q_2f056232"
+          }
+        ],
+        "_nodeId": "n_m_ab3e8c87"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "slab_completion_date",
+        "label": "Date / Slab Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_3_9c4c6304",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Rajesh Sharma",
+        "required": true,
+        "group": "Customer Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_6_794cd0c3",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Customer Address",
+        "type": "textarea",
+        "defaultValue": "B-204, Greenfield Heights, Malad West, Mumbai 400064",
+        "required": true,
+        "group": "Customer Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_7_77dc4373",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Flat No.",
+        "type": "text",
+        "defaultValue": "804",
+        "required": true,
+        "group": "Property Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_8_2702e08b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "8th",
+        "required": true,
+        "group": "Property Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_8_2702e08b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "wing",
+        "label": "Wing",
+        "type": "text",
+        "defaultValue": "B",
+        "required": true,
+        "group": "Property Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_8_2702e08b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "WestWood",
+        "required": true,
+        "group": "Project Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_8_2702e08b",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_address",
+        "label": "Project Address",
+        "type": "textarea",
+        "defaultValue": "CTS No. 452, Off Link Road, Goregaon West, Mumbai",
+        "required": true,
+        "group": "Project Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_8_2702e08b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "installment_name",
+        "label": "Installment Name / Stage",
+        "type": "text",
+        "defaultValue": "8th Slab",
+        "required": true,
+        "group": "Document Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_amount_as_per_work",
+        "label": "Payment Due Till Commencement",
+        "type": "currency",
+        "defaultValue": 5200000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Received",
+        "type": "currency",
+        "defaultValue": 4500000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_due_amount",
+        "label": "Balance Flat Amount Due",
+        "type": "currency",
+        "defaultValue": 700000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_tax_amount",
+        "label": "GST Due Amount",
+        "type": "currency",
+        "defaultValue": 35000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_b_633bca5f",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_l_c6c3af59",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_due_amount_with_tds",
+        "label": "Payment Due Before TDS",
+        "type": "currency",
+        "defaultValue": 700000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_f_ca2143ab",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_tds_as_per_work",
+        "label": "TDS @ 1%",
+        "type": "currency",
+        "defaultValue": 7000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_h_7901620d",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_k_3120927d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "balance_as_per_work",
+        "label": "Net Balance Due",
+        "type": "currency",
+        "defaultValue": 693000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_j_2b6aab6c",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_l_c6c3af59",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

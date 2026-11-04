@@ -1,0 +1,447 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "PIONEER HOUSING",
+        "style": "companyTitle",
+        "_nodeId": "n_1_6764a7ec"
+      },
+      {
+        "text": "R.O. Address : 322, Commerce House,140, N. M. Road, Fort,Mumbai - 400 001",
+        "style": "subHeader",
+        "_nodeId": "n_2_bc593cf6"
+      },
+      {
+        "text": "RECEIPT",
+        "style": "receiptTitle",
+        "_nodeId": "n_3_a5744123"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Flat No: {{unit_name}} on Floor: {{unit_floor}}",
+                "bold": true,
+                "_nodeId": "n_6_386b2da4"
+              },
+              {
+                "text": "in Building: D1 Wing: {{unit_wing}}",
+                "_nodeId": "n_7_8eba6038"
+              },
+              {
+                "text": "at: SENROOFS Project on {{site_address}}",
+                "color": "#334155",
+                "_nodeId": "n_8_68604f73"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_5_413edc30"
+          },
+          {
+            "stack": [
+              {
+                "text": "Receipt No. : {{receipt_number}}",
+                "bold": true,
+                "_nodeId": "n_a_81455110"
+              },
+              {
+                "text": "Date : {{payment_date}}",
+                "_nodeId": "n_b_f27373e0"
+              }
+            ],
+            "width": 160,
+            "alignment": "right",
+            "_nodeId": "n_9_65df7d57"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_4_615dbcef"
+      },
+      {
+        "stack": [
+          {
+            "text": "Received with thanks from : {{customer_name}} {{remark}} ₹{{amount_paid}}",
+            "bold": true,
+            "fontSize": 10.5,
+            "_nodeId": "n_d_c8534fc3"
+          },
+          {
+            "text": "the sum of : {{amount_in_words}}",
+            "italics": true,
+            "color": "#334155",
+            "margin": [
+              0,
+              4,
+              0,
+              4
+            ],
+            "_nodeId": "n_e_684f8aed"
+          },
+          {
+            "text": "by as under as per details in margin hereof",
+            "color": "#64748b",
+            "fontSize": 9,
+            "_nodeId": "n_f_904ba932"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_c_061a4ac7"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            100,
+            120,
+            90,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Amount",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_h_f23c4286"
+              },
+              {
+                "text": "Chq/ RTGS No.",
+                "style": "tableHeader",
+                "_nodeId": "n_i_ba821a1a"
+              },
+              {
+                "text": "Date",
+                "style": "tableHeader",
+                "_nodeId": "n_j_bebde810"
+              },
+              {
+                "text": "Name of Bank / Branch",
+                "style": "tableHeader",
+                "_nodeId": "n_k_9816322c"
+              }
+            ],
+            [
+              {
+                "text": "₹{{amount_paid}}",
+                "style": "tableCell",
+                "bold": true,
+                "alignment": "right",
+                "_nodeId": "n_l_e664a985"
+              },
+              {
+                "text": "{{cheque_number}}",
+                "style": "tableCell",
+                "_nodeId": "n_m_a2b60fd1"
+              },
+              {
+                "text": "{{cheque_date}}",
+                "style": "tableCell",
+                "_nodeId": "n_n_fabbc8de"
+              },
+              {
+                "text": "{{bank_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_o_48ffe669"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_g_9172a03c"
+      },
+      {
+        "text": "Subject to Realisation of Cheque",
+        "fontSize": 8.5,
+        "italics": true,
+        "color": "#64748b",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ],
+        "_nodeId": "n_p_4235d03b"
+      },
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_r_dc098ec1"
+          },
+          {
+            "stack": [
+              {
+                "text": "For PIONEER HOUSING,",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_t_48ad995e"
+              },
+              {
+                "text": "Authorised Signatory",
+                "style": "signatory",
+                "_nodeId": "n_u_31469fa4"
+              }
+            ],
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_s_2dd59cd3"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          24
+        ],
+        "_nodeId": "n_q_2a38f382"
+      },
+      {
+        "text": "This is auto generated receipt it doesn't require stamp",
+        "fontSize": 8.5,
+        "italics": true,
+        "alignment": "center",
+        "color": "#94a3b8",
+        "_nodeId": "n_v_cf21a26a"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "PH/2026/0892",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_a_81455110",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Payment Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_b_f27373e0",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Flat No.",
+        "type": "text",
+        "defaultValue": "1402",
+        "required": true,
+        "group": "Property Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_6_386b2da4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "14th",
+        "required": true,
+        "group": "Property Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_6_386b2da4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Building Wing",
+        "type": "text",
+        "defaultValue": "A",
+        "required": true,
+        "group": "Property Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_7_8eba6038",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "site_address",
+        "label": "Site Address",
+        "type": "textarea",
+        "defaultValue": "Senroofs, Nahur West, Mumbai 400078",
+        "required": true,
+        "group": "Project Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_8_68604f73",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Vipin Tomar",
+        "required": true,
+        "group": "Customer Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_d_c8534fc3",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "type": "currency",
+        "defaultValue": 400000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_d_c8534fc3",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_l_e664a985",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Four Lakh Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_e_684f8aed",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "remark",
+        "label": "Payment Remark / Stage",
+        "type": "text",
+        "defaultValue": "towards 14th Slab casting",
+        "required": false,
+        "group": "Document Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_d_c8534fc3",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Cheque / RTGS / UTR No.",
+        "type": "text",
+        "defaultValue": "HDFC001928374",
+        "required": true,
+        "group": "Bank Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_m_a2b60fd1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Cheque / Transfer Date",
+        "type": "date",
+        "defaultValue": "2026-11-03",
+        "required": true,
+        "group": "Bank Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_n_fabbc8de",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Bank Name & Branch",
+        "type": "text",
+        "defaultValue": "HDFC Bank, Mulund West",
+        "required": true,
+        "group": "Bank Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_o_48ffe669",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

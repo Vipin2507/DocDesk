@@ -1,0 +1,403 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_2_19e4f820"
+          },
+          {
+            "stack": [
+              {
+                "text": "Receipt No. : {{receipt_number}}",
+                "bold": true,
+                "_nodeId": "n_4_d3272235"
+              },
+              {
+                "text": "Date : {{payment_date}}",
+                "_nodeId": "n_5_d0261d41"
+              },
+              {
+                "text": "₹{{amount_paid}}",
+                "fontSize": 18,
+                "bold": true,
+                "color": "#0369a1",
+                "margin": [
+                  0,
+                  4,
+                  0,
+                  0
+                ],
+                "_nodeId": "n_6_a06a586e"
+              }
+            ],
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_3_2aec29d2"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_1_6cb39832"
+      },
+      {
+        "stack": [
+          {
+            "text": "Received with thanks from :",
+            "color": "#64748b",
+            "_nodeId": "n_8_ee1ef8ca"
+          },
+          {
+            "text": "{{customer_name}}",
+            "bold": true,
+            "fontSize": 12,
+            "margin": [
+              0,
+              2,
+              0,
+              6
+            ],
+            "_nodeId": "n_9_0bc610ac"
+          },
+          {
+            "text": "the sum of : {{amount_in_words}}",
+            "italics": true,
+            "margin": [
+              0,
+              0,
+              0,
+              4
+            ],
+            "_nodeId": "n_a_7f44af5c"
+          },
+          {
+            "text": "by as under as per details in margin hereof",
+            "color": "#64748b",
+            "fontSize": 9,
+            "_nodeId": "n_b_1206f6fa"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_7_52a06034"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            80,
+            110,
+            90,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Mode",
+                "style": "tableHeader",
+                "_nodeId": "n_d_0b030eb5"
+              },
+              {
+                "text": "Chq/ RTGS No.",
+                "style": "tableHeader",
+                "_nodeId": "n_e_2ce094dd"
+              },
+              {
+                "text": "DATED",
+                "style": "tableHeader",
+                "_nodeId": "n_f_a29b5d0e"
+              },
+              {
+                "text": "Name of Bank / Branch",
+                "style": "tableHeader",
+                "_nodeId": "n_g_13d6b938"
+              }
+            ],
+            [
+              {
+                "text": "{{payment_mode}}",
+                "style": "tableCell",
+                "_nodeId": "n_h_fe34e5ee"
+              },
+              {
+                "text": "{{cheque_number}}",
+                "style": "tableCell",
+                "_nodeId": "n_i_cdeaf7cd"
+              },
+              {
+                "text": "{{cheque_date}}",
+                "style": "tableCell",
+                "_nodeId": "n_j_90b00348"
+              },
+              {
+                "text": "{{bank_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_k_7ffb5ba7"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_c_9bf0fa2f"
+      },
+      {
+        "text": "ON ACCOUNT OF EARNEST MONEY / FULL PAYMENT / GST TOWARDS THE PURCHASE VALUE OF SHOP / FLAT NO. {{unit_name}} ON FLOOR {{unit_floor}}",
+        "bold": true,
+        "fontSize": 9.5,
+        "color": "#334155",
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_l_cf8f9163"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "ALL PAYMENT BY CHEQUE ARE ACKNOWLEDGED SUBJECT TO REALISATION",
+                "style": "notice",
+                "_nodeId": "n_o_94cfaaf4"
+              },
+              {
+                "text": "*On Cancellation of booking 10% payment will be deducted",
+                "style": "notice",
+                "color": "#ef4444",
+                "_nodeId": "n_p_397264a2"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_n_a07628ce"
+          },
+          {
+            "text": "Authorised Signatory",
+            "style": "signatory",
+            "alignment": "right",
+            "width": 160,
+            "margin": [
+              0,
+              20,
+              0,
+              0
+            ],
+            "_nodeId": "n_q_cff4d302"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          24
+        ],
+        "_nodeId": "n_m_b9a09380"
+      },
+      {
+        "text": "This is computer generated copy",
+        "alignment": "center",
+        "style": "notice",
+        "_nodeId": "n_r_33691bed"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "REC/2026/0921",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_4_d3272235",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_5_d0261d41",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "type": "currency",
+        "defaultValue": 250000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_6_a06a586e",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Amitabh Banerjee",
+        "required": true,
+        "group": "Customer Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_9_0bc610ac",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Two Lakh Fifty Thousand Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_a_7f44af5c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_mode",
+        "label": "Mode",
+        "type": "text",
+        "defaultValue": "Cheque",
+        "required": true,
+        "group": "Bank Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_h_fe34e5ee",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Chq / RTGS No.",
+        "type": "text",
+        "defaultValue": "000412",
+        "required": true,
+        "group": "Bank Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_i_cdeaf7cd",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Dated",
+        "type": "date",
+        "defaultValue": "2026-11-01",
+        "required": true,
+        "group": "Bank Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_j_90b00348",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Name of Bank / Branch",
+        "type": "text",
+        "defaultValue": "Axis Bank, Bandra West",
+        "required": true,
+        "group": "Bank Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_k_7ffb5ba7",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Shop / Flat No.",
+        "type": "text",
+        "defaultValue": "Flat 402",
+        "required": true,
+        "group": "Property Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_l_cf8f9163",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "On Floor",
+        "type": "text",
+        "defaultValue": "4th Floor",
+        "required": true,
+        "group": "Property Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_l_cf8f9163",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

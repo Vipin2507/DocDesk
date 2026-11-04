@@ -1,0 +1,16 @@
+node_modules
+dist
+dist-server
+.env
+.env.*
+data/*.db
+data/*.db-*
+data/uploads/*
+data/generated/*
+data/tmp/*
+.git
+.DS_Store
+*.log
+tests
+Demand and Receipt format
+

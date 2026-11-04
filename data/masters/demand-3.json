@@ -1,0 +1,754 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "Gurukrupa Realcon Developers Private Limited",
+        "style": "companyTitle",
+        "_nodeId": "n_1_3bed288b"
+      },
+      {
+        "canvas": [
+          {}
+        ],
+        "margin": [
+          0,
+          4,
+          0,
+          12
+        ],
+        "_nodeId": "n_2_ce6c487e"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Letter No -: {{project_name}} / {{wing}} {{unit_name}} / Demand",
+                "bold": true,
+                "_nodeId": "n_5_d5c9b68e"
+              },
+              {
+                "text": "Payee -: {{customer_name}}",
+                "bold": true,
+                "_nodeId": "n_6_8800cde7"
+              },
+              {
+                "text": "Address -: {{customer_address}}",
+                "color": "#334155",
+                "_nodeId": "n_7_2cf3baad"
+              },
+              {
+                "text": "Project & Wing Unit No -: {{project_name}} / {{wing}} {{unit_name}}",
+                "_nodeId": "n_8_35330309"
+              },
+              {
+                "text": "Project Address-: {{project_address}}",
+                "color": "#334155",
+                "_nodeId": "n_9_bd6da66e"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_4_3cb831b1"
+          },
+          {
+            "text": "Date: {{slab_completion_date}}",
+            "alignment": "right",
+            "bold": true,
+            "width": 140,
+            "_nodeId": "n_a_e3fe7188"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_3_89aa7ebb"
+      },
+      {
+        "text": "Dear Sir/ Madam\nHope you are doing well and keeping safe.",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_b_b12af1ec"
+      },
+      {
+        "text": "We would just like to inform you that we have successfully completed {{installment_name}} and as per our agreed terms and conditions under the payment schedule mentioned Below.",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_c_177f74e4"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Agreement Execution Date -: {{effective_date}}",
+                "_nodeId": "n_f_f89645de"
+              },
+              {
+                "text": "Agreement Registration Date -: {{agreement_date}}",
+                "_nodeId": "n_g_ef331f79"
+              }
+            ],
+            "_nodeId": "n_e_229fdfa8"
+          },
+          {
+            "stack": [
+              {
+                "text": "Agreement Value -: ₹{{agreement_amount}}",
+                "bold": true,
+                "_nodeId": "n_i_148daef1"
+              },
+              {
+                "text": "Demand Percentage -: {{total_percentage}} %",
+                "bold": true,
+                "_nodeId": "n_j_8b2b9fab"
+              }
+            ],
+            "_nodeId": "n_h_fbe894b4"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_d_44fe0bda"
+      },
+      {
+        "text": "We request you to complete the payment as early as possible. Hereby attaching the “Architect Certificate” with this letter for your reference.",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_k_9f091900"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            "*",
+            120,
+            110
+          ],
+          "body": [
+            [
+              {
+                "text": "Particulars",
+                "style": "tableHeader",
+                "_nodeId": "n_m_b8648de3"
+              },
+              {
+                "text": "Flat Cost",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_n_9cf079ad"
+              },
+              {
+                "text": "GST 5%",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_o_8ec7455a"
+              }
+            ],
+            [
+              {
+                "text": "Agreement Value (AV)",
+                "style": "tableCell",
+                "_nodeId": "n_p_469750ea"
+              },
+              {
+                "text": "₹{{agreement_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_q_7344a956"
+              },
+              {
+                "text": "₹{{total_gst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_r_0a8d8484"
+              }
+            ],
+            [
+              {
+                "text": "Amount Bill till date ({{total_percentage}} %) of AV",
+                "style": "tableCellBold",
+                "_nodeId": "n_s_7b5bcc27"
+              },
+              {
+                "text": "₹{{pending_amount_as_per_work}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_t_9c645593"
+              },
+              {
+                "text": "₹{{pending_tax_as_per_work}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_u_ca255839"
+              }
+            ],
+            [
+              {
+                "text": "Amount Received till date",
+                "style": "tableCell",
+                "_nodeId": "n_v_8ebd9e0a"
+              },
+              {
+                "text": "₹{{amount_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_w_76cf945f"
+              },
+              {
+                "text": "₹{{tax_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_x_058f16a6"
+              }
+            ],
+            [
+              {
+                "text": "Total Amount Payable",
+                "style": "boldCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_y_75c12a93"
+              },
+              {
+                "text": "₹{{total_due_amount}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_z_52637bd3"
+              },
+              {
+                "text": "₹{{total_tax_amount}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_10_ce1f0968"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_l_d8c555d7"
+      },
+      {
+        "text": "Note: Delay in the payment shall levy interest on your due payment as agreed in the Agreement.",
+        "fontSize": 8.5,
+        "italics": true,
+        "color": "#64748b",
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "pageBreak": "after",
+        "_nodeId": "n_11_b35e1ef5"
+      },
+      {
+        "text": "Please Issue the Amount in Cheque or RTGS as mentioned below-:",
+        "bold": true,
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_12_89a7d787"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            80,
+            120,
+            110,
+            110,
+            80
+          ],
+          "body": [
+            [
+              {
+                "text": "Payment Term",
+                "style": "tableHeader",
+                "_nodeId": "n_14_cdbc170c"
+              },
+              {
+                "text": "Company Name",
+                "style": "tableHeader",
+                "_nodeId": "n_15_89007bc4"
+              },
+              {
+                "text": "Bank Name & Branch",
+                "style": "tableHeader",
+                "_nodeId": "n_16_a780e651"
+              },
+              {
+                "text": "Account No",
+                "style": "tableHeader",
+                "_nodeId": "n_17_23b0754d"
+              },
+              {
+                "text": "IFSC Code",
+                "style": "tableHeader",
+                "_nodeId": "n_18_cfb97e0f"
+              }
+            ],
+            [
+              {
+                "text": "FLAT COST Payment",
+                "style": "tableCellBold",
+                "_nodeId": "n_19_6bf3ce0d"
+              },
+              {
+                "text": "Gurukrupa Realcon Developers Private Limited",
+                "style": "tableCell",
+                "_nodeId": "n_1a_6a354285"
+              },
+              {
+                "text": "IDBI Bank\nGhatkopar East",
+                "style": "tableCell",
+                "_nodeId": "n_1b_e4167bee"
+              },
+              {
+                "text": "0033102000028848",
+                "style": "tableCellBold",
+                "_nodeId": "n_1c_7341a9b8"
+              },
+              {
+                "text": "IBKL0000033",
+                "style": "tableCell",
+                "_nodeId": "n_1d_16356fe9"
+              }
+            ],
+            [
+              {
+                "text": "GST Payment",
+                "style": "tableCellBold",
+                "_nodeId": "n_1e_879d032d"
+              },
+              {
+                "text": "Gurukrupa Realcon Developers Private Limited",
+                "style": "tableCell",
+                "_nodeId": "n_1f_2e3defe2"
+              },
+              {
+                "text": "IDBI Bank\nGhatkopar East",
+                "style": "tableCell",
+                "_nodeId": "n_1g_c0913d46"
+              },
+              {
+                "text": "0033102000028820",
+                "style": "tableCellBold",
+                "_nodeId": "n_1h_84609b70"
+              },
+              {
+                "text": "IBKL0000033",
+                "style": "tableCell",
+                "_nodeId": "n_1i_a3144473"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_13_4f112d1e"
+      },
+      {
+        "text": "If you have any query kindly contact our “ Customer Service Manager Mr. Devendra Naik Mobile 7208119728” If you do not provide payment within 7 days after receiving this email/ the letter we shall again send you a reminder letter via email/ RPAD or Courier after that our customer care executive reminds you on call also. Your Cooperation and promptness in making a said payment will enable us to hand over the possession of the said flat on time. Please ignore this letter if already paid.",
+        "fontSize": 9,
+        "color": "#475569",
+        "margin": [
+          0,
+          0,
+          0,
+          24
+        ],
+        "_nodeId": "n_1j_02e825c1"
+      },
+      {
+        "stack": [
+          {
+            "text": "Yours Faithfully,",
+            "margin": [
+              0,
+              0,
+              0,
+              2
+            ],
+            "_nodeId": "n_1l_0664e325"
+          },
+          {
+            "text": "For Gurukrupa Realcon Developers Private Limited",
+            "bold": true,
+            "margin": [
+              0,
+              0,
+              0,
+              40
+            ],
+            "_nodeId": "n_1m_7919a9e3"
+          },
+          {
+            "text": "This is auto generated demand it doesn't require signature",
+            "italics": true,
+            "color": "#64748b",
+            "fontSize": 9,
+            "_nodeId": "n_1n_d0425569"
+          }
+        ],
+        "_nodeId": "n_1k_2f594c4b"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "slab_completion_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_a_e3fe7188",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "Marina Enclave",
+        "required": true,
+        "group": "Project Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_5_d5c9b68e",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_8_35330309",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "wing",
+        "label": "Wing",
+        "type": "text",
+        "defaultValue": "Wing C",
+        "required": true,
+        "group": "Property Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_5_d5c9b68e",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_8_35330309",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit No",
+        "type": "text",
+        "defaultValue": "1103",
+        "required": true,
+        "group": "Property Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_5_d5c9b68e",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_8_35330309",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Payee Name",
+        "type": "text",
+        "defaultValue": "Pooja Mehta",
+        "required": true,
+        "group": "Customer Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_6_8800cde7",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Address",
+        "type": "textarea",
+        "defaultValue": "Flat 502, Palm Beach Residency, Vashi, Navi Mumbai",
+        "required": true,
+        "group": "Customer Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_7_2cf3baad",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_address",
+        "label": "Project Address",
+        "type": "textarea",
+        "defaultValue": "Jankalyan Nagar, Malad West, Mumbai 400095",
+        "required": true,
+        "group": "Project Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_9_bd6da66e",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "installment_name",
+        "label": "Completed Stage",
+        "type": "text",
+        "defaultValue": "11th Slab RCC Work",
+        "required": true,
+        "group": "Document Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_c_177f74e4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "effective_date",
+        "label": "Agreement Execution Date",
+        "type": "date",
+        "defaultValue": "2025-08-15",
+        "required": false,
+        "group": "Document Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_f_f89645de",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "agreement_date",
+        "label": "Agreement Registration Date",
+        "type": "date",
+        "defaultValue": "2025-08-28",
+        "required": false,
+        "group": "Document Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_g_ef331f79",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "agreement_amount",
+        "label": "Agreement Value (AV)",
+        "type": "currency",
+        "defaultValue": 8500000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_i_148daef1",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_q_7344a956",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_percentage",
+        "label": "Demand Percentage",
+        "type": "percent",
+        "defaultValue": 70,
+        "required": true,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_j_8b2b9fab",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_s_7b5bcc27",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_gst",
+        "label": "Total GST (5%) on AV",
+        "type": "currency",
+        "defaultValue": 425000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_r_0a8d8484",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_amount_as_per_work",
+        "label": "Amount Billed Till Date",
+        "type": "currency",
+        "defaultValue": 5950000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_t_9c645593",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_tax_as_per_work",
+        "label": "GST Billed Till Date",
+        "type": "currency",
+        "defaultValue": 297500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_u_ca255839",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Received Till Date",
+        "type": "currency",
+        "defaultValue": 5100000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_w_76cf945f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tax_paid",
+        "label": "Tax Received Till Date",
+        "type": "currency",
+        "defaultValue": 255000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_x_058f16a6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_due_amount",
+        "label": "Total Flat Cost Payable",
+        "type": "currency",
+        "defaultValue": 850000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_z_52637bd3",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_tax_amount",
+        "label": "Total GST Payable",
+        "type": "currency",
+        "defaultValue": 42500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 18,
+        "bindings": [
+          {
+            "nodeId": "n_10_ce1f0968",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

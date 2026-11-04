@@ -1,0 +1,943 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "SANKALP BUILDERS",
+                "style": "companyTitle",
+                "_nodeId": "n_3_f589bed4"
+              },
+              {
+                "text": "E-123-124, Behind IOC Petrol Pump, Sahakar Marg, Jaipur 302015",
+                "style": "subHeader",
+                "_nodeId": "n_4_d15aa5af"
+              },
+              {
+                "text": "GSTIN: 08ACOFS3617H1ZT | Original For Recipient",
+                "style": "subHeader",
+                "margin": [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                "_nodeId": "n_5_92c9040c"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_2_2b7dba22"
+          },
+          {
+            "stack": [
+              {
+                "text": "Tax Invoice",
+                "style": "invoiceTitle",
+                "_nodeId": "n_7_999cb4f9"
+              },
+              {
+                "text": "Date: {{current_date}}",
+                "alignment": "right",
+                "bold": true,
+                "margin": [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                "_nodeId": "n_8_112fd3ac"
+              },
+              {
+                "text": "Invoice No: {{project_name}} / {{unit_name}} / Demand",
+                "alignment": "right",
+                "fontSize": 8.5,
+                "_nodeId": "n_9_78fc4d04"
+              }
+            ],
+            "width": 220,
+            "_nodeId": "n_6_65cf5c93"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_1_db2be600"
+      },
+      {
+        "canvas": [
+          {}
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_a_6471e9b1"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Customer Name : {{customer_name}}",
+                "bold": true,
+                "_nodeId": "n_d_e907f816"
+              },
+              {
+                "text": "Address : {{customer_address}}",
+                "_nodeId": "n_e_c9a804bf"
+              },
+              {
+                "text": "State : Rajasthan  |  State Code : 8",
+                "_nodeId": "n_f_0f4ffd8e"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_c_347aa624"
+          },
+          {
+            "stack": [
+              {
+                "text": "Mobile : {{customer_phone}}",
+                "_nodeId": "n_h_16e827bd"
+              },
+              {
+                "text": "Email : {{customer_email}}",
+                "_nodeId": "n_i_5899b729"
+              }
+            ],
+            "width": 200,
+            "_nodeId": "n_g_e5c260de"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_b_1883ac37"
+      },
+      {
+        "text": "DEMAND LETTER",
+        "alignment": "center",
+        "bold": true,
+        "fontSize": 11,
+        "margin": [
+          0,
+          0,
+          0,
+          4
+        ],
+        "_nodeId": "n_j_952438bc"
+      },
+      {
+        "text": "Subject: Demand letter for due amount of Unit No. {{wing}} {{unit_name}} in {{project_name}} at {{project_address}}.",
+        "bold": true,
+        "fontSize": 9,
+        "margin": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "_nodeId": "n_k_cbc1249b"
+      },
+      {
+        "text": "Ref: {{total_percentage}} % amount due | {{installment_name}}",
+        "fontSize": 8.5,
+        "color": "#475569",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_l_e7d1ba5b"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            "*",
+            50,
+            75,
+            55,
+            55
+          ],
+          "body": [
+            [
+              {
+                "text": "Description",
+                "style": "tableHeader",
+                "_nodeId": "n_n_67ff6326"
+              },
+              {
+                "text": "HSN/SAC",
+                "style": "tableHeader",
+                "_nodeId": "n_o_87a1d61a"
+              },
+              {
+                "text": "Amount (A)",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_p_4e620e8d"
+              },
+              {
+                "text": "CGST (B)",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_q_2cda1f90"
+              },
+              {
+                "text": "SGST (C)",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_r_d7dbb2be"
+              }
+            ],
+            [
+              {
+                "text": "Sale of Residential Unit No {{unit_name}} in the project {{project_name}} (GST calculated on 2/3rd value as per N/N 11/2017 CGST Rate)",
+                "style": "tableCell",
+                "_nodeId": "n_s_495d254c"
+              },
+              {
+                "text": "995411",
+                "style": "tableCell",
+                "_nodeId": "n_t_d5dc41fc"
+              },
+              {
+                "text": "₹{{latest_slab_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_u_9fb2c0a0"
+              },
+              {
+                "text": "₹{{latest_tax_as_per_work_cgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_v_0dda0907"
+              },
+              {
+                "text": "₹{{latest_tax_as_per_work_sgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_w_dbb94ed1"
+              }
+            ],
+            [
+              {
+                "text": "{{latest_slab_percentage}} % amount Due of Sale consideration (i)",
+                "style": "tableCell",
+                "_nodeId": "n_x_48bba757"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_y_b86f7453"
+              },
+              {
+                "text": "₹{{latest_slab_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_z_9a524a21"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_10_dfe38779"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_11_b4e921a2"
+              }
+            ],
+            [
+              {
+                "text": "GST (ii)",
+                "style": "tableCell",
+                "_nodeId": "n_12_01e12d32"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_13_17b6f10c"
+              },
+              {
+                "text": "₹{{latest_slab_gst_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_14_621c0b9e"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_15_99f57f59"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_16_517dde9f"
+              }
+            ],
+            [
+              {
+                "text": "Total (iii) = (i) + (ii)",
+                "style": "tableCellBold",
+                "_nodeId": "n_17_35b57afe"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_18_8121671b"
+              },
+              {
+                "text": "₹{{latest_slab_total_amount}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_19_719b9a5c"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1a_89512fa6"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1b_d726d4d5"
+              }
+            ],
+            [
+              {
+                "text": "Add:- Previous Demand Value ({{previous_slabs_percentage}}%) + GST (iv)",
+                "style": "tableCell",
+                "_nodeId": "n_1c_70535c5c"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1d_e7f3d319"
+              },
+              {
+                "text": "₹{{previous_slabs_total_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_1e_cd3e26fa"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1f_7a0ece1d"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1g_7b5ae85f"
+              }
+            ],
+            [
+              {
+                "text": "Total Amount Due {{total_percentage}}% (v)",
+                "style": "tableCellBold",
+                "_nodeId": "n_1h_989534c0"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1i_6bb5e49e"
+              },
+              {
+                "text": "₹{{total_pending_amount_as_per_work}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_1j_fa49801d"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1k_440c34b3"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1l_23fee927"
+              }
+            ],
+            [
+              {
+                "text": "Amount Received Till Date (vi)",
+                "style": "tableCell",
+                "_nodeId": "n_1m_e4a0bf98"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1n_80d829fb"
+              },
+              {
+                "text": "₹{{total_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_1o_ceac927b"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1p_24791615"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "_nodeId": "n_1q_575cc5f1"
+              }
+            ],
+            [
+              {
+                "text": "Net Due (vii) = (v - vi)",
+                "style": "tableCellBold",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_1r_14df5c94"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_1s_0a19118d"
+              },
+              {
+                "text": "₹{{final_amount}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_1t_a92a9fbd"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_1u_cc7a866a"
+              },
+              {
+                "text": "",
+                "style": "tableCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_1v_15d7e2d7"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_m_988386a4"
+      },
+      {
+        "text": "Therefore, you are requested to make the payment of outstanding dues within 15 days from the date of issuance of this tax invoice to avoid interest charges on delayed payment as per the terms & condition of the firm.",
+        "fontSize": 8.5,
+        "margin": [
+          0,
+          0,
+          0,
+          4
+        ],
+        "_nodeId": "n_1w_46a3006a"
+      },
+      {
+        "text": "Note: GST or any other govt. taxes and charges which may be applicable as per Govt. norms, shall be paid by Buyer.",
+        "fontSize": 8,
+        "italics": true,
+        "color": "#475569",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_1x_2e7c7d89"
+      },
+      {
+        "stack": [
+          {
+            "text": "The Cheque, Demand Draft or RTGS can be made in the following bank account details:.",
+            "bold": true,
+            "fontSize": 8.5,
+            "_nodeId": "n_1z_0cbf548f"
+          },
+          {
+            "text": "Account Name : SANKALP BUILDERS RERA COLLECTION ACCOUNT\nBank Account No. : 777705514422\nBank & Branch : ICICI Bank, Sahakar Marg, Jaipur | IFSC Code : ICIC0006790.",
+            "fontSize": 8.5,
+            "color": "#334155",
+            "margin": [
+              0,
+              2,
+              0,
+              4
+            ],
+            "_nodeId": "n_20_4ac19833"
+          },
+          {
+            "text": "For any further clarification please call us on 7073877746 or mail us on crm@sankalpbuilders.com",
+            "fontSize": 8.5,
+            "color": "#0284c7",
+            "_nodeId": "n_21_4a512541"
+          },
+          {
+            "text": "RERA Registration No. {{project_rera}} | RERA Website : http:// rera.rajasthan.gov.in/",
+            "fontSize": 8.5,
+            "bold": true,
+            "margin": [
+              0,
+              2,
+              0,
+              8
+            ],
+            "_nodeId": "n_22_a10b0d6f"
+          }
+        ],
+        "_nodeId": "n_1y_5f9d4015"
+      },
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_24_1ed9f28c"
+          },
+          {
+            "stack": [
+              {
+                "text": "Thanking you,",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  2
+                ],
+                "_nodeId": "n_26_2967ee36"
+              },
+              {
+                "text": "For M/ s Sankalp Builders",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  28
+                ],
+                "_nodeId": "n_27_755ca6d2"
+              },
+              {
+                "text": "(Authorized Signatory)",
+                "style": "signatory",
+                "_nodeId": "n_28_738b074a"
+              }
+            ],
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_25_c4f8ce98"
+          }
+        ],
+        "_nodeId": "n_23_0db20d49"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "defaultStyle": {
+      "fontSize": 9.5,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.25
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "current_date",
+        "label": "Invoice Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_8_112fd3ac",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "The Rise",
+        "required": true,
+        "group": "Project Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_9_78fc4d04",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_k_cbc1249b",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_s_495d254c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "wing",
+        "label": "Tower / Wing",
+        "type": "text",
+        "defaultValue": "Tower A",
+        "required": false,
+        "group": "Property Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_k_cbc1249b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit No.",
+        "type": "text",
+        "defaultValue": "A-502",
+        "required": true,
+        "group": "Property Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_9_78fc4d04",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_k_cbc1249b",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_s_495d254c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Sunil Agarwal",
+        "required": true,
+        "group": "Customer Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_d_e907f816",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Customer Address",
+        "type": "textarea",
+        "defaultValue": "Plot 45, Civil Lines, Jaipur 302006",
+        "required": true,
+        "group": "Customer Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_e_c9a804bf",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_phone",
+        "label": "Mobile",
+        "type": "phone",
+        "defaultValue": "9829012345",
+        "required": false,
+        "group": "Contact Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_h_16e827bd",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_email",
+        "label": "Email",
+        "type": "email",
+        "defaultValue": "sunil.agarwal@gmail.com",
+        "required": false,
+        "group": "Contact Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_i_5899b729",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_address",
+        "label": "Project Address",
+        "type": "textarea",
+        "defaultValue": "Ajmer Road, Jaipur, Rajasthan",
+        "required": true,
+        "group": "Project Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_k_cbc1249b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_percentage",
+        "label": "Total Amount Due %",
+        "type": "percent",
+        "defaultValue": 75,
+        "required": false,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_l_e7d1ba5b",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1h_989534c0",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "installment_name",
+        "label": "Stage / Milestone",
+        "type": "text",
+        "defaultValue": "On Completion of 5th Floor Slab",
+        "required": true,
+        "group": "Document Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_l_e7d1ba5b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_percentage",
+        "label": "Current Slab % Due",
+        "type": "percent",
+        "defaultValue": 10,
+        "required": false,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_x_48bba757",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_amount",
+        "label": "Current Slab Consideration",
+        "type": "currency",
+        "defaultValue": 600000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_u_9fb2c0a0",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_z_9a524a21",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_tax_as_per_work_cgst",
+        "label": "CGST (B)",
+        "type": "currency",
+        "defaultValue": 15000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_v_0dda0907",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_tax_as_per_work_sgst",
+        "label": "SGST (C)",
+        "type": "currency",
+        "defaultValue": 15000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_w_dbb94ed1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_gst_amount",
+        "label": "Current Slab GST Total",
+        "type": "currency",
+        "defaultValue": 30000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_14_621c0b9e",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_total_amount",
+        "label": "Total (Consideration + GST)",
+        "type": "currency",
+        "defaultValue": 630000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_19_719b9a5c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "previous_slabs_percentage",
+        "label": "Previous Demanded %",
+        "type": "percent",
+        "defaultValue": 65,
+        "required": false,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_1c_70535c5c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "previous_slabs_total_amount",
+        "label": "Previous Demand Value + GST",
+        "type": "currency",
+        "defaultValue": 4095000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 18,
+        "bindings": [
+          {
+            "nodeId": "n_1e_cd3e26fa",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_pending_amount_as_per_work",
+        "label": "Total Amount Due (v)",
+        "type": "currency",
+        "defaultValue": 4725000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 19,
+        "bindings": [
+          {
+            "nodeId": "n_1j_fa49801d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_paid",
+        "label": "Amount Received Till Date (vi)",
+        "type": "currency",
+        "defaultValue": 4095000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 20,
+        "bindings": [
+          {
+            "nodeId": "n_1o_ceac927b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "final_amount",
+        "label": "Net Due (vii) =(v-vi)",
+        "type": "currency",
+        "defaultValue": 630000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 21,
+        "bindings": [
+          {
+            "nodeId": "n_1t_a92a9fbd",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_rera",
+        "label": "RERA Registration No.",
+        "type": "text",
+        "defaultValue": "RAJ/P/2021/1542",
+        "required": false,
+        "group": "Project Details",
+        "order": 22,
+        "bindings": [
+          {
+            "nodeId": "n_22_a10b0d6f",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,726 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "PIONEER HOUSING",
+                "style": "companyTitle",
+                "_nodeId": "n_3_178afd75"
+              },
+              {
+                "text": "Senroofs Project, Nahur / Mulund West, Mumbai",
+                "style": "subHeader",
+                "_nodeId": "n_4_e2f27988"
+              }
+            ],
+            "_nodeId": "n_2_677a5b26"
+          },
+          {
+            "text": "Date: {{current_date}}",
+            "alignment": "right",
+            "bold": true,
+            "margin": [
+              0,
+              4,
+              0,
+              0
+            ],
+            "_nodeId": "n_5_d46a1611"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_1_a1df4709"
+      },
+      {
+        "stack": [
+          {
+            "text": "To,",
+            "bold": true,
+            "_nodeId": "n_7_1a91b6b3"
+          },
+          {
+            "text": "{{customer_name}}",
+            "bold": true,
+            "_nodeId": "n_8_b68c9fde"
+          },
+          {
+            "text": "{{customer_address}}",
+            "color": "#334155",
+            "_nodeId": "n_9_9298d915"
+          },
+          {
+            "text": "Email :- {{customer_email}}",
+            "color": "#334155",
+            "_nodeId": "n_a_58445caa"
+          },
+          {
+            "text": "Mob :- {{customer_phone}}",
+            "color": "#334155",
+            "_nodeId": "n_b_261689a4"
+          },
+          {
+            "text": "Slab Completion :- {{slab_completion_date}}",
+            "bold": true,
+            "margin": [
+              0,
+              4,
+              0,
+              0
+            ],
+            "_nodeId": "n_c_f83b0bb1"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_6_dc5de47f"
+      },
+      {
+        "text": "Subject :- Intimation for payment of {{installment_name}} against your Booking of Flat No. {{unit_name}} on {{unit_floor}} floor, of Tower “{{wing}}” in Senroofs Project, {{project_address}}",
+        "style": "subject",
+        "_nodeId": "n_d_bcd38a90"
+      },
+      {
+        "text": "Dear Madam/ Sir, ,",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_e_4cfff385"
+      },
+      {
+        "text": "Pursuant to Allotment / Agreement in respect of above referred flat, we have to inform you that a payment of ₹{{final_amount}} ({{final_amount_in_words}}) is due and payable separately as below.",
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_f_c4884339"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            "*",
+            120,
+            100
+          ],
+          "body": [
+            [
+              {
+                "text": "INSTALLMENT DUE",
+                "style": "tableHeader",
+                "alignment": "left",
+                "_nodeId": "n_h_b8a17984"
+              },
+              {
+                "text": "ON FLAT COST",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_i_564b33a3"
+              },
+              {
+                "text": "GST",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_j_6eebb901"
+              }
+            ],
+            [
+              {
+                "text": "Previous Demand Value",
+                "style": "tableCell",
+                "_nodeId": "n_k_68b5e749"
+              },
+              {
+                "text": "₹{{previous_slabs_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_l_51c6ca1d"
+              },
+              {
+                "text": "₹{{previous_slabs_gst_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_m_750f37ec"
+              }
+            ],
+            [
+              {
+                "text": "{{installment_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_n_abd7efe0"
+              },
+              {
+                "text": "₹{{latest_slab_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_o_e69a0dab"
+              },
+              {
+                "text": "₹{{latest_slab_gst_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_p_e3366e5d"
+              }
+            ],
+            [
+              {
+                "text": "Total Amount Due {{total_percentage}}%",
+                "style": "tableCellBold",
+                "_nodeId": "n_q_850c7e39"
+              },
+              {
+                "text": "₹{{pending_amount_as_per_work}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_r_2c537abf"
+              },
+              {
+                "text": "₹{{pending_tax_as_per_work}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_s_cea0e0db"
+              }
+            ],
+            [
+              {
+                "text": "Less Amount Received ……………………….",
+                "style": "tableCell",
+                "_nodeId": "n_t_fad41cc3"
+              },
+              {
+                "text": "₹{{amount_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_u_9f52a171"
+              },
+              {
+                "text": "₹{{tax_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_v_376f1380"
+              }
+            ],
+            [
+              {
+                "text": "AMOUNT DUE ……………………………….",
+                "style": "tableCellBold",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_w_01cde41d"
+              },
+              {
+                "text": "₹{{total_due_amount}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_x_e39acdf4"
+              },
+              {
+                "text": "₹{{total_tax_amount}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_y_5aa6b323"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          4,
+          0,
+          12
+        ],
+        "_nodeId": "n_g_c4ca65e2"
+      },
+      {
+        "text": "You are requested to kindly make the above payment as soon as possible from the receipt of this letter otherwise interest will be charged on delay payment. Please find the banking details below.",
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "fontSize": 9.5,
+        "_nodeId": "n_z_a490a3d3"
+      },
+      {
+        "stack": [
+          {
+            "text": "FLAT COST BANKING DETAILS",
+            "style": "bankHeader",
+            "_nodeId": "n_11_d4e7f1cd"
+          },
+          {
+            "text": "“PIONEER HOUSING SENROOFS PHASE III COLLECTION A/ C. , Kotak Mahindra Bank Ltd., Mulund West Branch, Account No. 4946470941 and IFSC CODE KKBK0000642. MIRC Code : 400485006",
+            "style": "bankText",
+            "margin": [
+              0,
+              2,
+              0,
+              6
+            ],
+            "_nodeId": "n_12_2a93818e"
+          },
+          {
+            "text": "GST BANKING DETAILS",
+            "style": "bankHeader",
+            "_nodeId": "n_13_be70dac5"
+          },
+          {
+            "text": "“PIONEER HOUSING” Bank of India A/ C. No. 009020110000971, Small Scale Ind Andheri - East Br., and IFSC CODE BKID0000090. MIRC Code : 400013050.",
+            "style": "bankText",
+            "margin": [
+              0,
+              2,
+              0,
+              12
+            ],
+            "_nodeId": "n_14_cf234c61"
+          }
+        ],
+        "_nodeId": "n_10_176ff739"
+      },
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_16_52860530"
+          },
+          {
+            "stack": [
+              {
+                "text": "Yours Faithfully,",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  4
+                ],
+                "_nodeId": "n_18_c054444a"
+              },
+              {
+                "text": "For PIONEER HOUSING",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_19_4cfa9b8f"
+              },
+              {
+                "text": "AUTHORISED SIGNATORY",
+                "style": "signatory",
+                "_nodeId": "n_1a_8689f9fc"
+              }
+            ],
+            "alignment": "right",
+            "width": 200,
+            "_nodeId": "n_17_4f1ac2a9"
+          }
+        ],
+        "_nodeId": "n_15_23a287e0"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "current_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_5_d46a1611",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Vipin Tomar",
+        "required": true,
+        "group": "Customer Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_8_b68c9fde",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Customer Address",
+        "type": "textarea",
+        "defaultValue": "Flat No 402, Building A, Sunrise Heights, Mumbai 400078",
+        "required": true,
+        "group": "Customer Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_9_9298d915",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_email",
+        "label": "Email",
+        "type": "email",
+        "defaultValue": "vipintomar@gmail.com",
+        "required": false,
+        "group": "Contact Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_a_58445caa",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_phone",
+        "label": "Mobile",
+        "type": "phone",
+        "defaultValue": "+91 98765 43210",
+        "required": false,
+        "group": "Contact Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_b_261689a4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "slab_completion_date",
+        "label": "Slab Completion Date",
+        "type": "date",
+        "defaultValue": "2026-10-25",
+        "required": true,
+        "group": "Document Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_c_f83b0bb1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "installment_name",
+        "label": "Installment Name",
+        "type": "text",
+        "defaultValue": "14th Slab",
+        "required": true,
+        "group": "Document Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_d_bcd38a90",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_n_abd7efe0",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Flat No.",
+        "type": "text",
+        "defaultValue": "1402",
+        "required": true,
+        "group": "Property Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_d_bcd38a90",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "14th",
+        "required": true,
+        "group": "Property Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_d_bcd38a90",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "wing",
+        "label": "Tower / Wing",
+        "type": "text",
+        "defaultValue": "A",
+        "required": true,
+        "group": "Property Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_d_bcd38a90",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_address",
+        "label": "Project Address",
+        "type": "textarea",
+        "defaultValue": "L.B.S. Marg, Mulund West, Mumbai - 400080",
+        "required": true,
+        "group": "Project Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_d_bcd38a90",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "final_amount",
+        "label": "Total Final Amount",
+        "type": "currency",
+        "defaultValue": 420000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_f_c4884339",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "final_amount_in_words",
+        "label": "Final Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Four Lakh Twenty Thousand Only",
+        "required": false,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_f_c4884339",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "previous_slabs_amount",
+        "label": "Previous Slabs Amount",
+        "type": "currency",
+        "defaultValue": 3500000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_l_51c6ca1d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "previous_slabs_gst_amount",
+        "label": "Previous Slabs GST Amount",
+        "type": "currency",
+        "defaultValue": 175000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_m_750f37ec",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_amount",
+        "label": "Current Slab Amount",
+        "type": "currency",
+        "defaultValue": 400000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_o_e69a0dab",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_gst_amount",
+        "label": "Current Slab GST Amount",
+        "type": "currency",
+        "defaultValue": 20000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_p_e3366e5d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_percentage",
+        "label": "Total Work Percentage",
+        "type": "percent",
+        "defaultValue": 85,
+        "required": false,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_q_850c7e39",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_amount_as_per_work",
+        "label": "Pending Flat Cost As Per Work",
+        "type": "currency",
+        "defaultValue": 3900000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 18,
+        "bindings": [
+          {
+            "nodeId": "n_r_2c537abf",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_tax_as_per_work",
+        "label": "Pending Tax As Per Work",
+        "type": "currency",
+        "defaultValue": 195000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 19,
+        "bindings": [
+          {
+            "nodeId": "n_s_cea0e0db",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid Till Date",
+        "type": "currency",
+        "defaultValue": 3500000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 20,
+        "bindings": [
+          {
+            "nodeId": "n_u_9f52a171",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tax_paid",
+        "label": "Tax Paid Till Date",
+        "type": "currency",
+        "defaultValue": 175000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 21,
+        "bindings": [
+          {
+            "nodeId": "n_v_376f1380",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_due_amount",
+        "label": "Total Flat Cost Due",
+        "type": "currency",
+        "defaultValue": 400000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 22,
+        "bindings": [
+          {
+            "nodeId": "n_x_e39acdf4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_tax_amount",
+        "label": "Total Tax Due",
+        "type": "currency",
+        "defaultValue": 20000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 23,
+        "bindings": [
+          {
+            "nodeId": "n_y_5aa6b323",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

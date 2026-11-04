@@ -1,0 +1,618 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "ROYAL BUILDCON",
+        "style": "companyTitle",
+        "_nodeId": "n_1_e4dc16fd"
+      },
+      {
+        "text": "DEMAND LETTER",
+        "style": "docTitle",
+        "_nodeId": "n_2_d3aaa65c"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "To,",
+                "bold": true,
+                "_nodeId": "n_5_dcb8a3a2"
+              },
+              {
+                "text": "{{customer_name}}",
+                "bold": true,
+                "_nodeId": "n_6_979dc3c5"
+              },
+              {
+                "text": "{{customer_address}}",
+                "color": "#334155",
+                "_nodeId": "n_7_c837c20a"
+              },
+              {
+                "text": "Email :- {{customer_email}}",
+                "_nodeId": "n_8_e69c0cbd"
+              },
+              {
+                "text": "Mob :- {{customer_phone}}",
+                "_nodeId": "n_9_8fcc5a7a"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_4_9002627e"
+          },
+          {
+            "text": "Date: {{current_date}}",
+            "alignment": "right",
+            "bold": true,
+            "width": 140,
+            "_nodeId": "n_a_56d99fa4"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_3_8624764c"
+      },
+      {
+        "text": "Subject :- Intimation for payment of {{installment_name}} against your Booking of Flat No. {{unit_name}} on {{unit_floor}} floor, “AVENCIA ” Plot-04, Sector-5, Pushpaknagar, Dapoli, Navi Mumbai, Maharastra.",
+        "bold": true,
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_b_a1c2f968"
+      },
+      {
+        "text": "Agreement Amount: ₹{{agreement_amount}}",
+        "bold": true,
+        "color": "#0369a1",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_c_0bfa525d"
+      },
+      {
+        "text": "Dear Madam/ Sir, ,\nWe have to inform you that a payment of ₹{{balance_as_per_work_without_exceed}} is due as below.",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_d_0ade76c6"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            "*",
+            140
+          ],
+          "body": [
+            [
+              {
+                "text": "INSTALLMENT DUE",
+                "style": "tableHeader",
+                "_nodeId": "n_f_d239a728"
+              },
+              {
+                "text": "ON FLAT COST",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_g_d986e896"
+              }
+            ],
+            [
+              {
+                "text": "Previous Demand Value",
+                "style": "tableCell",
+                "_nodeId": "n_h_951280bc"
+              },
+              {
+                "text": "₹{{previous_slabs_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_i_0b0f9e1c"
+              }
+            ],
+            [
+              {
+                "text": "{{installment_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_j_3711ac60"
+              },
+              {
+                "text": "₹{{latest_slab_amount}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_k_357f945b"
+              }
+            ],
+            [
+              {
+                "text": "Total Amount Due {{total_percentage}}%",
+                "style": "boldCell",
+                "_nodeId": "n_l_64c6535a"
+              },
+              {
+                "text": "₹{{pending_amount_as_per_work}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "_nodeId": "n_m_952bb07c"
+              }
+            ],
+            [
+              {
+                "text": "Less Amount Received ……………………….",
+                "style": "tableCell",
+                "_nodeId": "n_n_29c381c2"
+              },
+              {
+                "text": "₹{{amount_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_o_9cc086c6"
+              }
+            ],
+            [
+              {
+                "text": "AMOUNT DUE ……………………………….",
+                "style": "boldCell",
+                "_nodeId": "n_p_120e4522"
+              },
+              {
+                "text": "₹{{total_due_amount_without_exceed}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "_nodeId": "n_q_d8a47ac6"
+              }
+            ],
+            [
+              {
+                "text": "Less: TDS @ 1%",
+                "style": "tableCell",
+                "_nodeId": "n_r_e3e528a1"
+              },
+              {
+                "text": "₹{{total_tds_amount_as_per_work}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_s_5562c780"
+              }
+            ],
+            [
+              {
+                "text": "Balance",
+                "style": "boldCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_t_cec7ee3b"
+              },
+              {
+                "text": "₹{{balance_as_per_work_without_exceed}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_u_db518018"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_e_b810e684"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Flat Amount Collection Banking Details:",
+                "bold": true,
+                "fontSize": 9,
+                "_nodeId": "n_x_b641a88b"
+              },
+              {
+                "text": "Favouring Name : ROYAL BUILDCON AVENCIA COLLECTION A/ C",
+                "bold": true,
+                "fontSize": 8.5,
+                "_nodeId": "n_y_112a7e87"
+              },
+              {
+                "text": "Bank Name : IndusInd Bank, Belapur Branch",
+                "fontSize": 8.5,
+                "_nodeId": "n_z_cf971d67"
+              },
+              {
+                "text": "Current A/ C No. : 201029817183 | IFSC : INDB0000599",
+                "bold": true,
+                "fontSize": 8.5,
+                "_nodeId": "n_10_944d51a0"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_w_cb3a9692"
+          },
+          {
+            "text": "Kindly pay online TDS of ₹{{tds_balance}}",
+            "bold": true,
+            "color": "#0369a1",
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_11_82cba6f9"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_v_dc1d2788"
+      },
+      {
+        "text": "You are requested to kindly make the above payment within 15 days from the receipt of this letter otherwise arrears will be charged on delay payment. Please find above banking details.",
+        "fontSize": 9,
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_12_2eb901cc"
+      },
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_14_553b8986"
+          },
+          {
+            "stack": [
+              {
+                "text": "Yours Faithfully,",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_16_a7a66b92"
+              },
+              {
+                "text": "Authorized Signatory",
+                "style": "signatory",
+                "_nodeId": "n_17_5c3bf4cb"
+              }
+            ],
+            "alignment": "right",
+            "width": 170,
+            "_nodeId": "n_15_f31444d9"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ],
+        "_nodeId": "n_13_d4f8277d"
+      },
+      {
+        "text": "OFFICE ADDRESS: 905, Mayuresh Chambers. plot-60 sector-11, Cbd Belapur, Navi Mumbai, Maharashtra-400614.",
+        "style": "footerText",
+        "_nodeId": "n_18_69378ddc"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "current_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_a_56d99fa4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Rohan Deshmukh",
+        "required": true,
+        "group": "Customer Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_6_979dc3c5",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Customer Address",
+        "type": "textarea",
+        "defaultValue": "Flat 101, Shanti Niketan, Panvel, Navi Mumbai 410206",
+        "required": true,
+        "group": "Customer Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_7_c837c20a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_email",
+        "label": "Email",
+        "type": "email",
+        "defaultValue": "rohan.deshmukh@gmail.com",
+        "required": false,
+        "group": "Contact Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_8_e69c0cbd",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_phone",
+        "label": "Mobile",
+        "type": "phone",
+        "defaultValue": "9833445566",
+        "required": false,
+        "group": "Contact Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_9_8fcc5a7a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "installment_name",
+        "label": "Installment Name",
+        "type": "text",
+        "defaultValue": "Top Slab Casting",
+        "required": true,
+        "group": "Document Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_b_a1c2f968",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_j_3711ac60",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Flat No.",
+        "type": "text",
+        "defaultValue": "A-701",
+        "required": true,
+        "group": "Property Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_b_a1c2f968",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "7th",
+        "required": true,
+        "group": "Property Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_b_a1c2f968",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "agreement_amount",
+        "label": "Agreement Amount",
+        "type": "currency",
+        "defaultValue": 6500000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_c_0bfa525d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "balance_as_per_work_without_exceed",
+        "label": "Net Due Balance",
+        "type": "currency",
+        "defaultValue": 643500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_d_0ade76c6",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_u_db518018",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "previous_slabs_amount",
+        "label": "Previous Slabs Demanded",
+        "type": "currency",
+        "defaultValue": 4500000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_i_0b0f9e1c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "latest_slab_amount",
+        "label": "Current Slab Demanded",
+        "type": "currency",
+        "defaultValue": 650000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_k_357f945b",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_percentage",
+        "label": "Total Demand %",
+        "type": "percent",
+        "defaultValue": 80,
+        "required": false,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_l_64c6535a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "pending_amount_as_per_work",
+        "label": "Total Billed Till Date",
+        "type": "currency",
+        "defaultValue": 5150000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_m_952bb07c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Received Till Date",
+        "type": "currency",
+        "defaultValue": 4500000,
+        "required": false,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_o_9cc086c6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_due_amount_without_exceed",
+        "label": "Total Due Flat Cost",
+        "type": "currency",
+        "defaultValue": 650000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_q_d8a47ac6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "total_tds_amount_as_per_work",
+        "label": "TDS @ 1%",
+        "type": "currency",
+        "defaultValue": 6500,
+        "required": false,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_s_5562c780",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tds_balance",
+        "label": "TDS Online Payment",
+        "type": "currency",
+        "defaultValue": 6500,
+        "required": false,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_11_82cba6f9",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

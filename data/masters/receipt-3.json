@@ -1,0 +1,588 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "{{project_by}}",
+                "bold": true,
+                "fontSize": 12,
+                "color": "#0f172a",
+                "_nodeId": "n_3_78890c15"
+              },
+              {
+                "text": "{{sub_company_address}}",
+                "fontSize": 8.5,
+                "color": "#475569",
+                "_nodeId": "n_4_c6ba6ce9"
+              },
+              {
+                "text": "Contact : {{sub_company_landline}}",
+                "fontSize": 8.5,
+                "_nodeId": "n_5_3bd66644"
+              },
+              {
+                "text": "PAN : {{sub_company_pan}}",
+                "bold": true,
+                "fontSize": 8.5,
+                "_nodeId": "n_6_d1bb05ee"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_2_db4b3fa8"
+          },
+          {
+            "stack": [
+              {
+                "text": "Project : {{project_name}}",
+                "bold": true,
+                "fontSize": 11,
+                "_nodeId": "n_8_03762b8c"
+              },
+              {
+                "text": "{{site_address}}",
+                "fontSize": 8.5,
+                "color": "#475569",
+                "_nodeId": "n_9_8165b424"
+              },
+              {
+                "text": "Rera No.: {{rera}}",
+                "bold": true,
+                "fontSize": 8.5,
+                "_nodeId": "n_a_5e0657aa"
+              },
+              {
+                "text": "GST : {{sub_company_gst}}",
+                "bold": true,
+                "fontSize": 8.5,
+                "_nodeId": "n_b_226cceb8"
+              }
+            ],
+            "width": 220,
+            "alignment": "right",
+            "_nodeId": "n_7_cb376f62"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_1_7ebd017c"
+      },
+      {
+        "canvas": [
+          {}
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_c_5681319c"
+      },
+      {
+        "columns": [
+          {
+            "text": "Date: {{payment_date}}",
+            "bold": true,
+            "_nodeId": "n_e_ffb8ad9c"
+          },
+          {
+            "text": "RECEIPT",
+            "style": "receiptTitle",
+            "_nodeId": "n_f_6fc779ee"
+          },
+          {
+            "text": "Receipt No.: {{receipt_number}}",
+            "alignment": "right",
+            "bold": true,
+            "_nodeId": "n_g_40848bbd"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_d_f453378d"
+      },
+      {
+        "stack": [
+          {
+            "text": "Received with the thanks from {{customer_name}}",
+            "bold": true,
+            "fontSize": 11,
+            "_nodeId": "n_i_ec7fe11f"
+          },
+          {
+            "text": "Basic: ₹ {{amount_without_tax}} + GST: ₹ {{tax_amount}} = Total: ₹ {{amount_for_paid}}",
+            "color": "#334155",
+            "margin": [
+              0,
+              4,
+              0,
+              4
+            ],
+            "_nodeId": "n_j_af8bc82a"
+          },
+          {
+            "text": "a sum of {{amount_in_words}} on account of amount received against Unit No.: {{unit_wing}}- {{unit_name}}",
+            "color": "#334155",
+            "_nodeId": "n_k_7adbf7ac"
+          },
+          {
+            "text": "₹{{amount_paid}}",
+            "style": "amountBanner",
+            "_nodeId": "n_l_f065ffe1"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_h_da7f7c89"
+      },
+      {
+        "stack": [
+          {
+            "text": "Cheque/ D.D. No./ RTGS : {{cheque_number}} Dated : {{cheque_date}}",
+            "bold": true,
+            "_nodeId": "n_n_f1a1ba06"
+          },
+          {
+            "text": "Bank Name: {{bank_name}}",
+            "_nodeId": "n_o_242e03f2"
+          },
+          {
+            "text": "Remark: {{remark}}",
+            "italics": true,
+            "color": "#475569",
+            "_nodeId": "n_p_8260f69b"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_m_f4631ec1"
+      },
+      {
+        "columns": [
+          {
+            "text": "Cheques are subject to realisation",
+            "fontSize": 8.5,
+            "italics": true,
+            "color": "#64748b",
+            "margin": [
+              0,
+              40,
+              0,
+              0
+            ],
+            "_nodeId": "n_r_ba43901d"
+          },
+          {
+            "stack": [
+              {
+                "text": "For {{project_by}}",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_t_3c7974d3"
+              },
+              {
+                "text": "Authorised Signatory",
+                "style": "signatory",
+                "_nodeId": "n_u_1dbf3065"
+              }
+            ],
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_s_14ba73e1"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ],
+        "_nodeId": "n_q_b1a5e18b"
+      },
+      {
+        "text": "This is an auto- generated Payment Receipt.",
+        "alignment": "center",
+        "fontSize": 8.5,
+        "italics": true,
+        "color": "#94a3b8",
+        "_nodeId": "n_v_77fad925"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "project_by",
+        "label": "Company / Developer",
+        "type": "text",
+        "defaultValue": "Gurukrupa Realcon Developers Pvt. Ltd.",
+        "required": true,
+        "group": "Company Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_3_78890c15",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_t_3c7974d3",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_address",
+        "label": "Company Address",
+        "type": "textarea",
+        "defaultValue": "Gurukrupa Heights, Ghatkopar East, Mumbai - 400077",
+        "required": false,
+        "group": "Company Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_4_c6ba6ce9",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_landline",
+        "label": "Contact No.",
+        "type": "phone",
+        "defaultValue": "+91-22-25123456",
+        "required": false,
+        "group": "Contact Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_5_3bd66644",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_pan",
+        "label": "Company PAN",
+        "type": "text",
+        "defaultValue": "AABCG1234F",
+        "required": false,
+        "group": "Company Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_6_d1bb05ee",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "Marina Enclave",
+        "required": true,
+        "group": "Project Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_8_03762b8c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "site_address",
+        "label": "Site Address",
+        "type": "textarea",
+        "defaultValue": "Jankalyan Nagar, Malad West, Mumbai - 400095",
+        "required": false,
+        "group": "Project Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_9_8165b424",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "rera",
+        "label": "RERA No.",
+        "type": "text",
+        "defaultValue": "P51800004567",
+        "required": false,
+        "group": "Project Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_a_5e0657aa",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_gst",
+        "label": "GSTIN",
+        "type": "text",
+        "defaultValue": "27AABCG1234F1Z2",
+        "required": false,
+        "group": "Company Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_b_226cceb8",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_e_ffb8ad9c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "GRD/2026/512",
+        "required": true,
+        "group": "Document Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_g_40848bbd",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Pooja Mehta",
+        "required": true,
+        "group": "Customer Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_i_ec7fe11f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_without_tax",
+        "label": "Basic Amount",
+        "type": "currency",
+        "defaultValue": 850000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_j_af8bc82a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tax_amount",
+        "label": "GST Amount",
+        "type": "currency",
+        "defaultValue": 42500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_j_af8bc82a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_for_paid",
+        "label": "Total Amount",
+        "type": "currency",
+        "defaultValue": 892500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_j_af8bc82a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "type": "currency",
+        "defaultValue": 892500,
+        "required": true,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_l_f065ffe1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Eight Lakh Ninety Two Thousand Five Hundred Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_k_7adbf7ac",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Wing",
+        "type": "text",
+        "defaultValue": "Wing C",
+        "required": false,
+        "group": "Property Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_k_7adbf7ac",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit No.",
+        "type": "text",
+        "defaultValue": "1103",
+        "required": true,
+        "group": "Property Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_k_7adbf7ac",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Cheque / RTGS / UTR No.",
+        "type": "text",
+        "defaultValue": "ICIC00088921",
+        "required": true,
+        "group": "Bank Details",
+        "order": 18,
+        "bindings": [
+          {
+            "nodeId": "n_n_f1a1ba06",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Dated",
+        "type": "date",
+        "defaultValue": "2026-11-03",
+        "required": true,
+        "group": "Bank Details",
+        "order": 19,
+        "bindings": [
+          {
+            "nodeId": "n_n_f1a1ba06",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Bank Name",
+        "type": "text",
+        "defaultValue": "ICICI Bank, Ghatkopar",
+        "required": true,
+        "group": "Bank Details",
+        "order": 20,
+        "bindings": [
+          {
+            "nodeId": "n_o_242e03f2",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "remark",
+        "label": "Remark",
+        "type": "text",
+        "defaultValue": "11th Slab RCC milestone payment",
+        "required": false,
+        "group": "Document Details",
+        "order": 21,
+        "bindings": [
+          {
+            "nodeId": "n_p_8260f69b",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

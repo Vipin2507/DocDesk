@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: document-builder
+    runtime: node
+    plan: starter # Change to 'free' if deploying without persistent disk (ephemeral SQLite)
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DATA_DIR
+        value: /var/data # Use ./data if running without persistent disk
+      - key: ADMIN_EMAIL
+        value: admin@buildesk.local
+      - key: ADMIN_PASSWORD
+        generateValue: true
+    # Persistent disk keeps SQLite database, uploads, and generated PDFs across deploys
+    disk:
+      name: document-builder-data
+      mountPath: /var/data
+      sizeGB: 1
+

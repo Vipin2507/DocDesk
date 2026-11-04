@@ -1,0 +1,730 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "ROYAL BUILDCON",
+        "style": "companyTitle",
+        "_nodeId": "n_1_bc0ccc8b"
+      },
+      {
+        "text": "RECEIPT",
+        "style": "receiptTitle",
+        "_nodeId": "n_2_a6dc81fa"
+      },
+      {
+        "columns": [
+          {
+            "text": "Receipt No.: {{receipt_number}}",
+            "bold": true,
+            "_nodeId": "n_4_2addd38d"
+          },
+          {
+            "text": "Date: {{current_date}}",
+            "alignment": "right",
+            "bold": true,
+            "_nodeId": "n_5_98c87e90"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_3_7b115158"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "CUSTOMER DETAILS",
+                "style": "sectionHead",
+                "_nodeId": "n_8_9f5f8878"
+              },
+              {
+                "text": "{{customer_name}}",
+                "bold": true,
+                "_nodeId": "n_9_5e7865c7"
+              },
+              {
+                "text": "{{customer_address}}",
+                "color": "#334155",
+                "_nodeId": "n_a_9a5af784"
+              },
+              {
+                "text": "(M): {{customer_contact}}",
+                "_nodeId": "n_b_7b068fca"
+              },
+              {
+                "text": "UNIT DETAILS",
+                "style": "sectionHead",
+                "margin": [
+                  0,
+                  6,
+                  0,
+                  2
+                ],
+                "_nodeId": "n_c_a8184ee0"
+              },
+              {
+                "text": "Project : {{project_name}}",
+                "_nodeId": "n_d_5914862a"
+              },
+              {
+                "text": "Unit No.: {{unit_name}}",
+                "_nodeId": "n_e_1c5bf4ed"
+              },
+              {
+                "text": "Floor: {{unit_floor}}  |  Block: {{unit_wing}}",
+                "_nodeId": "n_f_e4f106ed"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_7_216f9f56"
+          },
+          {
+            "stack": [
+              {
+                "text": "COMPANY DETAILS",
+                "style": "sectionHead",
+                "_nodeId": "n_h_57dd5471"
+              },
+              {
+                "text": "ROYAL BUILDCON",
+                "bold": true,
+                "_nodeId": "n_i_417ca509"
+              },
+              {
+                "text": "Plot-60, Sector-11, Cbd Belapur, Navi Mumbai, Maharashtra 400614",
+                "color": "#334155",
+                "_nodeId": "n_j_ebbdc26a"
+              },
+              {
+                "text": "Tel: 7977174537 / 8080200802",
+                "_nodeId": "n_k_55996c70"
+              },
+              {
+                "text": "Email: vinit@hitechinfragroup.com / hitech270918@gmail.com",
+                "_nodeId": "n_l_ca80918c"
+              },
+              {
+                "text": "State: Maharashtra  |  State Code: 27",
+                "_nodeId": "n_m_e1fb7419"
+              },
+              {
+                "text": "GSTIN: 27ABAFR3966R1ZD",
+                "bold": true,
+                "_nodeId": "n_n_3721d834"
+              }
+            ],
+            "width": 240,
+            "_nodeId": "n_g_f6a2f233"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_6_565c6da9"
+      },
+      {
+        "text": "Received with thanks from a sum of Rs. {{amount_paid}} /- ( {{amount_in_words}} )",
+        "bold": true,
+        "fontSize": 9.5,
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_o_a27f6689"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            20,
+            45,
+            55,
+            60,
+            "*",
+            55,
+            45,
+            45,
+            55
+          ],
+          "body": [
+            [
+              {
+                "text": "S.No",
+                "style": "tableHeader",
+                "_nodeId": "n_q_aa00559d"
+              },
+              {
+                "text": "Mode",
+                "style": "tableHeader",
+                "_nodeId": "n_r_9e0c8174"
+              },
+              {
+                "text": "Inst. Date",
+                "style": "tableHeader",
+                "_nodeId": "n_s_ca3feb0b"
+              },
+              {
+                "text": "Inst. No",
+                "style": "tableHeader",
+                "_nodeId": "n_t_b50ab14e"
+              },
+              {
+                "text": "Bank",
+                "style": "tableHeader",
+                "_nodeId": "n_u_d418b9f7"
+              },
+              {
+                "text": "Amount",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_v_f40a48ef"
+              },
+              {
+                "text": "CGST",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_w_e232267f"
+              },
+              {
+                "text": "SGST",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_x_2c154bc2"
+              },
+              {
+                "text": "Total Amount",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_y_ff645b4b"
+              }
+            ],
+            [
+              {
+                "text": "1",
+                "style": "tableCell",
+                "_nodeId": "n_z_1d22d695"
+              },
+              {
+                "text": "{{payment_mode}}",
+                "style": "tableCell",
+                "_nodeId": "n_10_802fcd95"
+              },
+              {
+                "text": "{{cheque_date}}",
+                "style": "tableCell",
+                "_nodeId": "n_11_6b0d797d"
+              },
+              {
+                "text": "{{cheque_number}}",
+                "style": "tableCell",
+                "_nodeId": "n_12_1b637cc6"
+              },
+              {
+                "text": "{{bank_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_13_e68f6710"
+              },
+              {
+                "text": "₹{{amount_without_tax}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_14_f5afa15f"
+              },
+              {
+                "text": "₹{{cgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_15_915a5b04"
+              },
+              {
+                "text": "₹{{sgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_16_b845db0c"
+              },
+              {
+                "text": "₹{{amount_for_paid}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_17_0bb8e77c"
+              }
+            ],
+            [
+              {
+                "text": "Total",
+                "style": "tableCellBold",
+                "colSpan": 5,
+                "_nodeId": "n_18_597f07bf"
+              },
+              {
+                "_nodeId": "n_19_5ad6d6b4"
+              },
+              {
+                "_nodeId": "n_1a_d2db7165"
+              },
+              {
+                "_nodeId": "n_1b_7579f308"
+              },
+              {
+                "_nodeId": "n_1c_4f137359"
+              },
+              {
+                "text": "₹{{amount_without_tax}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_1d_76721f5a"
+              },
+              {
+                "text": "₹{{cgst}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_1e_7c1b122f"
+              },
+              {
+                "text": "₹{{sgst}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_1f_1c6f86b6"
+              },
+              {
+                "text": "₹{{amount_for_paid}}",
+                "style": "tableCellBold",
+                "alignment": "right",
+                "_nodeId": "n_1g_3ebca794"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_p_b1db2ebe"
+      },
+      {
+        "text": "Total Amount Received: ₹{{amount_paid}}",
+        "bold": true,
+        "fontSize": 11,
+        "color": "#0369a1",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_1h_3157e1c4"
+      },
+      {
+        "stack": [
+          {
+            "text": "Terms & Conditions.",
+            "bold": true,
+            "fontSize": 8.5,
+            "_nodeId": "n_1j_ad2edaab"
+          },
+          {
+            "text": "1. This receipt is non transferable.",
+            "style": "noteText",
+            "_nodeId": "n_1k_c2d55df3"
+          },
+          {
+            "text": "2. This receipt is neither a dcoument of title nor a document giving any other right in the respect of immovable property and thus entering into a transaction of subsequent sale/ purchase etc. based on this receipt would be so at his/ her own risk.",
+            "style": "noteText",
+            "_nodeId": "n_1l_1810e4b5"
+          },
+          {
+            "text": "3. The amount mentioned in this receipt may be liable to be forfeited, in accordance with the terms and conditions of the booking if all payments are not mode on time or the other breach by the applicant(s).",
+            "style": "noteText",
+            "_nodeId": "n_1m_5bf18d37"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_1i_cc42878d"
+      },
+      {
+        "columns": [
+          {
+            "text": "This is an auto- generated payment receipt and therefore does not require any signature.",
+            "fontSize": 8,
+            "italics": true,
+            "color": "#94a3b8",
+            "margin": [
+              0,
+              18,
+              0,
+              0
+            ],
+            "_nodeId": "n_1o_e510f751"
+          },
+          {
+            "stack": [
+              {
+                "text": "Authorized Signatory",
+                "style": "signatory",
+                "_nodeId": "n_1q_6dbd90a1"
+              }
+            ],
+            "alignment": "right",
+            "width": 150,
+            "_nodeId": "n_1p_b281c259"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_1n_a7485b11"
+      },
+      {
+        "text": "SITE ADDRESS: Plot-04, Sector-5, Pushpaknagar, Dapoli, Navi Mumbai, Maharastra",
+        "fontSize": 8,
+        "color": "#64748b",
+        "alignment": "center",
+        "_nodeId": "n_1r_b929840c"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "defaultStyle": {
+      "fontSize": 9.5,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.25
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "RB/REC/2026/184",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_4_2addd38d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "current_date",
+        "label": "Receipt Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_5_98c87e90",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Rohan Deshmukh",
+        "required": true,
+        "group": "Customer Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_9_5e7865c7",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_address",
+        "label": "Customer Address",
+        "type": "textarea",
+        "defaultValue": "Flat 101, Shanti Niketan, Panvel 410206",
+        "required": true,
+        "group": "Customer Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_a_9a5af784",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_contact",
+        "label": "Customer Mobile",
+        "type": "phone",
+        "defaultValue": "9833445566",
+        "required": false,
+        "group": "Contact Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_b_7b068fca",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "Avencia",
+        "required": true,
+        "group": "Project Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_d_5914862a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit No.",
+        "type": "text",
+        "defaultValue": "A-701",
+        "required": true,
+        "group": "Property Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_e_1c5bf4ed",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "7th",
+        "required": true,
+        "group": "Property Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_f_e4f106ed",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Block / Wing",
+        "type": "text",
+        "defaultValue": "A",
+        "required": false,
+        "group": "Property Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_f_e4f106ed",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "type": "currency",
+        "defaultValue": 650000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_o_a27f6689",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1h_3157e1c4",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Six Lakh Fifty Thousand Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_o_a27f6689",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_mode",
+        "label": "Instrument Mode",
+        "type": "text",
+        "defaultValue": "NEFT",
+        "required": true,
+        "group": "Bank Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_10_802fcd95",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Instrument Date",
+        "type": "date",
+        "defaultValue": "2026-11-03",
+        "required": true,
+        "group": "Bank Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_11_6b0d797d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Instrument No.",
+        "type": "text",
+        "defaultValue": "INDBN20261103001",
+        "required": true,
+        "group": "Bank Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_12_1b637cc6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Bank Name",
+        "type": "text",
+        "defaultValue": "IndusInd Bank, Belapur",
+        "required": true,
+        "group": "Bank Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_13_e68f6710",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_without_tax",
+        "label": "Amount (Basic)",
+        "type": "currency",
+        "defaultValue": 619048,
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_14_f5afa15f",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1d_76721f5a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cgst",
+        "label": "CGST",
+        "type": "currency",
+        "defaultValue": 15476,
+        "required": true,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_15_915a5b04",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1e_7c1b122f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sgst",
+        "label": "SGST",
+        "type": "currency",
+        "defaultValue": 15476,
+        "required": true,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_16_b845db0c",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1f_1c6f86b6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_for_paid",
+        "label": "Total Amount",
+        "type": "currency",
+        "defaultValue": 650000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 18,
+        "bindings": [
+          {
+            "nodeId": "n_17_0bb8e77c",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_1g_3ebca794",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

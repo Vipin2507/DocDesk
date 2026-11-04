@@ -1,0 +1,586 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "SANKALP BUILDERS",
+        "style": "companyTitle",
+        "_nodeId": "n_1_13d41e09"
+      },
+      {
+        "text": "Corp. Off.. E-123-124, Behind IOC Petrol Pump, Sahakar Marg, Jaipur -302015 (Raj.)\nPhone: +91-141-247-0007/2470008",
+        "style": "subHeader",
+        "margin": [
+          0,
+          2,
+          0,
+          8
+        ],
+        "_nodeId": "n_2_bf8b7079"
+      },
+      {
+        "columns": [
+          {
+            "text": "GSTIN: {{sub_company_gst}}",
+            "bold": true,
+            "fontSize": 9,
+            "_nodeId": "n_4_dfde1034"
+          },
+          {
+            "text": "RECEIPT",
+            "style": "receiptTitle",
+            "_nodeId": "n_5_aa4d3450"
+          },
+          {
+            "text": "Rera REG No.: {{rera}}",
+            "alignment": "right",
+            "bold": true,
+            "fontSize": 9,
+            "_nodeId": "n_6_cf9ccc2c"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_3_9b965608"
+      },
+      {
+        "canvas": [
+          {}
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          10
+        ],
+        "_nodeId": "n_7_d0841442"
+      },
+      {
+        "columns": [
+          {
+            "text": "Date: {{payment_date}}",
+            "bold": true,
+            "_nodeId": "n_9_5731fafa"
+          },
+          {
+            "text": "Receipt No.: {{receipt_number}}",
+            "alignment": "right",
+            "bold": true,
+            "_nodeId": "n_a_2c87bfc1"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_8_171f4a9c"
+      },
+      {
+        "text": "Received with the thanks from {{customer_name}}\na sum of {{amount_in_words}} vide {{payment_mode}}: {{cheque_number}} Dated: {{cheque_date}} Drawn on {{bank_name}} on account of {{remark}} in respect of provisional Unit No. {{unit_name}} in the project {{project_name}} {{site_address}}",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_b_d274fd49"
+      },
+      {
+        "text": "In accordance with the terms and conditions of booking. The break- up the amount received is as under:-",
+        "fontSize": 9,
+        "color": "#475569",
+        "margin": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "_nodeId": "n_c_1c4132f4"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            50,
+            "*",
+            120
+          ],
+          "body": [
+            [
+              {
+                "text": "Sr. No.",
+                "style": "tableHeader",
+                "alignment": "center",
+                "_nodeId": "n_e_f13f2d49"
+              },
+              {
+                "text": "Particulars",
+                "style": "tableHeader",
+                "_nodeId": "n_f_63f30e2e"
+              },
+              {
+                "text": "Amount(Rs.)",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_g_0cf5b09a"
+              }
+            ],
+            [
+              {
+                "text": "1.",
+                "style": "tableCell",
+                "alignment": "center",
+                "_nodeId": "n_h_1cce5c0e"
+              },
+              {
+                "text": "Basic Consideration",
+                "style": "tableCell",
+                "_nodeId": "n_i_ea66ab47"
+              },
+              {
+                "text": "₹{{amount_without_tax}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_j_92a59318"
+              }
+            ],
+            [
+              {
+                "text": "2.",
+                "style": "tableCell",
+                "alignment": "center",
+                "_nodeId": "n_k_20793696"
+              },
+              {
+                "text": "CGST",
+                "style": "tableCell",
+                "_nodeId": "n_l_1e1cf67a"
+              },
+              {
+                "text": "₹{{cgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_m_467efe25"
+              }
+            ],
+            [
+              {
+                "text": "3.",
+                "style": "tableCell",
+                "alignment": "center",
+                "_nodeId": "n_n_8bd16400"
+              },
+              {
+                "text": "SGST",
+                "style": "tableCell",
+                "_nodeId": "n_o_ce0391bc"
+              },
+              {
+                "text": "₹{{sgst}}",
+                "style": "tableCell",
+                "alignment": "right",
+                "_nodeId": "n_p_c42889d1"
+              }
+            ],
+            [
+              {
+                "text": "4.",
+                "style": "boldCell",
+                "alignment": "center",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_q_da250548"
+              },
+              {
+                "text": "Total Amount",
+                "style": "boldCell",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_r_fb360b52"
+              },
+              {
+                "text": "₹{{amount_for_paid}}",
+                "style": "boldCell",
+                "alignment": "right",
+                "fillColor": "#f8fafc",
+                "_nodeId": "n_s_0f6acb01"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_d_73ff1276"
+      },
+      {
+        "columns": [
+          {
+            "text": "Receipt of cheque shall be valid subject to realization.",
+            "fontSize": 8.5,
+            "italics": true,
+            "color": "#64748b",
+            "margin": [
+              0,
+              16,
+              0,
+              0
+            ],
+            "_nodeId": "n_u_639addda"
+          },
+          {
+            "stack": [
+              {
+                "text": "For M/ s Sankalp Builders",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  30
+                ],
+                "_nodeId": "n_w_20b2fcbb"
+              },
+              {
+                "text": "(Authorised Signatory)",
+                "style": "signatory",
+                "_nodeId": "n_x_006afd84"
+              }
+            ],
+            "alignment": "right",
+            "width": 170,
+            "_nodeId": "n_v_16cef2fd"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_t_7d246f2f"
+      },
+      {
+        "stack": [
+          {
+            "text": "Note:",
+            "bold": true,
+            "fontSize": 8.5,
+            "_nodeId": "n_z_333f3679"
+          },
+          {
+            "text": "1. This receipt is not transerable.",
+            "style": "noteText",
+            "_nodeId": "n_10_f7005a6d"
+          },
+          {
+            "text": "2. This receipt is neither a dcoument of title nor a document giving any other right in the respect of immovable property and thus entering into a transaction of subsequent sale/ purchase etc. based on this receipt would be so at his/ her own risk.",
+            "style": "noteText",
+            "_nodeId": "n_11_2a333ba2"
+          },
+          {
+            "text": "3. The amount mentioned in this receipt may be liable to be forfeited, in accordance with the terms and conditions of the booking if all payments are not mode on time or the other breach by the applicant(s).",
+            "style": "noteText",
+            "_nodeId": "n_12_29cd30ec"
+          }
+        ],
+        "_nodeId": "n_y_20a64e81"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 9.5,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "rera",
+        "label": "RERA REG No.",
+        "type": "text",
+        "defaultValue": "RAJ/P/2021/1542",
+        "required": true,
+        "group": "Project Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_6_cf9ccc2c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_gst",
+        "label": "GSTIN",
+        "type": "text",
+        "defaultValue": "08ACOFS3617H1ZT",
+        "required": true,
+        "group": "Company Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_4_dfde1034",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_9_5731fafa",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "SB/2026/0431",
+        "required": true,
+        "group": "Document Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_a_2c87bfc1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Sunil Agarwal",
+        "required": true,
+        "group": "Customer Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Six Lakh Thirty Thousand Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_mode",
+        "label": "Payment Mode",
+        "type": "text",
+        "defaultValue": "RTGS",
+        "required": true,
+        "group": "Bank Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Cheque / UTR No.",
+        "type": "text",
+        "defaultValue": "HDFCR52026110291",
+        "required": true,
+        "group": "Bank Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Instrument Date",
+        "type": "date",
+        "defaultValue": "2026-11-02",
+        "required": true,
+        "group": "Bank Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Drawn On (Bank)",
+        "type": "text",
+        "defaultValue": "HDFC Bank, Jaipur",
+        "required": true,
+        "group": "Bank Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "remark",
+        "label": "On Account Of",
+        "type": "text",
+        "defaultValue": "5th Floor Slab Milestone",
+        "required": false,
+        "group": "Document Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Provisional Unit No.",
+        "type": "text",
+        "defaultValue": "A-502",
+        "required": true,
+        "group": "Property Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_name",
+        "label": "Project Name",
+        "type": "text",
+        "defaultValue": "The Rise",
+        "required": true,
+        "group": "Project Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "site_address",
+        "label": "Project Site Address",
+        "type": "textarea",
+        "defaultValue": "Ajmer Road, Jaipur",
+        "required": true,
+        "group": "Project Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_b_d274fd49",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_without_tax",
+        "label": "Basic Consideration",
+        "type": "currency",
+        "defaultValue": 600000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_j_92a59318",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cgst",
+        "label": "CGST (2.5%)",
+        "type": "currency",
+        "defaultValue": 15000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_m_467efe25",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sgst",
+        "label": "SGST (2.5%)",
+        "type": "currency",
+        "defaultValue": 15000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_p_c42889d1",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_for_paid",
+        "label": "Total Amount Received",
+        "type": "currency",
+        "defaultValue": 630000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_s_0f6acb01",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

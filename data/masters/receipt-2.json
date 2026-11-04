@@ -1,0 +1,498 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "{{project_by}}",
+                "bold": true,
+                "fontSize": 13,
+                "color": "#0f172a",
+                "_nodeId": "n_3_257a50c3"
+              },
+              {
+                "text": "Contact : {{sub_company_landline}}",
+                "fontSize": 9,
+                "color": "#475569",
+                "_nodeId": "n_4_f68b1c10"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_2_9ec39acb"
+          },
+          {
+            "text": "Rera No.: {{rera}}",
+            "alignment": "right",
+            "bold": true,
+            "fontSize": 9.5,
+            "width": 180,
+            "_nodeId": "n_5_d861fa7d"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_1_04a2dd7d"
+      },
+      {
+        "canvas": [
+          {}
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_6_c1037a0b"
+      },
+      {
+        "columns": [
+          {
+            "text": "Date: {{payment_date}}",
+            "bold": true,
+            "_nodeId": "n_8_ce3179e9"
+          },
+          {
+            "text": "RECEIPT",
+            "style": "receiptTitle",
+            "_nodeId": "n_9_61792e01"
+          },
+          {
+            "text": "Receipt No.: {{receipt_number}}",
+            "alignment": "right",
+            "bold": true,
+            "_nodeId": "n_a_30618a64"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_7_9b7ec3be"
+      },
+      {
+        "stack": [
+          {
+            "text": "Received with thanks from {{customer_name}}",
+            "bold": true,
+            "fontSize": 11,
+            "_nodeId": "n_c_f716567d"
+          },
+          {
+            "text": "Basic: ₹{{amount_without_tax}} {{tds_payment_type}} + GST: ₹{{tax_amount}} = Total: ₹{{amount_for_paid}}",
+            "color": "#334155",
+            "margin": [
+              0,
+              4,
+              0,
+              4
+            ],
+            "_nodeId": "n_d_02bb4d59"
+          },
+          {
+            "text": "a sum of {{amount_in_words}} against Unit No.: {{unit_wing}}- {{unit_name}} On {{unit_floor}} Floor",
+            "color": "#334155",
+            "_nodeId": "n_e_e6dd9fdb"
+          },
+          {
+            "text": "₹{{amount_for_paid}}",
+            "style": "amountBanner",
+            "_nodeId": "n_f_0dd863ed"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_b_261322ae"
+      },
+      {
+        "stack": [
+          {
+            "text": "Cheque/ D.D. No./ RTGS : {{cheque_number}} Dated : {{cheque_date}}",
+            "bold": true,
+            "_nodeId": "n_h_30e8ac6a"
+          },
+          {
+            "text": "Bank Name: {{bank_name}}",
+            "_nodeId": "n_i_aba37e73"
+          },
+          {
+            "text": "Remark: {{remark}}",
+            "italics": true,
+            "color": "#475569",
+            "_nodeId": "n_j_04efed50"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_g_99e8cbd6"
+      },
+      {
+        "columns": [
+          {
+            "text": "Cheques are subject to realisation",
+            "fontSize": 8.5,
+            "italics": true,
+            "color": "#64748b",
+            "margin": [
+              0,
+              40,
+              0,
+              0
+            ],
+            "_nodeId": "n_l_e0df58fe"
+          },
+          {
+            "stack": [
+              {
+                "text": "For {{project_by}}",
+                "bold": true,
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  36
+                ],
+                "_nodeId": "n_n_8440349c"
+              },
+              {
+                "text": "Authorised Signatory",
+                "style": "signatory",
+                "_nodeId": "n_o_febc502a"
+              }
+            ],
+            "alignment": "right",
+            "width": 180,
+            "_nodeId": "n_m_41d9c26f"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ],
+        "_nodeId": "n_k_7e69f54b"
+      },
+      {
+        "text": "This is an auto- generated Payment Receipt.",
+        "alignment": "center",
+        "fontSize": 8.5,
+        "italics": true,
+        "color": "#94a3b8",
+        "_nodeId": "n_p_d8e27377"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 10,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "rera",
+        "label": "RERA No.",
+        "type": "text",
+        "defaultValue": "P51800001234",
+        "required": true,
+        "group": "Project Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_5_d861fa7d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "project_by",
+        "label": "Developer / Company Name",
+        "type": "text",
+        "defaultValue": "Dimple Realtors Pvt. Ltd.",
+        "required": true,
+        "group": "Company Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_3_257a50c3",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_n_8440349c",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_landline",
+        "label": "Contact / Landline",
+        "type": "phone",
+        "defaultValue": "+91-22-28901234",
+        "required": false,
+        "group": "Contact Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_4_f68b1c10",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_8_ce3179e9",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "DR/REC/2026/104",
+        "required": true,
+        "group": "Document Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_a_30618a64",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Rajesh Sharma",
+        "required": true,
+        "group": "Customer Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_c_f716567d",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_without_tax",
+        "label": "Basic Amount",
+        "type": "currency",
+        "defaultValue": 693000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_d_02bb4d59",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tds_payment_type",
+        "label": "TDS Note / Breakup",
+        "type": "text",
+        "defaultValue": "(Net of TDS)",
+        "required": false,
+        "group": "Financial Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_d_02bb4d59",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "tax_amount",
+        "label": "GST Amount",
+        "type": "currency",
+        "defaultValue": 35000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_d_02bb4d59",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_for_paid",
+        "label": "Total Amount Received",
+        "type": "currency",
+        "defaultValue": 728000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_d_02bb4d59",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_f_0dd863ed",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Seven Lakh Twenty Eight Thousand Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_e_e6dd9fdb",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Wing",
+        "type": "text",
+        "defaultValue": "B",
+        "required": false,
+        "group": "Property Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_e_e6dd9fdb",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit No.",
+        "type": "text",
+        "defaultValue": "804",
+        "required": true,
+        "group": "Property Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_e_e6dd9fdb",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "8th",
+        "required": true,
+        "group": "Property Details",
+        "order": 13,
+        "bindings": [
+          {
+            "nodeId": "n_e_e6dd9fdb",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Cheque / D.D. / RTGS No.",
+        "type": "text",
+        "defaultValue": "SBI092837192",
+        "required": true,
+        "group": "Bank Details",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_h_30e8ac6a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Dated",
+        "type": "date",
+        "defaultValue": "2026-11-02",
+        "required": true,
+        "group": "Bank Details",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_h_30e8ac6a",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Bank Name",
+        "type": "text",
+        "defaultValue": "State Bank of India, Borivali",
+        "required": true,
+        "group": "Bank Details",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_i_aba37e73",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "remark",
+        "label": "Remark",
+        "type": "text",
+        "defaultValue": "Part Payment against Flat 804",
+        "required": false,
+        "group": "Document Details",
+        "order": 17,
+        "bindings": [
+          {
+            "nodeId": "n_j_04efed50",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}

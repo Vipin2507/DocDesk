@@ -1,0 +1,450 @@
+{
+  "documentDefinition": {
+    "content": [
+      {
+        "text": "LMP GROUP RITA PALACE",
+        "style": "companyTitle",
+        "_nodeId": "n_1_726e7a65"
+      },
+      {
+        "text": "RECEIPT",
+        "style": "receiptTitle",
+        "_nodeId": "n_2_0a9a67c1"
+      },
+      {
+        "columns": [
+          {
+            "stack": [
+              {
+                "text": "Flat No: {{unit_name}} on Floor: {{unit_floor}}",
+                "bold": true,
+                "_nodeId": "n_5_16e3e357"
+              },
+              {
+                "text": "in Building: RITA PALACE Wing: {{unit_wing}}",
+                "_nodeId": "n_6_6afe7629"
+              },
+              {
+                "text": "Project on {{site_address}}",
+                "color": "#334155",
+                "_nodeId": "n_7_ba774bdb"
+              }
+            ],
+            "width": "*",
+            "_nodeId": "n_4_af41054b"
+          },
+          {
+            "stack": [
+              {
+                "text": "Receipt No. : {{receipt_number}}",
+                "bold": true,
+                "_nodeId": "n_9_006356b9"
+              },
+              {
+                "text": "Date : {{payment_date}}",
+                "_nodeId": "n_a_d6b1f9f6"
+              }
+            ],
+            "width": 160,
+            "alignment": "right",
+            "_nodeId": "n_8_49e75f3b"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_3_92ab64ab"
+      },
+      {
+        "stack": [
+          {
+            "text": "Received with thanks from : {{customer_name}} {{remark}} ₹{{amount_paid}}",
+            "bold": true,
+            "fontSize": 10.5,
+            "_nodeId": "n_c_9916fe7f"
+          },
+          {
+            "text": "the sum of : {{amount_in_words}}",
+            "italics": true,
+            "color": "#334155",
+            "margin": [
+              0,
+              4,
+              0,
+              4
+            ],
+            "_nodeId": "n_d_772f91e7"
+          },
+          {
+            "text": "by as under as per details",
+            "color": "#64748b",
+            "fontSize": 8.5,
+            "_nodeId": "n_e_88c5966a"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          12
+        ],
+        "_nodeId": "n_b_d306fd6b"
+      },
+      {
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            100,
+            120,
+            90,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Amount",
+                "style": "tableHeader",
+                "alignment": "right",
+                "_nodeId": "n_g_404395e8"
+              },
+              {
+                "text": "Chq/ RTGS No.",
+                "style": "tableHeader",
+                "_nodeId": "n_h_76d1be58"
+              },
+              {
+                "text": "Date",
+                "style": "tableHeader",
+                "_nodeId": "n_i_78efcaab"
+              },
+              {
+                "text": "Name of Bank / Branch",
+                "style": "tableHeader",
+                "_nodeId": "n_j_05afaaa1"
+              }
+            ],
+            [
+              {
+                "text": "₹{{amount_paid}}",
+                "style": "tableCell",
+                "bold": true,
+                "alignment": "right",
+                "_nodeId": "n_k_b328dad7"
+              },
+              {
+                "text": "{{cheque_number}}",
+                "style": "tableCell",
+                "_nodeId": "n_l_f1ec7c94"
+              },
+              {
+                "text": "{{cheque_date}}",
+                "style": "tableCell",
+                "_nodeId": "n_m_c61877f6"
+              },
+              {
+                "text": "{{bank_name}}",
+                "style": "tableCell",
+                "_nodeId": "n_n_81a33311"
+              }
+            ]
+          ]
+        },
+        "layout": "lightHorizontalLines",
+        "margin": [
+          0,
+          0,
+          0,
+          14
+        ],
+        "_nodeId": "n_f_df4a17ea"
+      },
+      {
+        "text": "Subject to Realisation of Cheque",
+        "fontSize": 8.5,
+        "italics": true,
+        "color": "#64748b",
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_o_72a072fb"
+      },
+      {
+        "columns": [
+          {
+            "text": "",
+            "_nodeId": "n_q_05792d09"
+          },
+          {
+            "stack": [
+              {
+                "text": "For LMP GROUP RITA PALACE,",
+                "bold": true,
+                "_nodeId": "n_s_f71eedd4"
+              },
+              {
+                "text": "Account department",
+                "margin": [
+                  0,
+                  0,
+                  0,
+                  30
+                ],
+                "_nodeId": "n_t_3a819abd"
+              }
+            ],
+            "alignment": "right",
+            "width": 190,
+            "_nodeId": "n_r_35fda679"
+          }
+        ],
+        "margin": [
+          0,
+          0,
+          0,
+          16
+        ],
+        "_nodeId": "n_p_1cd33553"
+      },
+      {
+        "text": "This is auto generated receipt it doesn't require stamp",
+        "style": "footerText",
+        "italics": true,
+        "margin": [
+          0,
+          0,
+          0,
+          8
+        ],
+        "_nodeId": "n_u_c750f17b"
+      },
+      {
+        "text": "Off: Kahan Bhavan, L.T.road, Behind Diamond Cinema, next to Purohit Hospital , Borivali west Mumbai-92\n98200 49360 | Email: lmpgroup.rpchsl@gmail.com",
+        "style": "footerText",
+        "_nodeId": "n_v_46b13865"
+      }
+    ],
+    "pageSize": "A4",
+    "pageMargins": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "defaultStyle": {
+      "fontSize": 9.5,
+      "font": "Roboto",
+      "color": "#1e293b",
+      "lineHeight": 1.3
+    },
+    "styles": {}
+  },
+  "variableSchema": {
+    "variables": [
+      {
+        "id": "receipt_number",
+        "label": "Receipt No.",
+        "type": "text",
+        "defaultValue": "LMP/REC/2026/088",
+        "required": true,
+        "group": "Document Details",
+        "order": 0,
+        "bindings": [
+          {
+            "nodeId": "n_9_006356b9",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "payment_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-04",
+        "required": true,
+        "group": "Document Details",
+        "order": 1,
+        "bindings": [
+          {
+            "nodeId": "n_a_d6b1f9f6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Flat No.",
+        "type": "text",
+        "defaultValue": "503",
+        "required": true,
+        "group": "Property Details",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_5_16e3e357",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_floor",
+        "label": "Floor",
+        "type": "text",
+        "defaultValue": "5th",
+        "required": true,
+        "group": "Property Details",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_5_16e3e357",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Wing",
+        "type": "text",
+        "defaultValue": "A",
+        "required": true,
+        "group": "Property Details",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_6_6afe7629",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "site_address",
+        "label": "Project Site Address",
+        "type": "textarea",
+        "defaultValue": "Rita Palace, Harsha Park, Chandravarkar Road, Borivali West, Mumbai - 400092",
+        "required": true,
+        "group": "Project Details",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_7_ba774bdb",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "Ketan Shah",
+        "required": true,
+        "group": "Customer Details",
+        "order": 6,
+        "bindings": [
+          {
+            "nodeId": "n_c_9916fe7f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "remark",
+        "label": "Remark",
+        "type": "text",
+        "defaultValue": "against Brickwork & Plaster milestone",
+        "required": false,
+        "group": "Document Details",
+        "order": 7,
+        "bindings": [
+          {
+            "nodeId": "n_c_9916fe7f",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "type": "currency",
+        "defaultValue": 1188000,
+        "required": true,
+        "group": "Financial Details",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_c_9916fe7f",
+            "field": "text"
+          },
+          {
+            "nodeId": "n_k_b328dad7",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount in Words",
+        "type": "text",
+        "defaultValue": "Rupees Eleven Lakh Eighty Eight Thousand Only",
+        "required": true,
+        "group": "Financial Details",
+        "order": 9,
+        "bindings": [
+          {
+            "nodeId": "n_d_772f91e7",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_number",
+        "label": "Chq / RTGS No.",
+        "type": "text",
+        "defaultValue": "BARBN2026110298",
+        "required": true,
+        "group": "Bank Details",
+        "order": 10,
+        "bindings": [
+          {
+            "nodeId": "n_l_f1ec7c94",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "cheque_date",
+        "label": "Date",
+        "type": "date",
+        "defaultValue": "2026-11-02",
+        "required": true,
+        "group": "Bank Details",
+        "order": 11,
+        "bindings": [
+          {
+            "nodeId": "n_m_c61877f6",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "bank_name",
+        "label": "Bank / Branch",
+        "type": "text",
+        "defaultValue": "Bank of Baroda, Borivali West",
+        "required": true,
+        "group": "Bank Details",
+        "order": 12,
+        "bindings": [
+          {
+            "nodeId": "n_n_81a33311",
+            "field": "text"
+          }
+        ]
+      }
+    ]
+  }
+}
