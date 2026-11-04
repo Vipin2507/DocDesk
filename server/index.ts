@@ -19,19 +19,12 @@ ensureDirs();
 cleanupTemporaryFiles();
 const db = openDatabase();
 
-const email = process.env.ADMIN_EMAIL?.trim();
-const password = process.env.ADMIN_PASSWORD || "";
+const email = process.env.ADMIN_EMAIL?.trim() || "admin@buildesk.local";
+const password = process.env.ADMIN_PASSWORD || "Buildesk123!";
 if (countUsers(db) === 0) {
   if (email && password.length >= 8) {
     createUser(db, { email, name: "Administrator", password, role: "admin" });
     console.log(JSON.stringify({ level: "info", message: "Created the initial administrator.", email }));
-  } else {
-    console.log(
-      JSON.stringify({
-        level: "info",
-        message: "No users exist. Set ADMIN_EMAIL and ADMIN_PASSWORD (8+ characters) and restart to create an administrator.",
-      }),
-    );
   }
 }
 

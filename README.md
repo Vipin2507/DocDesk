@@ -61,14 +61,16 @@ AI keys are read only on the server.
 
 This project is pre-configured and ready for one-click deployment on [Render](https://render.com).
 
-### Option 1: Automatic Blueprint (`render.yaml`)
+### Option 1: Automatic Blueprint (`render.yaml`) - 100% Free
 1. Push your repository to GitHub or GitLab.
 2. In the Render Dashboard, click **New +** > **Blueprint**.
 3. Connect your repository. Render will automatically read `render.yaml` and configure:
+   - **Plan**: `Free` ($0/mo, no payment or credit card required)
    - **Build Command**: `npm install && npm run build`
    - **Start Command**: `npm start`
    - **Health Check**: `/healthz`
-   - **Persistent Disk**: 1 GB mounted at `/var/data` (keeps SQLite database, uploaded files, and generated PDFs across restarts).
+   - **Default Admin**: `admin@buildesk.local` / `Buildesk123!`
+4. Click **Apply**. Render will deploy your free service.
 
 ### Option 2: Manual Web Service (Native Node)
 1. In Render Dashboard, click **New +** > **Web Service**.

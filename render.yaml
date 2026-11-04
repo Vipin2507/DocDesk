@@ -2,7 +2,7 @@ services:
   - type: web
     name: document-builder
     runtime: node
-    plan: starter # Change to 'free' if deploying without persistent disk (ephemeral SQLite)
+    plan: free # 100% Free tier (No credit card or payment required)
     region: oregon
     buildCommand: npm install && npm run build
     startCommand: npm start
@@ -16,14 +16,8 @@ services:
       - key: SESSION_SECRET
         generateValue: true
       - key: DATA_DIR
-        value: /var/data # Use ./data if running without persistent disk
+        value: ./data
       - key: ADMIN_EMAIL
         value: admin@buildesk.local
       - key: ADMIN_PASSWORD
-        generateValue: true
-    # Persistent disk keeps SQLite database, uploads, and generated PDFs across deploys
-    disk:
-      name: document-builder-data
-      mountPath: /var/data
-      sizeGB: 1
-
+        value: Buildesk123!
