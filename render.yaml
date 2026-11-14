@@ -2,7 +2,7 @@ services:
   - type: web
     name: document-builder
     runtime: node
-    plan: free # 100% Free tier (No credit card or payment required)
+    plan: free
     region: oregon
     buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
@@ -11,13 +11,15 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
+      - key: COOKIE_SECURE
+        value: "true"
       - key: SESSION_SECRET
         generateValue: true
       - key: DATA_DIR
         value: ./data
+      - key: DATABASE_URL
+        value: file:./data/document-studio.db
       - key: ADMIN_EMAIL
-        value: admin@buildesk.local
+        sync: false
       - key: ADMIN_PASSWORD
-        value: Buildesk123!
+        sync: false

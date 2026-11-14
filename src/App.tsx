@@ -14,8 +14,10 @@ function Gate() {
   const me = useQuery({ queryKey: ["me"], queryFn: client.me });
   if (me.isLoading) {
     return (
-      <div className="grid h-full place-items-center text-sm text-muted">
-        Loading Document Studio…
+      <div className="grid h-full place-items-center bg-canvas">
+        <div className="rounded-2xl border border-line bg-white px-6 py-5 text-sm text-muted shadow-sm">
+          Loading Document Studio…
+        </div>
       </div>
     );
   }

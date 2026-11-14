@@ -16,6 +16,19 @@ Open the Vite URL, usually http://localhost:5173. The API listens on port 8787 a
 
 Set `ADMIN_EMAIL` and `ADMIN_PASSWORD` (at least 8 characters) before the first start. The account is created only when the user table is empty.
 
+### Production / Render
+
+`npm start` does **not** require a `.env` file. Set environment variables in the host dashboard instead. Render injects `PORT` automatically.
+
+Required on first boot:
+
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD` (8+ characters)
+- `SESSION_SECRET`
+- `COOKIE_SECURE=true` when the site is served over HTTPS
+
+Optional: `DATA_DIR`, `DATABASE_URL`, AI keys. Free Render disks are ephemeral, so uploaded files and SQLite data reset when the instance is replaced.
+
 ## Scripts
 
 | Command | Purpose |

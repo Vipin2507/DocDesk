@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FileJson, FileText, ShieldCheck, Sparkles, Upload, Zap } from "lucide-react";
 import { ApiError, uploadFile } from "../lib/api";
-import { Button } from "../components/ui";
+import { Button, Card, PageHeader } from "../components/ui";
 
 interface Uploaded {
   uploadId: string;
@@ -20,6 +20,7 @@ export function UploadPage() {
   const [error, setError] = useState("");
   const [uploaded, setUploaded] = useState<Uploaded | null>(null);
   const [busy, setBusy] = useState(false);
+  const [dragging, setDragging] = useState(false);
 
   async function receive(file: File) {
     setError("");
@@ -62,25 +63,36 @@ export function UploadPage() {
   }
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8 md:px-6">
-      <h1 className="text-2xl font-semibold">Upload documents</h1>
-      <p className="mt-1 text-sm text-muted">Drop a PDF to reconstruct it, or a PDFMake JSON file to edit it directly.</p>
+    <div className="page-shell max-w-5xl">
+      <PageHeader
+        title="Upload documents"
+        description="Drop a PDF to keep its exact layout, or import a PDFMake JSON file to edit it directly."
+      />
 
       <label
-        className="mt-6 flex cursor-pointer flex-col items-center rounded-2xl border-2 border-dashed border-brand/40 bg-sky-50/60 px-6 py-14 text-center"
-        onDragOver={(event) => event.preventDefault()}
+        className={`flex cursor-pointer flex-col items-center rounded-[1.5rem] border-2 border-dashed px-6 py-16 text-center transition ${
+          dragging ? "border-brand bg-brand-soft/80" : "border-brand/35 bg-gradient-to-b from-sky-50/90 to-white"
+        }`}
+        onDragOver={(event) => {
+          event.preventDefault();
+          setDragging(true);
+        }}
+        onDragLeave={() => setDragging(false)}
         onDrop={(event) => {
           event.preventDefault();
+          setDragging(false);
           const file = event.dataTransfer.files?.[0];
           if (file) void receive(file);
         }}
       >
-        <span className="grid h-14 w-14 place-items-center rounded-full bg-brand text-white">
-          <Upload className="h-6 w-6" />
+        <span className="grid h-16 w-16 place-items-center rounded-full bg-brand text-white shadow-lg shadow-brand/30">
+          <Upload className="h-7 w-7" />
         </span>
-        <span className="mt-4 text-lg font-semibold">Drop files here</span>
-        <span className="mt-1 text-sm text-muted">PDF or PDFMake JSON, up to 20 MB and 50 pages.</span>
-        <span className="mt-2 text-sm text-brand">Or click to select</span>
+        <span className="mt-5 text-xl font-semibold tracking-tight">Drop files here</span>
+        <span className="mt-2 max-w-md text-sm leading-relaxed text-muted">
+          Get summaries, extracted fields, and exact citations against the original layout. PDF or PDFMake JSON, up to 20 MB and 50 pages.
+        </span>
+        <span className="mt-3 text-sm font-medium text-brand">Or click to select</span>
         <input
           className="sr-only"
           type="file"
@@ -91,19 +103,20 @@ export function UploadPage() {
           }}
         />
       </label>
+
       {progress !== null ? (
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-200">
-          <div className="h-full bg-brand" style={{ width: `${progress}%` }} />
+        <div className="mt-4 h-2.5 overflow-hidden rounded-full bg-slate-200">
+          <div className="h-full rounded-full bg-brand transition-all" style={{ width: `${progress}%` }} />
         </div>
       ) : null}
-      {error ? <p className="mt-4 rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p> : null}
+      {error ? <p className="mt-4 rounded-xl bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p> : null}
 
       {uploaded ? (
-        <section className="mt-5 rounded-2xl border border-line bg-white p-5 shadow-sm">
+        <Card className="mt-5 p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <div className="font-medium">{uploaded.filename}</div>
-              <div className="text-sm text-muted">
+              <div className="font-semibold tracking-tight">{uploaded.filename}</div>
+              <div className="mt-1 text-sm text-muted">
                 {(uploaded.size / 1024).toFixed(0)} KB
                 {uploaded.pageCount ? ` · ${uploaded.pageCount} page${uploaded.pageCount === 1 ? "" : "s"}` : ""}
                 {uploaded.classification ? ` · ${uploaded.classification}` : ""}
@@ -112,60 +125,73 @@ export function UploadPage() {
           </div>
           {uploaded.kind === "pdf" ? (
             <div className="mt-4 grid gap-3 md:grid-cols-3">
-              <article className="rounded-xl border border-brand/30 bg-sky-50/40 p-4">
-                <h2 className="font-medium">Exact PDF layout</h2>
-                <p className="mt-1 text-sm text-muted">Keep the original page look and overlay editable fields on $merge tokens from the PDF text layer.</p>
-                <Button className="mt-3" disabled={busy} onClick={() => convert("exact")}>
+              <article className="rounded-2xl border border-brand/30 bg-brand-soft/50 p-4">
+                <h2 className="font-semibold">Exact PDF layout</h2>
+                <p className="mt-1 text-sm leading-relaxed text-muted">Keep the original page look and overlay editable fields on $merge tokens.</p>
+                <Button className="mt-4" disabled={busy} onClick={() => convert("exact")}>
                   <ShieldCheck className="h-4 w-4" />
                   Use exact layout
                 </Button>
               </article>
-              <article className="rounded-xl border border-line p-4">
-                <h2 className="font-medium">Standard extraction</h2>
-                <p className="mt-1 text-sm text-muted">Read text, positions, and page size. Layout is approximate and should be compared with the original.</p>
-                <Button className="mt-3" tone="ghost" disabled={busy} onClick={() => convert("standard")}>Extract layout</Button>
+              <article className="rounded-2xl border border-line p-4">
+                <h2 className="font-semibold">Standard extraction</h2>
+                <p className="mt-1 text-sm leading-relaxed text-muted">Read text, positions, and page size. Layout is approximate.</p>
+                <Button className="mt-4" tone="ghost" disabled={busy} onClick={() => convert("standard")}>
+                  Extract layout
+                </Button>
               </article>
-              <article className="rounded-xl border border-line p-4">
-                <h2 className="font-medium">AI reconstruction</h2>
-                <p className="mt-1 text-sm text-muted">Ask the configured model to rebuild a PDFMake definition. If no provider is set, this step stops with a clear message.</p>
-                <Button tone="soft" className="mt-3" disabled={busy} onClick={() => convert("ai")}>Reconstruct with AI</Button>
+              <article className="rounded-2xl border border-line p-4">
+                <h2 className="font-semibold">AI reconstruction</h2>
+                <p className="mt-1 text-sm leading-relaxed text-muted">Ask the configured model to rebuild a PDFMake definition.</p>
+                <Button tone="soft" className="mt-4" disabled={busy} onClick={() => convert("ai")}>
+                  Reconstruct with AI
+                </Button>
               </article>
             </div>
           ) : null}
           {uploaded.classification === "pdfmake" || uploaded.classification === "bundle" ? (
             <div className="mt-4">
               <p className="text-sm text-muted">This file is a PDFMake definition. It will be loaded without rewriting the layout.</p>
-              <Button className="mt-3" disabled={busy} onClick={() => convert("json")}>Open in editor</Button>
+              <Button className="mt-3" disabled={busy} onClick={() => convert("json")}>
+                Open in editor
+              </Button>
             </div>
           ) : null}
           {uploaded.classification === "generic" ? (
             <div className="mt-4">
               <p className="text-sm text-muted">This JSON is valid, but it is not a PDFMake definition. You can import it as a readable field table.</p>
-              <Button className="mt-3" disabled={busy} onClick={() => convert("generic")}>Import as a field table</Button>
+              <Button className="mt-3" disabled={busy} onClick={() => convert("generic")}>
+                Import as a field table
+              </Button>
             </div>
           ) : null}
-        </section>
+        </Card>
       ) : null}
 
       <div className="mt-8 grid gap-3 md:grid-cols-3">
         {[
-          [Sparkles, "Variable detection", "Names, dates, amounts, and line items become form fields."],
-          [Zap, "Same engine for preview and download", "PDFMake renders both the live preview and the file you keep."],
-          [ShieldCheck, "Private by default", "Files stay behind your sign-in. Uploaded JavaScript is never executed."],
+          [Sparkles, "AI Processing", "Automatic extraction of text, entities, and metadata"],
+          [Zap, "Fast & efficient", "Parallel processing for instant results"],
+          [ShieldCheck, "Maximum security", "Private storage behind signed-in access"],
         ].map(([Icon, title, copy]) => (
-          <article key={String(title)} className="rounded-2xl border border-line bg-white p-4">
-            <Icon className="h-5 w-5 text-brand" />
-            <h2 className="mt-2 font-medium">{String(title)}</h2>
-            <p className="mt-1 text-sm text-muted">{String(copy)}</p>
-          </article>
+          <Card key={String(title)} className="p-5">
+            <div className="grid h-10 w-10 place-items-center rounded-xl bg-brand-soft text-brand">
+              <Icon className="h-5 w-5" />
+            </div>
+            <h2 className="mt-3 font-semibold tracking-tight">{String(title)}</h2>
+            <p className="mt-1 text-sm leading-relaxed text-muted">{String(copy)}</p>
+          </Card>
         ))}
       </div>
+
       <div className="mt-6 flex flex-wrap items-center gap-2 text-sm text-muted">
-        <span>Supported</span>
-        {["PDF", "JSON"].map((format) => (
-          <span key={format} className="rounded-full bg-brand px-2.5 py-0.5 text-xs font-medium text-white">{format}</span>
+        <span className="font-medium text-ink">Supported formats:</span>
+        {["PDF", "JSON", "DOCX-ready JSON"].map((format) => (
+          <span key={format} className="rounded-full bg-brand-soft px-2.5 py-1 text-xs font-semibold text-brand-dark">
+            {format}
+          </span>
         ))}
-        <FileText className="ml-2 h-4 w-4" />
+        <FileText className="ml-1 h-4 w-4" />
         <FileJson className="h-4 w-4" />
       </div>
     </div>

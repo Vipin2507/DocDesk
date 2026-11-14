@@ -42,11 +42,15 @@ export function PdfPreview({
     };
   }, [blob, page, scale, onPages]);
 
-  if (!blob) return <div className="grid h-full place-items-center text-sm text-muted">Edit a field to refresh the preview.</div>;
-  if (error) return <div className="grid h-full place-items-center px-6 text-center text-sm text-rose-600">{error}</div>;
+  if (!blob) {
+    return <div className="grid h-full place-items-center text-sm text-muted">Edit a field to refresh the preview.</div>;
+  }
+  if (error) {
+    return <div className="grid h-full place-items-center px-6 text-center text-sm text-rose-600">{error}</div>;
+  }
   return (
-    <div className="h-full overflow-auto bg-[#eef3f8] p-6">
-      <canvas ref={canvasRef} className="mx-auto bg-white shadow-md" />
+    <div className="h-full overflow-auto bg-[#e8eef5] p-6 md:p-8">
+      <canvas ref={canvasRef} className="mx-auto rounded-sm bg-white shadow-[0_12px_40px_rgb(15_28_46_/_12%)] ring-1 ring-black/5" />
     </div>
   );
 }

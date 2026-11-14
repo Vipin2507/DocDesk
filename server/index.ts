@@ -5,6 +5,16 @@ import { createApp } from "./app";
 import { countUsers, createUser, openDatabase } from "./db";
 import { cleanupTemporaryFiles, ensureDirs } from "./storage";
 
+// Optional local .env. Platforms like Render inject env vars directly and do not ship a .env file.
+const envPath = path.resolve(".env");
+if (fs.existsSync(envPath) && typeof process.loadEnvFile === "function") {
+  try {
+    process.loadEnvFile(envPath);
+  } catch {
+    /* ignore malformed local env files */
+  }
+}
+
 ensureDirs();
 cleanupTemporaryFiles();
 const db = openDatabase();

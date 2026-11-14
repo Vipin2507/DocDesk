@@ -161,9 +161,16 @@ function readVariables(body: { variables?: unknown; variableSchema?: unknown }):
   return normalized.variables;
 }
 
+function requestOrigin(req: Request): string {
+  const forwarded = req.get("x-forwarded-proto")?.split(",")[0]?.trim();
+  const protocol = forwarded || req.protocol || "http";
+  return `${protocol}://${req.get("host")}`;
+}
+
 export function createApp(db: DB) {
   const app = express();
   app.disable("x-powered-by");
+  app.set("trust proxy", 1);
   app.use((_req, res, next) => {
     res.setHeader("X-Content-Type-Options", "nosniff");
     res.setHeader("Referrer-Policy", "same-origin");
@@ -171,15 +178,22 @@ export function createApp(db: DB) {
     next();
   });
   const origins = (process.env.CLIENT_ORIGIN || "http://localhost:5173,http://127.0.0.1:5173").split(",").map((item) => item.trim());
-  app.use(cors({ origin: origins, credentials: true }));
+  app.use(
+    cors({
+      origin(origin, callback) {
+        if (!origin || origins.includes(origin)) return callback(null, true);
+        return callback(null, false);
+      },
+      credentials: true,
+    }),
+  );
   app.use(express.json({ limit: "12mb" }));
   app.use(cookieParser());
   app.use((req, res, next) => {
     if (req.method === "GET" || req.method === "HEAD" || req.method === "OPTIONS") return next();
     const origin = req.headers.origin;
     if (!origin) return next();
-    const host = `${req.protocol}://${req.get("host")}`;
-    if (origin === host || origins.includes(origin)) return next();
+    if (origin === requestOrigin(req) || origins.includes(origin)) return next();
     return res.status(403).json({ error: { code: "ORIGIN", message: "This request was blocked." } });
   });
   app.use((req, _res, next) => {
@@ -192,6 +206,9 @@ export function createApp(db: DB) {
 
   app.get("/api/health", (_req, res) => {
     res.json({ ok: true });
+  });
+  app.get("/healthz", (_req, res) => {
+    res.status(200).send("ok");
   });
 
   app.post(

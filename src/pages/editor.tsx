@@ -222,50 +222,114 @@ export function EditorPage() {
   const selectedNode = outline.find((item) => item.nodeId === nodeId);
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
-      <div className="flex flex-wrap items-center gap-2 border-b border-line bg-white px-3 py-2">
-        <input aria-label="Template name" className="h-9 min-w-40 flex-1 rounded-lg border border-line px-2 text-sm font-medium" value={draft.name} disabled={!canEdit} onChange={(event) => setDraft({ ...draft, name: event.target.value })} />
-        <select aria-label="Category" className="h-9 rounded-lg border border-line bg-white px-2 text-sm" value={draft.category} disabled={!canEdit} onChange={(event) => setDraft({ ...draft, category: event.target.value })}>
-          {CATEGORIES.map((category) => <option key={category}>{category}</option>)}
+    <div className="flex h-full min-h-0 flex-col bg-canvas/40">
+      <div className="flex flex-wrap items-center gap-2 border-b border-line bg-white/95 px-3 py-2.5 backdrop-blur">
+        <input
+          aria-label="Template name"
+          className="h-9 min-w-40 flex-1 rounded-xl border border-line bg-white px-3 text-sm font-semibold tracking-tight outline-none focus:border-brand focus:ring-4 focus:ring-brand/10"
+          value={draft.name}
+          disabled={!canEdit}
+          onChange={(event) => setDraft({ ...draft, name: event.target.value })}
+        />
+        <select
+          aria-label="Category"
+          className="h-9 rounded-xl border border-line bg-white px-2.5 text-sm"
+          value={draft.category}
+          disabled={!canEdit}
+          onChange={(event) => setDraft({ ...draft, category: event.target.value })}
+        >
+          {CATEGORIES.map((category) => (
+            <option key={category}>{category}</option>
+          ))}
         </select>
-        <select aria-label="Status" className="h-9 rounded-lg border border-line bg-white px-2 text-sm" value={draft.status} disabled={!canEdit} onChange={(event) => setDraft({ ...draft, status: event.target.value })}>
+        <select
+          aria-label="Status"
+          className="h-9 rounded-xl border border-line bg-white px-2.5 text-sm"
+          value={draft.status}
+          disabled={!canEdit}
+          onChange={(event) => setDraft({ ...draft, status: event.target.value })}
+        >
           <option value="draft">Draft</option>
           <option value="active">Active</option>
           <option value="archived">Archived</option>
         </select>
         <Badge tone={statusTone(draft.status)}>{draft.status}</Badge>
-        <div className="ml-auto flex flex-wrap gap-2">
-          <Button tone={mode === "visual" ? "soft" : "ghost"} onClick={() => (mode === "json" ? showVisual() : setMode("visual"))}>Visual</Button>
-          <Button tone={mode === "json" ? "soft" : "ghost"} onClick={() => { setJsonText(JSON.stringify(bundleFrom(draft.definition, draft.variables), null, 2)); setMode("json"); }}>JSON</Button>
-          {template.data?.template.hasOriginal ? <Button tone="ghost" onClick={() => setCompare((value) => !value)}>{compare ? "Hide original" : "Compare"}</Button> : null}
-          <Button tone="ghost" onClick={() => setVersionsOpen(true)}>History</Button>
-          {canEdit ? <Button tone="ghost" onClick={save}>Save template</Button> : null}
+        <div className="ml-auto flex flex-wrap items-center gap-1.5">
+          <div className="mr-1 inline-flex rounded-xl border border-line bg-slate-50 p-0.5">
+            <button
+              className="toolbar-chip border-0"
+              data-active={mode === "visual"}
+              onClick={() => (mode === "json" ? showVisual() : setMode("visual"))}
+            >
+              Visual
+            </button>
+            <button
+              className="toolbar-chip border-0"
+              data-active={mode === "json"}
+              onClick={() => {
+                setJsonText(JSON.stringify(bundleFrom(draft.definition, draft.variables), null, 2));
+                setMode("json");
+              }}
+            >
+              JSON
+            </button>
+          </div>
+          {template.data?.template.hasOriginal ? (
+            <Button tone="ghost" onClick={() => setCompare((value) => !value)}>
+              {compare ? "Hide original" : "Compare"}
+            </Button>
+          ) : null}
+          <Button tone="ghost" onClick={() => setVersionsOpen(true)}>
+            History
+          </Button>
+          {canEdit ? (
+            <Button tone="ghost" onClick={save}>
+              Save template
+            </Button>
+          ) : null}
           <Button onClick={generate}>Generate PDF</Button>
         </div>
       </div>
-      {draft.warnings[0] ? <p className="border-b border-amber-100 bg-amber-50 px-4 py-2 text-sm text-amber-800">{draft.warnings[0]}</p> : null}
-      {error ? <p className="border-b border-rose-100 bg-rose-50 px-4 py-2 text-sm text-rose-700">{error}</p> : null}
-      {notice ? <p className="border-b border-emerald-100 bg-emerald-50 px-4 py-2 text-sm text-emerald-800">{notice}</p> : null}
+      {draft.warnings[0] ? <p className="border-b border-amber-100 bg-amber-50 px-4 py-2.5 text-sm text-amber-800">{draft.warnings[0]}</p> : null}
+      {error ? <p className="border-b border-rose-100 bg-rose-50 px-4 py-2.5 text-sm text-rose-700">{error}</p> : null}
+      {notice ? <p className="border-b border-emerald-100 bg-emerald-50 px-4 py-2.5 text-sm text-emerald-800">{notice}</p> : null}
       {generated ? (
-        <div className="flex flex-wrap items-center gap-3 border-b border-line bg-white px-4 py-2 text-sm">
-          <span>PDF ready: {generated.fileName}</span>
-          <a className="font-medium text-brand" href={`/api/document-studio/generated/${generated.id}/file`}>Download</a>
-          <button className="text-brand" onClick={() => blob && window.open(URL.createObjectURL(blob))}>Print</button>
-          <button className="text-brand" onClick={() => setGenerated(null)}>Generate another</button>
-          <button className="text-brand" onClick={async () => {
-            const name = window.prompt("Preset name", "Saved values");
-            if (!name) return;
-            await client.savePreset(id, name, draft.values);
-            setNotice("Preset saved.");
-            await queryClient.invalidateQueries({ queryKey: ["template", id] });
-          }}>Save values as preset</button>
-          <button className="text-brand" onClick={() => {
-            const file = new Blob([JSON.stringify(bundleFrom(draft.definition, draft.variables), null, 2)], { type: "application/json" });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(file);
-            link.download = `${draft.name.replace(/[^\w.-]+/g, "_")}.json`;
-            link.click();
-          }}>Download JSON</button>
+        <div className="flex flex-wrap items-center gap-2 border-b border-line bg-white px-4 py-2.5 text-sm">
+          <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">PDF ready</span>
+          <span className="font-medium">{generated.fileName}</span>
+          <a className="toolbar-chip text-brand" href={`/api/document-studio/generated/${generated.id}/file`}>
+            Download
+          </a>
+          <button className="toolbar-chip" onClick={() => blob && window.open(URL.createObjectURL(blob))}>
+            Print
+          </button>
+          <button className="toolbar-chip" onClick={() => setGenerated(null)}>
+            Generate another
+          </button>
+          <button
+            className="toolbar-chip"
+            onClick={async () => {
+              const name = window.prompt("Preset name", "Saved values");
+              if (!name) return;
+              await client.savePreset(id, name, draft.values);
+              setNotice("Preset saved.");
+              await queryClient.invalidateQueries({ queryKey: ["template", id] });
+            }}
+          >
+            Save values as preset
+          </button>
+          <button
+            className="toolbar-chip"
+            onClick={() => {
+              const file = new Blob([JSON.stringify(bundleFrom(draft.definition, draft.variables), null, 2)], { type: "application/json" });
+              const link = document.createElement("a");
+              link.href = URL.createObjectURL(file);
+              link.download = `${draft.name.replace(/[^\w.-]+/g, "_")}.json`;
+              link.click();
+            }}
+          >
+            Download JSON
+          </button>
         </div>
       ) : null}
 
@@ -297,51 +361,89 @@ export function EditorPage() {
         </div>
       ) : (
         <>
-          <div className="flex gap-2 border-b border-line bg-white px-3 py-2 lg:hidden">
+          <div className="flex gap-1.5 border-b border-line bg-white px-3 py-2 lg:hidden">
             {(["fields", "preview", "properties"] as const).map((item) => (
-              <button key={item} className={`rounded-full px-3 py-1 text-sm capitalize ${panel === item ? "bg-brand text-white" : "bg-canvas"}`} onClick={() => setPanel(item)}>{item}</button>
+              <button
+                key={item}
+                className={`rounded-full px-3.5 py-1.5 text-sm font-medium capitalize transition ${panel === item ? "bg-brand text-white shadow-sm shadow-brand/25" : "bg-canvas text-muted"}`}
+                onClick={() => setPanel(item)}
+              >
+                {item}
+              </button>
             ))}
           </div>
           <div className="grid min-h-0 flex-1 lg:grid-cols-[280px_minmax(0,1fr)_320px]">
             <aside className={`${panel === "fields" ? "flex" : "hidden"} min-h-0 flex-col border-r border-line bg-white lg:flex`}>
               <div className="border-b border-line p-3">
-                <input aria-label="Search variables" className={controlClass} placeholder="Search variables" value={query} onChange={(event) => setQuery(event.target.value)} />
+                <input
+                  aria-label="Search variables"
+                  className={controlClass}
+                  placeholder="Search variables"
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                />
               </div>
               <div className="min-h-0 flex-1 overflow-auto p-3">
-                <h2 className="text-xs font-semibold uppercase tracking-wide text-muted">Fields</h2>
+                <h2 className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted">Fields</h2>
                 {[...groups.entries()].map(([group, variables]) => (
                   <div key={group} className="mt-3">
-                    <div className="text-xs font-medium text-muted">{group}</div>
+                    <div className="px-1 text-[11px] font-semibold text-slate-500">{group}</div>
                     {variables.map((variable) => (
-                      <button key={variable.id} className={`mt-1 block w-full rounded-lg px-2 py-1.5 text-left text-sm ${selected === variable.id ? "bg-sky-50 text-brand-dark" : "hover:bg-slate-50"}`} onClick={() => { setSelected(variable.id); setPanel("properties"); }}>
-                        <div>{variable.label}</div>
+                      <button
+                        key={variable.id}
+                        className={`mt-1 block w-full rounded-xl px-2.5 py-2 text-left text-sm transition ${selected === variable.id ? "bg-brand-soft text-brand-dark ring-1 ring-brand/15" : "hover:bg-slate-50"}`}
+                        onClick={() => {
+                          setSelected(variable.id);
+                          setPanel("properties");
+                        }}
+                      >
+                        <div className="font-medium">{variable.label}</div>
                         <div className="truncate text-xs text-muted">{String(draft.values[variable.id] ?? "")}</div>
                       </button>
                     ))}
                   </div>
                 ))}
-                <h2 className="mt-5 text-xs font-semibold uppercase tracking-wide text-muted">Document outline</h2>
+                <h2 className="mt-5 text-[11px] font-semibold uppercase tracking-[0.08em] text-muted">Document outline</h2>
                 {outline.map((item) => (
-                  <button key={item.nodeId} className={`mt-1 block w-full truncate rounded-lg px-2 py-1 text-left text-xs ${nodeId === item.nodeId ? "bg-slate-100" : ""}`} onClick={() => {
-                    setNodeId(item.nodeId);
-                    const match = /\{\{\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\}\}/.exec(item.text);
-                    if (match) setSelected(match[1]);
-                    setPanel("properties");
-                  }}>{item.text}</button>
+                  <button
+                    key={item.nodeId}
+                    className={`mt-1 block w-full truncate rounded-lg px-2 py-1.5 text-left text-xs ${nodeId === item.nodeId ? "bg-slate-100 font-medium" : "text-muted hover:bg-slate-50"}`}
+                    onClick={() => {
+                      setNodeId(item.nodeId);
+                      const match = /\{\{\s*([a-zA-Z_][a-zA-Z0-9_]*)\s*\}\}/.exec(item.text);
+                      if (match) setSelected(match[1]);
+                      setPanel("properties");
+                    }}
+                  >
+                    {item.text}
+                  </button>
                 ))}
               </div>
             </aside>
-            <section className={`${panel === "preview" ? "flex" : "hidden"} min-h-0 flex-col lg:flex`}>
-              <div className="flex items-center gap-2 border-b border-line bg-white px-3 py-2 text-sm">
-                <Button tone="ghost" onClick={() => setPage((value) => Math.max(1, value - 1))}>Prev</Button>
-                <span>Page {page} / {pages}</span>
-                <Button tone="ghost" onClick={() => setPage((value) => Math.min(pages, value + 1))}>Next</Button>
-                <Button tone="ghost" onClick={() => setScale((value) => Math.max(0.6, Number((value - 0.1).toFixed(2))))}>−</Button>
-                <span>{Math.round(scale * 100)}%</span>
-                <Button tone="ghost" onClick={() => setScale((value) => Math.min(1.8, Number((value + 0.1).toFixed(2))))}>+</Button>
-                <Button tone="ghost" onClick={() => setScale(1)}>Fit</Button>
-                {loadingPreview ? <span className="text-muted">Updating…</span> : null}
-                {previewError ? <span className="text-rose-600">{previewError}</span> : null}
+            <section className={`${panel === "preview" ? "flex" : "hidden"} min-h-0 flex-col bg-[#eef2f7] lg:flex`}>
+              <div className="flex items-center gap-1.5 border-b border-line bg-white px-3 py-2 text-sm">
+                <Button tone="ghost" className="h-8 px-2.5" onClick={() => setPage((value) => Math.max(1, value - 1))}>
+                  Prev
+                </Button>
+                <span className="rounded-lg bg-slate-50 px-2.5 py-1 text-xs font-medium text-muted">
+                  Page {page} / {pages}
+                </span>
+                <Button tone="ghost" className="h-8 px-2.5" onClick={() => setPage((value) => Math.min(pages, value + 1))}>
+                  Next
+                </Button>
+                <div className="mx-1 h-5 w-px bg-line" />
+                <Button tone="ghost" className="h-8 px-2.5" onClick={() => setScale((value) => Math.max(0.6, Number((value - 0.1).toFixed(2))))}>
+                  −
+                </Button>
+                <span className="min-w-12 text-center text-xs font-semibold">{Math.round(scale * 100)}%</span>
+                <Button tone="ghost" className="h-8 px-2.5" onClick={() => setScale((value) => Math.min(1.8, Number((value + 0.1).toFixed(2))))}>
+                  +
+                </Button>
+                <Button tone="ghost" className="h-8 px-2.5" onClick={() => setScale(1)}>
+                  Fit
+                </Button>
+                {loadingPreview ? <span className="ml-2 text-xs text-muted">Updating…</span> : null}
+                {previewError ? <span className="ml-2 text-xs text-rose-600">{previewError}</span> : null}
               </div>
               <div className={`grid min-h-0 flex-1 ${compare ? "md:grid-cols-2" : ""}`}>
                 {compare ? <iframe title="Original PDF" className="h-full w-full border-r border-line bg-white" src={`/api/document-studio/templates/${id}/original`} /> : null}
