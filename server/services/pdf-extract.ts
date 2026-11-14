@@ -152,7 +152,35 @@ async function ocrPage(page: PdfPage): Promise<Glyph[]> {
   }
 }
 
-async function readPage(page: PdfPage, pageNumber: number): Promise<PageLayout> {
+async function renderPageImage(page: PdfPage, scale = 1.5): Promise<string | undefined> {
+  try {
+    const canvasPkg = await import("@napi-rs/canvas");
+    const viewport = page.getViewport({ scale });
+    const canvas = canvasPkg.createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height));
+    const context = canvas.getContext("2d");
+    const factory = {
+      create(w: number, h: number) {
+        const next = canvasPkg.createCanvas(w, h);
+        return { canvas: next, context: next.getContext("2d") };
+      },
+      reset(pair: { canvas: { width: number; height: number } }, w: number, h: number) {
+        pair.canvas.width = w;
+        pair.canvas.height = h;
+      },
+      destroy(pair: { canvas: { width: number; height: number } }) {
+        pair.canvas.width = 0;
+        pair.canvas.height = 0;
+      },
+    };
+    await page.render({ canvasContext: context, viewport, canvasFactory: factory }).promise;
+    const jpeg = canvas.toBuffer("image/jpeg", 0.82);
+    return `data:image/jpeg;base64,${jpeg.toString("base64")}`;
+  } catch {
+    return undefined;
+  }
+}
+
+async function readPage(page: PdfPage, pageNumber: number, withRender = false): Promise<PageLayout> {
   const viewport = page.getViewport({ scale: 1 });
   const text = await page.getTextContent();
   let glyphs = glyphsFromItems(text.items, viewport.height);
@@ -162,7 +190,8 @@ async function readPage(page: PdfPage, pageNumber: number): Promise<PageLayout> 
     if (recognized.length) glyphs = recognized;
   }
   const images = letters < 15 ? [] : await readImages(page);
-  return { width: viewport.width, height: viewport.height, glyphs, images };
+  const pageRender = withRender ? await renderPageImage(page) : undefined;
+  return { width: viewport.width, height: viewport.height, glyphs, images, pageRender };
 }
 
 export async function inspectPdf(buffer: Buffer): Promise<{ pageCount: number }> {
@@ -180,7 +209,10 @@ export async function inspectPdf(buffer: Buffer): Promise<{ pageCount: number }>
   return { pageCount };
 }
 
-export async function extractPdf(buffer: Buffer): Promise<{ pages: PageLayout[]; pageCount: number }> {
+export async function extractPdf(
+  buffer: Buffer,
+  options: { renderPages?: boolean } = {},
+): Promise<{ pages: PageLayout[]; pageCount: number }> {
   const doc = await loadDocument(buffer);
   if (doc.numPages > MAX_PDF_PAGES) {
     await doc.destroy();
@@ -188,7 +220,7 @@ export async function extractPdf(buffer: Buffer): Promise<{ pages: PageLayout[];
   }
   const pages: PageLayout[] = [];
   for (let pageNumber = 1; pageNumber <= doc.numPages; pageNumber += 1) {
-    pages.push(await readPage(await doc.getPage(pageNumber), pageNumber));
+    pages.push(await readPage(await doc.getPage(pageNumber), pageNumber, Boolean(options.renderPages)));
   }
   await doc.destroy();
   const letters = pages.reduce((sum, page) => sum + page.glyphs.map((glyph) => glyph.text).join("").replace(/\s/g, "").length, 0);

@@ -111,11 +111,19 @@ export function UploadPage() {
             </div>
           </div>
           {uploaded.kind === "pdf" ? (
-            <div className="mt-4 grid gap-3 md:grid-cols-2">
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
+              <article className="rounded-xl border border-brand/30 bg-sky-50/40 p-4">
+                <h2 className="font-medium">Exact PDF layout</h2>
+                <p className="mt-1 text-sm text-muted">Keep the original page look and overlay editable fields on $merge tokens from the PDF text layer.</p>
+                <Button className="mt-3" disabled={busy} onClick={() => convert("exact")}>
+                  <ShieldCheck className="h-4 w-4" />
+                  Use exact layout
+                </Button>
+              </article>
               <article className="rounded-xl border border-line p-4">
                 <h2 className="font-medium">Standard extraction</h2>
                 <p className="mt-1 text-sm text-muted">Read text, positions, and page size. Layout is approximate and should be compared with the original.</p>
-                <Button className="mt-3" disabled={busy} onClick={() => convert("standard")}>Extract layout</Button>
+                <Button className="mt-3" tone="ghost" disabled={busy} onClick={() => convert("standard")}>Extract layout</Button>
               </article>
               <article className="rounded-xl border border-line p-4">
                 <h2 className="font-medium">AI reconstruction</h2>

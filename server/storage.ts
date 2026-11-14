@@ -18,12 +18,9 @@ export function ensureDirs(): void {
 }
 
 export function databasePath(): string {
-  if (process.env.DATABASE_URL) {
-    const configured = process.env.DATABASE_URL;
-    const file = configured.startsWith("file:") ? configured.slice("file:".length) : configured;
-    return path.isAbsolute(file) ? file : path.resolve(projectRoot(), file);
-  }
-  return path.join(dataRoot(), "document-studio.db");
+  const configured = process.env.DATABASE_URL || "file:./data/document-studio.db";
+  const file = configured.startsWith("file:") ? configured.slice("file:".length) : configured;
+  return path.resolve(projectRoot(), file);
 }
 
 export function newStoredName(extension: string): string {

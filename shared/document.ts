@@ -63,6 +63,9 @@ const NODE_KEYS = new Set([
   "preserveLeadingSpaces",
   "noWrap",
   "pageBreak",
+  "absolutePosition",
+  "relativePosition",
+  "canvas",
   "_nodeId",
 ]);
 
@@ -495,6 +498,30 @@ function sanitizeNode(node: unknown, warnings: string[], depth: number, counter:
     }
     if (key === "pageBreak" && typeof value === "string") {
       if (value === "before" || value === "after") out.pageBreak = value;
+      continue;
+    }
+    if ((key === "absolutePosition" || key === "relativePosition") && isRecord(value)) {
+      out[key] = {
+        x: typeof value.x === "number" && Number.isFinite(value.x) ? value.x : 0,
+        y: typeof value.y === "number" && Number.isFinite(value.y) ? value.y : 0,
+      };
+      continue;
+    }
+    if (key === "canvas" && Array.isArray(value)) {
+      out.canvas = value
+        .filter(isRecord)
+        .slice(0, 40)
+        .map((item) => {
+          const shape: Record<string, unknown> = {};
+          if (typeof item.type === "string") shape.type = item.type.slice(0, 20);
+          for (const numeric of ["x", "y", "w", "h", "x1", "y1", "x2", "y2", "r", "lineWidth"] as const) {
+            if (typeof item[numeric] === "number" && Number.isFinite(item[numeric])) shape[numeric] = item[numeric];
+          }
+          if (typeof item.color === "string") shape.color = item.color.slice(0, 32);
+          if (typeof item.lineColor === "string") shape.lineColor = item.lineColor.slice(0, 32);
+          if (typeof item.fillOpacity === "number") shape.fillOpacity = item.fillOpacity;
+          return shape;
+        });
       continue;
     }
     out[key] = sanitizeNode(value, warnings, depth + 1, counter);

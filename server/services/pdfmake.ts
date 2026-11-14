@@ -5,9 +5,7 @@ import PdfPrinter from "pdfmake";
 import { stripInternal } from "../../shared/document";
 import type { DocumentDefinition } from "../../shared/types";
 
-const fontsDir = fs.existsSync(path.resolve(process.cwd(), "server/fonts"))
-  ? path.resolve(process.cwd(), "server/fonts")
-  : path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../fonts");
+const fontsDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../fonts");
 
 const fonts = {
   Roboto: {

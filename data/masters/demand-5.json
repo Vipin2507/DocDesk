@@ -2,442 +2,787 @@
   "documentDefinition": {
     "content": [
       {
-        "text": "DEMAND LETTER",
-        "style": "title",
-        "_nodeId": "n_1_669d68f4"
+        "image": "page_1",
+        "width": 595.28,
+        "height": 841.89,
+        "_nodeId": "n_1_574014c6"
       },
       {
-        "columns": [
+        "canvas": [
           {
-            "stack": [
-              {
-                "text": "To,",
-                "bold": true,
-                "_nodeId": "n_4_2447c739"
-              },
-              {
-                "text": "{{customer_name}}",
-                "bold": true,
-                "_nodeId": "n_5_f42cb712"
-              },
-              {
-                "text": "{{customer_address}}",
-                "color": "#334155",
-                "_nodeId": "n_6_a3fe6c74"
-              },
-              {
-                "text": "Email :- {{customer_email}}",
-                "_nodeId": "n_7_62d40e1c"
-              },
-              {
-                "text": "Mob :- {{customer_phone}}",
-                "_nodeId": "n_8_b1f85c0b"
-              }
-            ],
-            "width": "*",
-            "_nodeId": "n_3_52da2df0"
-          },
-          {
-            "text": "Date: {{current_date}}",
-            "alignment": "right",
-            "bold": true,
-            "width": 140,
-            "_nodeId": "n_9_2bd4ecdd"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 64,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          10
-        ],
-        "_nodeId": "n_2_6b5adb7b"
-      },
-      {
-        "text": "Subject :- Intimation for payment of {{installment_name}} against your Booking of Flat No. {{unit_name}} on {{unit_floor}} , “Sapphire ” situated at Plot No.01, Sector-34C, Kharghar, Navi Mumbai.",
-        "bold": true,
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_a_866ff9b7"
-      },
-      {
-        "text": "Dear Madam/ Sir, ,\nWe have to inform you that a payment of ₹{{amount_without_tds_final}} is due as below.",
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_b_9023b91a"
-      },
-      {
-        "table": {
-          "headerRows": 1,
-          "widths": [
-            "*",
-            120,
-            100
-          ],
-          "body": [
-            [
-              {
-                "text": "INSTALLMENT DUE",
-                "style": "tableHeader",
-                "_nodeId": "n_d_756559a4"
-              },
-              {
-                "text": "ON FLAT COST",
-                "style": "tableHeader",
-                "alignment": "right",
-                "_nodeId": "n_e_b9a002bf"
-              },
-              {
-                "text": "GST",
-                "style": "tableHeader",
-                "alignment": "right",
-                "_nodeId": "n_f_322fcc1e"
-              }
-            ],
-            [
-              {
-                "text": "Previous Demand Value",
-                "style": "tableCell",
-                "_nodeId": "n_g_fbca1d0b"
-              },
-              {
-                "text": "₹{{previous_slabs_amount}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_h_50cd2154"
-              },
-              {
-                "text": "₹{{previous_slabs_gst_amount}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_i_42a9a86a"
-              }
-            ],
-            [
-              {
-                "text": "{{installment_name}}",
-                "style": "tableCell",
-                "_nodeId": "n_j_b7a20873"
-              },
-              {
-                "text": "₹{{latest_slab_amount}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_k_8e6f891f"
-              },
-              {
-                "text": "₹{{latest_slab_gst_amount}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_l_d5fc4d25"
-              }
-            ],
-            [
-              {
-                "text": "Total Amount Due {{total_percentage}}%",
-                "style": "boldCell",
-                "_nodeId": "n_m_32c88234"
-              },
-              {
-                "text": "₹{{pending_amount_as_per_work}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "_nodeId": "n_n_867b5897"
-              },
-              {
-                "text": "₹{{pending_tax_as_per_work}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "_nodeId": "n_o_79a90dff"
-              }
-            ],
-            [
-              {
-                "text": "Less Amount Received ……………………….",
-                "style": "tableCell",
-                "_nodeId": "n_p_10823baf"
-              },
-              {
-                "text": "₹{{amount_paid}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_q_c5ead8c6"
-              },
-              {
-                "text": "₹{{tax_paid}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_r_22192534"
-              }
-            ],
-            [
-              {
-                "text": "AMOUNT DUE ……………………………….",
-                "style": "boldCell",
-                "_nodeId": "n_s_bffa933a"
-              },
-              {
-                "text": "₹{{total_due_amount}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "_nodeId": "n_t_7ce8fbb1"
-              },
-              {
-                "text": "₹{{total_tax_amount}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "_nodeId": "n_u_11e3c9ff"
-              }
-            ],
-            [
-              {
-                "text": "Less: TDS @ 1%",
-                "style": "tableCell",
-                "_nodeId": "n_v_f8c4f3ee"
-              },
-              {
-                "text": "₹{{pending_tds_as_per_work}}",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_w_5707d6c3"
-              },
-              {
-                "text": "-",
-                "style": "tableCell",
-                "alignment": "right",
-                "_nodeId": "n_x_434a2b00"
-              }
-            ],
-            [
-              {
-                "text": "Balance",
-                "style": "boldCell",
-                "fillColor": "#f8fafc",
-                "_nodeId": "n_y_7211663c"
-              },
-              {
-                "text": "₹{{balance_as_per_work}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "fillColor": "#f8fafc",
-                "_nodeId": "n_z_15a54bd2"
-              },
-              {
-                "text": "₹{{total_tax_amount}}",
-                "style": "boldCell",
-                "alignment": "right",
-                "fillColor": "#f8fafc",
-                "_nodeId": "n_10_016b3851"
-              }
-            ]
-          ]
+        "absolutePosition": {
+          "x": 494.670625,
+          "y": 140.30859399999997
         },
-        "layout": "lightHorizontalLines",
-        "margin": [
-          0,
-          0,
-          0,
-          6
-        ],
-        "_nodeId": "n_c_61511637"
+        "_nodeId": "n_2_6cee1fc0"
       },
       {
-        "text": "Kindly pay online TDS of ₹{{pending_tds_as_per_work}}",
-        "bold": true,
-        "color": "#0369a1",
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_11_5ee7e121"
-      },
-      {
-        "table": {
-          "widths": [
-            "*",
-            "*"
-          ],
-          "body": [
-            [
-              {
-                "text": "Flat Cost Banking Details",
-                "style": "tableHeader",
-                "_nodeId": "n_13_2ca72f0a"
-              },
-              {
-                "text": "For GST Banking Details",
-                "style": "tableHeader",
-                "_nodeId": "n_14_db38ce78"
-              }
-            ],
-            [
-              {
-                "stack": [
-                  {
-                    "text": "Favouring Name : A K HITECH ASSOCIATES SAPPHIRE COLLECTION ACCOUNT",
-                    "bold": true,
-                    "_nodeId": "n_16_0546292b"
-                  },
-                  {
-                    "text": "Bank Name : AXIS BANK",
-                    "_nodeId": "n_17_87e9b74b"
-                  },
-                  {
-                    "text": "Current A/ C No. : 924020002973152",
-                    "bold": true,
-                    "_nodeId": "n_18_1fd9aa15"
-                  },
-                  {
-                    "text": "Bank IFSC : UTIB0001365",
-                    "_nodeId": "n_19_d67932c0"
-                  }
-                ],
-                "style": "bankBox",
-                "_nodeId": "n_15_b8a4485f"
-              },
-              {
-                "stack": [
-                  {
-                    "text": "Favouring Name : A K HITECH ASSOCIATES",
-                    "bold": true,
-                    "_nodeId": "n_1b_1afdd896"
-                  },
-                  {
-                    "text": "Bank Name : AXIS BANK",
-                    "_nodeId": "n_1c_8b4cec7a"
-                  },
-                  {
-                    "text": "Current A/ C No. : 923020031598565",
-                    "bold": true,
-                    "_nodeId": "n_1d_6ed9e1d2"
-                  },
-                  {
-                    "text": "Bank IFSC : UTIB0001365",
-                    "_nodeId": "n_1e_63b6d0ab"
-                  }
-                ],
-                "style": "bankBox",
-                "_nodeId": "n_1a_9bcf3ac0"
-              }
-            ]
-          ]
+        "text": "{{current_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 495.670625,
+          "y": 141.30859399999997
         },
-        "layout": "lightHorizontalLines",
-        "margin": [
-          0,
-          0,
-          0,
-          10
-        ],
-        "_nodeId": "n_12_bc8d274b"
+        "_nodeId": "n_var_1_1_current_date"
       },
       {
-        "text": "You are requested to kindly make the above payment within 15 days ({{due_date}}) from the receipt of this letter otherwise arrears will be charge on delay payment. Pl find above banking details.",
-        "fontSize": 9,
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_1f_97940431"
-      },
-      {
-        "columns": [
+        "canvas": [
           {
-            "text": "",
-            "_nodeId": "n_1h_513049e0"
-          },
-          {
-            "stack": [
-              {
-                "text": "Yours Faithfully,",
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  2
-                ],
-                "_nodeId": "n_1j_1abb4b6b"
-              },
-              {
-                "text": "For AK Hitech Associates",
-                "bold": true,
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  36
-                ],
-                "_nodeId": "n_1k_4d27eb7f"
-              },
-              {
-                "text": "Authorized Signatory",
-                "style": "signatory",
-                "_nodeId": "n_1l_80cb903d"
-              }
-            ],
-            "alignment": "right",
-            "width": 180,
-            "_nodeId": "n_1i_93f0e832"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 119,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "_nodeId": "n_1g_e2b84dfe"
+        "absolutePosition": {
+          "x": 39,
+          "y": 145.46484399999997
+        },
+        "_nodeId": "n_3_90a45a7c"
+      },
+      {
+        "text": "{{customer_name_new_line}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 40,
+          "y": 146.46484399999997
+        },
+        "_nodeId": "n_var_1_2_customer_name_new_line"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 90,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 39,
+          "y": 157.18359399999997
+        },
+        "_nodeId": "n_4_0bd1355c"
+      },
+      {
+        "text": "{{customer_address}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 40,
+          "y": 158.18359399999997
+        },
+        "_nodeId": "n_var_1_3_customer_address"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 79,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 82.310547,
+          "y": 168.90234399999997
+        },
+        "_nodeId": "n_5_11abd606"
+      },
+      {
+        "text": "{{customer_email}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 83.310547,
+          "y": 169.90234399999997
+        },
+        "_nodeId": "n_var_1_4_customer_email"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 82,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 82.47168,
+          "y": 180.62109399999997
+        },
+        "_nodeId": "n_6_d88b7c2e"
+      },
+      {
+        "text": "{{customer_phone}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 83.47168,
+          "y": 181.62109399999997
+        },
+        "_nodeId": "n_var_1_5_customer_phone"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 87,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 200.007506,
+          "y": 207.05859399999997
+        },
+        "_nodeId": "n_7_3567919a"
+      },
+      {
+        "text": "{{installment_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 201.007506,
+          "y": 208.05859399999997
+        },
+        "_nodeId": "n_var_1_6_installment_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 55,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 431.104537,
+          "y": 207.05859399999997
+        },
+        "_nodeId": "n_8_584cda08"
+      },
+      {
+        "text": "{{unit_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 432.104537,
+          "y": 208.05859399999997
+        },
+        "_nodeId": "n_var_1_7_unit_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 56,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 497.946992,
+          "y": 207.05859399999997
+        },
+        "_nodeId": "n_9_89d81d47"
+      },
+      {
+        "text": "{{unit_floor}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 498.946992,
+          "y": 208.05859399999997
+        },
+        "_nodeId": "n_var_1_8_unit_floor"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 118,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 221.036133,
+          "y": 265.65234399999997
+        },
+        "_nodeId": "n_a_d69d9d0e"
+      },
+      {
+        "text": "{{amount_without_tds_final}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 222.036133,
+          "y": 266.65234399999997
+        },
+        "_nodeId": "n_var_1_9_amount_without_tds_final"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 109,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 326.789063,
+          "y": 311.80859399999997
+        },
+        "_nodeId": "n_b_aee230d4"
+      },
+      {
+        "text": "{{previous_slabs_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 327.789063,
+          "y": 312.80859399999997
+        },
+        "_nodeId": "n_var_1_10_previous_slabs_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 124,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 448.337891,
+          "y": 311.80859399999997
+        },
+        "_nodeId": "n_c_c888e8f8"
+      },
+      {
+        "text": "{{previous_slabs_gst_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 449.337891,
+          "y": 312.80859399999997
+        },
+        "_nodeId": "n_var_1_11_previous_slabs_gst_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 87,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 44,
+          "y": 328.52734399999997
+        },
+        "_nodeId": "n_d_64c6dde5"
+      },
+      {
+        "text": "{{installment_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 45,
+          "y": 329.52734399999997
+        },
+        "_nodeId": "n_var_1_12_installment_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 93,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 342.614258,
+          "y": 328.52734399999997
+        },
+        "_nodeId": "n_e_5e8d37ee"
+      },
+      {
+        "text": "{{latest_slab_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 343.614258,
+          "y": 329.52734399999997
+        },
+        "_nodeId": "n_var_1_13_latest_slab_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 108,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 464.163086,
+          "y": 328.52734399999997
+        },
+        "_nodeId": "n_f_5187f891"
+      },
+      {
+        "text": "{{latest_slab_gst_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 465.163086,
+          "y": 329.52734399999997
+        },
+        "_nodeId": "n_var_1_14_latest_slab_gst_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 91,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 126.646484,
+          "y": 345.24609399999997
+        },
+        "_nodeId": "n_g_615db89a"
+      },
+      {
+        "text": "{{total_percentage}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 127.646484,
+          "y": 346.24609399999997
+        },
+        "_nodeId": "n_var_1_15_total_percentage"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 132,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 303,
+          "y": 345.24609399999997
+        },
+        "_nodeId": "n_h_05906d58"
+      },
+      {
+        "text": "{{pending_amount_as_per_work}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 304,
+          "y": 346.24609399999997
+        },
+        "_nodeId": "n_var_1_16_pending_amount_as_per_work"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 113,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 459.314453,
+          "y": 345.24609399999997
+        },
+        "_nodeId": "n_i_897c7c29"
+      },
+      {
+        "text": "{{pending_tax_as_per_work}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 460.314453,
+          "y": 346.24609399999997
+        },
+        "_nodeId": "n_var_1_17_pending_tax_as_per_work"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 370.104492,
+          "y": 361.96484399999997
+        },
+        "_nodeId": "n_j_6e222454"
+      },
+      {
+        "text": "{{amount_paid}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 371.104492,
+          "y": 362.96484399999997
+        },
+        "_nodeId": "n_var_1_18_amount_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 46,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 526.384766,
+          "y": 361.96484399999997
+        },
+        "_nodeId": "n_k_f5b8690a"
+      },
+      {
+        "text": "{{tax_paid}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 527.384766,
+          "y": 362.96484399999997
+        },
+        "_nodeId": "n_var_1_19_tax_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 85,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 349.918945,
+          "y": 378.68359399999997
+        },
+        "_nodeId": "n_l_021a1056"
+      },
+      {
+        "text": "{{total_due_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 350.918945,
+          "y": 379.68359399999997
+        },
+        "_nodeId": "n_var_1_20_total_due_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 84,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 488.293945,
+          "y": 378.68359399999997
+        },
+        "_nodeId": "n_m_cfbf80f4"
+      },
+      {
+        "text": "{{total_tax_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 489.293945,
+          "y": 379.68359399999997
+        },
+        "_nodeId": "n_var_1_21_total_tax_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 113,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 321.974609,
+          "y": 395.40234399999997
+        },
+        "_nodeId": "n_n_0a6981d3"
+      },
+      {
+        "text": "{{pending_tds_as_per_work}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 322.974609,
+          "y": 396.40234399999997
+        },
+        "_nodeId": "n_var_1_22_pending_tds_as_per_work"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 96,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 339.259766,
+          "y": 412.12109399999997
+        },
+        "_nodeId": "n_o_7ae1838f"
+      },
+      {
+        "text": "{{balance_as_per_work}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 340.259766,
+          "y": 413.12109399999997
+        },
+        "_nodeId": "n_var_1_23_balance_as_per_work"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 84,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 488.293945,
+          "y": 412.12109399999997
+        },
+        "_nodeId": "n_p_69ac94b6"
+      },
+      {
+        "text": "{{total_tax_amount}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 489.293945,
+          "y": 413.12109399999997
+        },
+        "_nodeId": "n_var_1_24_total_tax_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 113,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 149.917969,
+          "y": 438.55859399999997
+        },
+        "_nodeId": "n_q_2e8bc927"
+      },
+      {
+        "text": "{{pending_tds_as_per_work}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 150.917969,
+          "y": 439.55859399999997
+        },
+        "_nodeId": "n_var_1_25_pending_tds_as_per_work"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 55,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 344,
+          "y": 571.308594
+        },
+        "_nodeId": "n_r_a6437576"
+      },
+      {
+        "text": "{{due_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 345,
+          "y": 572.308594
+        },
+        "_nodeId": "n_var_1_26_due_date"
       }
     ],
-    "pageSize": "A4",
+    "pageSize": {
+      "width": 595.28,
+      "height": 841.89
+    },
     "pageMargins": [
-      40,
-      40,
-      40,
-      40
+      0,
+      0,
+      0,
+      0
     ],
     "defaultStyle": {
       "fontSize": 10,
       "font": "Roboto",
-      "color": "#1e293b",
-      "lineHeight": 1.3
+      "color": "#0f172a"
     },
-    "styles": {}
+    "images": {
+      "page_1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCATvA30DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EADIQAQACAAIIBgIDAQEBAAMBAAABESExAhJBUWGRodEiYnGBsfBS4TJCwfFygpKy0sL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAZEQEBAQEBAQAAAAAAAAAAAAAAEQFBITH/2gAMAwEAAhEDEQA/AOgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlwoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkzRE2CTNS0xObapnWNvu2xt92zTOsxNy0xGbUzRpiiRNqigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM6WxdHJNLYujkvE6zObbE5tm8M6xt922Nvu2aZ1iM2tLJmM2tLI6Z81NHa0zo7WjTPgAigAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM6WxdHJNLYujkvE6zObbE5tm8M6lKxc37toYxGbWlkzGbWlkvTPmpo7WmdHa0aZ8AEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABnS2Lo5JpbF0cl4nWZzbYnNs3hnWNvu2xt92zTOsRm1pZMxm1pZHTPmpo7WmdHa0mmfAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABic2wEY2+7bFTfu2umMRm2CGAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM6MzjE591nKQUZicI3z0WMAUTSykjKPQFGdHPS4T3NLIGgZnCsZxmswaErjKTnEXONg0JCXc1sjMGhJjdM8ycp9AUTRyhI/lMA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAk41G/4hSgYnCYnfhLU5T6LmA5xhETHvDcTa5JUAaWUpERUYRluaAY0c9L17rpZStQtWAzpbPWGkqJBWZ/lo+7SVE7AIqGctKbyna3UQAJOU+klRuUGdGIqMISP5T6dm8kqAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEmaVKtQSMSyIr3KxsDbRE58CsbK6gXZOEWVuJi4oFSJv7yVKxA28yZqDbZMWCpE2qVtBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZ0sZ0Y9fhmcI0o2RVe7cxdZxW41Yqt+c7QZmKicKw3/uS8K23XtnfJa4zN+nZai74UDN+HRi8/jal3o+kxHVvVjDhFJqxjxroCXjoxOcTN8s0/re39t1FxO2E1Y4zw2AaWXL5NL+M+3ysxcUmrsuenYCIjdXv+00YjH1mPZqIrbM+pEVfGbBmIjWnhREXM4X4pxv8AbVYzO9NXjOM3s7AzNeLCbvCdzpGSVGPFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASZiMwUSJicpUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGP66Oy6i1jOYu4is+OxcJjgVHpjYKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMVelpe3wRM1GWPr8QDYxczOjsu/vY1uV1tv13A2HqxtxvPCdnoDYxEXd75j0pbzjdF2DQzEzNZZXKa01eGdRnvBsY1p4ZxvrEmZrSjDCsuINjFXpY/j/pEzXpNXP3EGxi5mI2eKtv2uBOlOPD1x7A2AAAAAAAAAAAAAAmljHvlv4KkxYMbKi4xiJjde71aqIxjDCcN61FY43mVHGdmIJc+HjEz0SJmd11umJjuurHHBajjwsGYma0Y37Z+4lzlhdzC6sccMuC1GHCb9wZuamcMJr1J0pua2cJx99jVRjG+bK9eNSDNzOtujnkn9anhMdMPZus+OZqxMRG4GZ0pi8sNlT1nKCZnHLBZ0Ym88VqMeOYJcxd1laXMxP/mdkx8tVHSvYr1yrMGNkRPCY9P0s6U41smqqcffJqomo3ZFevHEGZ0pjn0zJm6/9YNVF3vijViojHAEnZ6pc4ThV11arjM43iVGXGwZ1p61VTzvJtK9d9XgoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM6uMzc45rUcYrDDcoDOrGGeGXutcZ31sUAZ1eWdcWgE1c8Zi86NWOMYVhuUBIiuVFRVKAlcZ/4VE3xUBnV4zlX3BdWMNlKAzqxWc537rXGY38fvBQAAAAAAAAAAAAAABJy+fRUm9gJswnbERwXGNtxW1K35zU+lLU7Z2VgBeXGLS+GzAqcLnKKwIjG8Mqwir9QImajDGY+yXlhtmORU4Y4xFey1l6zM+4JrcMpqSdLpmtYTG+bSsdmO+LBbxnDLakTN47cY++lStZ8f0mrGFYUBM3W64x9yZww3xF+5U4ReETfEqcrwu+tgXnhhBrZ8IvetYTG+bSp4R6QC3hNwRPBKzyi90YfZWIq+O7IFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASZqq2zSs6UXW3GJBbrOva01o+xJXCsYnYVPi4xFcgWZiEmc8sItJiem+ue8qcf8AzEA2XQdQEmaiZKjP/ZJusAS5iJvHbcfBc4XEY7tiVd4VExlx3r4sMK3/AKBbjDjhBcM1OEVlN3fqRE3uxxxw9ozBY0oq8sV1oq2andlpX6lTNzvmMPQF1o+xKzMQlT4uMYcpSp6RGE1kDVxkkTM44dbIip9ohIiq8OO/AF1o39JW4zZqaj/1ftazE41tmP2C3h77YkibvhLNTjxmNt5NRGM8ZBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEmaxVnS2f+oBZmIi1c5ianyxUcceyznpXGeWHDZ7g1eMx6dVc9s3F+GNl4tx/HHdiCie+G6lAJmosScpwvgCROd4bfY1ssJi8pTO4i5itu/csTlFTx2UDQ57IjG40t3FduV47Yxjje4GomJ9lc9+H9scNhO2oww/YOlwMVF6WGxN1/jGcX9kHRnW21Nb0iMYvGtGM/UiLjGZq5w9wavGeCsTH8sN1cidtxdxFYcO4NjFZ3H9Y5puvLV2xYOgkZQoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJM18AokTvw+7yZqJ4Aol7sfcuAULhLi62goAAlxV5Z9C4wxzBRLLjfHMFC43pcXW0FEvfh7rcbwASJu5wr1BQuN4AFwlxvgFBLjfHMFC4LjeAJcYRvUASZiIsvCwUZic7jZcei3FXlhYKFxvS4ut4KFxvZjSywzmegNCXG+Oa3GdgCXG8mYiLBRNaLovPhNAolxvLjfHMFC43gAXG8uN4AlwXG+AULjelxdbQUEuN8AoJcbwUSZquOBE57KBQuEuKmYxoFEvD2suN8AoXAAJcb4ImwUS+G2sy89lTQKJcb8yZqLBRLy4rcZWADOtjlhGEzxBoS8+BExV5Aol/bTWionfINCXjXCy43wCiXG+Oa3GdgAXGVgCXG+CZqAUZ1sJuMYrqt4xG++gKJcby4w4gozc41GU1nCxOeypoFC4S43goAAAAAAAAAAAAAAACTllf3NUmaBjGpq5jCrzzxJxuonKNnFvWjniuYOc7ZiKjVmMqK5TEbL/wCNzF5qDFVnEzhERh04L/bLZ9xW8uKgm3jWax62AMRGWG3S/wBPb+27Y1cXX3K1BmuH9o+Cv5YenJoBidvpuu/ddvro9cWgGIwq4/rEZX6rEYxcbJ9sezRM0CaOXP5ZrCMMpmZ5y2AxneGEzo7OeDU5T6SszSXE3HDjAJ6RlE7K9ISMZjPKYnCt2DZwBjGYnlyzWvFls/1cIqOS8AYxw9KytYjGPSc/VpJmI+2DMf1w3/pqdm6JxLjO1BjZOGcxXS5anKcL4EzEfbUGI21dVOeyd0ERjFx/Xq2A51hGeU7L9qXbo4bOTYDnF3GG3HDCPdYifD66TVxH35JmsZBiIw0cNuOHyTE47ta8tnptbuIW7Bzr/wDaNldFmP5YbYrpdN8EuOtAzVzOzCKnimNTcf23X7xDoA51wn+UTlsWY/lhurDhsbOAOcxjN3jEbL2dG5y34KAxjN55bq25G3CP6zsrc1NVjkYR74bZBnn/ABmMq9liOH9Y/wBaAY2RnerEZXHou2MNnVriRN4gzpbJj05/synLCoiMLy2LhOKgxGFXeVb/AGIjLDZPy2X0BnS2Z57L3TuxSs6usM85354tgMTjdbq3XiTjlH9ZjKvSGwGKmpjO4z9suy1/LDZHw0AxlnGcRsv2X+v/AM/4sxE/9lQZzmKjLPCvZdHJQGYjPPOU9v7TsuuLYDGzb/K8tmGxqcuXyoDMxNxuu/TCflNlVje7jd36NgDE54RMTftMb5bAZynSwnHKo4JEYxcf1622AxEfxw/JIjDRispxw9XQBipid8RE12SPSf4zGVezoAxX8cNk3hw2pU4bomdl+mDoAzo5e+6ujNZRWN3fvnboAxWE4Y627i1OWV71AYxmJq5jCr6rnMYThE5xvaAYiP44evLakR/HDfeHrToAzEZ5x4p4JWeGGtfs2AxWc1hcTW+IzwSYvWqMJrZnjudAEyjhCgAAAAAAAAAAAAAAAADM54TU1tymGbutme2odAHOMdW52TtN1zheltzjY3UXHC8PUrLheHqDGdbtaYj0revDz17NgOeNTON3MZ5RbWjnO71toAZnP2yuvdoBjPf/ABtYzjdq9mio3Axsj321GZGOre+dvq3UAMY57b3zvyqqyNl3jrb+OVejZUAk7PXfXOWdnppRt9NrZQM6WXL5gqc5rCJyaAYjZf4xWNepGejM7p/ym6gBmYuYj1+Eucd8aP2WwGdsVOcTeN+5/b2/1oqAY/rPpLYVtBmc8Jqa25TCXdZVjtqJm+HNsBjdEzhU7eO/DKDC9HG88fv2WwGNkTeN7+OMUsbZ23OczvaAZnKco38fuSaWWU1WHrX+NgM7ccLjC/VYrrzlSsuAMzczhun/ABM9XZjVbsJwbAY3x5qjHhee44X/AGiMJ4b2wGJ245Rhjw7md/8AmNvq1MX/AM+FBi7/APxic6+yRjMX+MTm3UJXYE0suXzCZTEcbj0qcPZsBi8YnjWePLJYzrdf6+ejVQAzH8fZIyr8oiuWPf3bAYjCvXS/0z2/2nbwbAY2TnhOGM8Ca8WOMZY8IbKgGJnPfEb6xrZCxOM+kf61QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAk7PWFSYvnYJdTO6rIn0yvCb9lrO8bwSt87KyoDWzywi8JtYSt87KyaBiJwx3X63+8FiZrHHHbNGrlw6lcdtga3O6zw5kTPi9Y24ZRtK443dlccbict3ADW+YjCcMeJc44Rhx/RXHbE8lrPiBd1xx9vuBN8eNZkRXKIgmONAl8ZnGPWFibvDCMErjjcdFqYy2zcgomN8FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASZquOCpOXpjyAvPgX7M1NRxwn3m+5MYznjui/8AgNTNc4LjeTl7x8pP9sN33iC3G+FYq7zyipmKxiypq+Nz6egNpExN45Ebc8d8Uzvw/tfrAN5paRnM7KjgTGM/+tH/AAFmYqy8MZjmkx/L0g23WzdYNXG9LjfHNIjGMNk+2PZKwy/t/vYG7vISM59krxVs/l/nziDVxlYxsqsbz987NkxU/wAry4xINTMRmXFzl3wJy94+UmP5YZ5cgauN6XF1tZm8c8tkZ4b12+0f6DVxGcjM5+2yL9uB/T/5/wABq43pcb4TdUZROyvZIzjPKYnCo9AbtLjfHNmpqeEavJqvFls/0FuN6XG+GanDPKdl1juWIxj0nP1BbjDHNWI/r6z/AK1OcTuAmYiL/wBLqL+Gd+GelE/GLU5ZXwAiZymP+ETczG7qzF41dVhe/hwKmK5YXt3+4NXG+OZcb2aw0cP7Y4epMZ4Ya0T6wDVxvhbjexMXcxE7PeuCTc62E5Rs4g3cY45F5cYv9MzGM1H9epN1FRN5c4oF1ri+NGtG3fWcc0rxRuz96orhP87y2A1cY7Ma9VuN7ExhpYbcMCf7YTN5YcOgNpcXW2rZxi8Jm9GIw30RnGH9a9wW5uq6rM5etJ/afSGa/jFTcTjNf6DdxlaRMzs6ptynPbGXGJXRj1znD9At76jPaXGdxTNZYf2kxxw/tuvDfEA1M5bbmlc4id0/zvLZTc5x6/5ILcbzJiM4w35xl77VnOJ4eoLE316StxvYjCsJ/ts3zgY4TjnOzflgDZcb0jL324MxdxnnN4VEYSDdxvS6muDMZxhvzjL32rOcTWydl7gauEvGONs1OGcYzsurywKyz/t1+AauN6sR/WKyzw4b9tlTu/jlxj/nwDYkYYcFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASlAAAAAAAAAAAMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZnGY9/8AAaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGIi427ds711Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzlJit+cbZ3g2M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6sceckYTMcI/0GgAAAAAAAAAGZ/lHv/jTM/yj3/wGgAAAAAAAAAAAAAYn+3pH+l5ROcTHvH3NqYu+MUTF1wBmdt3wmNizEXHGf8la4zU7CsuAJOyImtvbqXc6M77+FrOd6VxrGZ5gs56Pv8JpXhX2otayxnDbh2KyxuvTdQMzN1XCec4f6bZwmcf8jjDWrHWys6mYv07AzlMzswieWZnE8J0mqz4kRUV69QIjDkzWEztudu5tnV4zU419xAjOfSP9TdnPi0v9arbdFZY5AR6THr/2Uq4vbj7LHrf3gVxmpzgGbm4nyxMx8rGc+3xC1jfCiIq+IKAAAAAAAAAAAAADOjlz+ZaZ0cufzLQAAAAAAMznlM4bPU2x6T8wtY3womMbutmwE0t2V/G0z0b2xE84WtuewrPj/wAAiKhIi4vbj7YtJXGanOATOZvZEf8AUxmKzqecerVbsNmBXe9oJERN5+m40Ywv1+ViK4kRQKAAAAAAzpZe8fLTOll7x8g0AAAAAAAAAAxhUTN3ONxeH6bZ1dlzW4Cc7mJmNlbPZJiKic8sfdquMxZWFenQFqgAAAAAAAAAGf7T6R8y0z/afSPmQaAAAAAAAAAAZnOMaz/xpmf5R7/4BU/lPTsVP5T07GlsxrH/AAur2xhzmaqwKn8p6dip/KenYvhj6mtn6X62BU/lPTsVP5T07F5+2HqXncZV1Aqfynp2Kn8p6dlmavhFkTw/0Eqfynp2Kn8p6djGZnGYqvg1st8/4BU/lPTsVP5T07F5VGd9C8sM5r3Aqfynp2Kn8p6dlvHLbX2EvhhddaAqfynp2Kn8p6diZwmtmFrOV7vjaCVP5T07FT+U9Oy3jwiOcyl4TsmpnMCp/KenYqfynp2W8+ERKa3xeYFT+U9OxU/lPTs1niAzU/lPTsVP5T07NAM1P5T07FT+U9OzQDNT+U9OxU/lPTs0AzU/lPTsVP5T07NAM1P5T07FT+U9OzQDNT+U9OxU/lPTs0AzU/lPTsVP5T07NAM1P5T07FT+U9OzQDNT+U9OxU/lPTs0AzU/lPTsVP5T07NAM1P5T07FT+U9OzQDNT+U9OxU/lPTs0AzU/lPTsVP5T07NAMaMTWc7d2+Vqfynp2NHLn8y0DNT+U9OxU/lPTs0AzU/lPTsVP5T07NJOXzW4Eqfynp2Kn8p6dk2Z4XnwW6vG4iL9/UCp/KenYqfynp2W+GPqa3xfcEqfynp2Kn8p6di8/SMPUuruNlgVP5T07FT+U9Oy38TPJLmYy2YAVP5T07FT+U9OxHrPGJInCNuG8Cp/KenYqfynp2LxitsZe8F5YZ30Aqfynp2Kn8p6dlmcN0zgl4RvuvfICp/KenYqfynp2LnHDLPFb3ReFglT+U9OxU/lPTssTfK0u6qM4sCp/KenZJiaznON29bnDjZpZe8fIFT+U9OxU/lPTs0AzU/lPTsVP5T07E8biOG9N1zWGe/IFqfynp2Kn8p6diJ98ajka3TPH7YFT+U9OxU/lPTst/NJfvjMcv8Aqfynp2Kn8p6dlv5ovPhMRzBKn8p6dip/KenYmZrdjj6cEvCam8vWMQWp/KenYqfynp2WZrZ99EuYnS2xHaAKn8p6dip/KenZb3Rf3Ym2caiKAqfynp2Kn8p6di8I23t2FzcYZgVP5T07FT+U9OxM48Iq/ftgsznhlFglT+U9OxU/lPTst5YZ5F5YYTkCVP5T07FT+U9Oy3hE75pL4YXXWgKn8p6diP5TjeEfMrEzN3vT+0+kfMg0AAAAAAAAAAzP8AKPf/ABpmbuK45+wLMZcOxMXHL5TxeXlPc8Xl5T3BZjG8PeLKy4dfsp4vLynueLy8p7gtZ+sTySru5xnoeLy8p7ni8vKe4FTneysliK3e0Uni8vKe54vLynuC1NzU58E1cq2b8TxeXlPc8Xl5T3Bay9J6lYRHG+tp4vLynueLy8p7gavzeWOdrWExxvraeLy8p7ni8vKe4FTjF4Tjk0z4vLynueLy8p7gauExee0r0yrCDxeXlPc8Xl5T3Aqdk5xRq+mURjF5Hi8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4Gjlz+ZaY0datm3fvnivi8vKe4NDPi8vKe54vLynuDSTez/qeLy8p7ni8vKe4Fc7tZi4mE8Xl5T3PF5eU9wWYubw94tJi64fZg8Xl5T3PF5eU9wWYu+NdEq852VgeLy8p7ni8vKe4FTv2VhBXHZWGHueLy8p7ni8vKe4LU4XOXBKy4RWMHi8vKe54vLynuBUxWOUUVhzu4wmzxeXlPc8Xl5T3A1crxo1d2VxPI8Xl5T3PF5eU9wWs+KVOydkRluPF5eU9zxeXlPcCqqp2VisRVcIpPF5eU9zxeXlPcCsuF9TSy94+TxeXlPdJ1q2Zxv3+oNjPi8vKe54vLynuCzez0qfkiKrhFJ4vLynueLy8p7gsxdcJtKxnLHfFni8vKe54vLynuC1jaVzuZ5ni8vKe54vLynuBXHG7KnHHPhh6Hi8vKe54vLynuBXHbeGXIq7xzroeLy8p7ni8vKe4E6OeOfDEqccc+HCjxeXlPc8Xl5T3AmL3csY9Fqc42708Xl5T3PF5eU9wKw55xhNlZY5f6eLy8p7ni8vKe4GrG3OVr4iOSeLy8p7ni8vKe4LWXDtSVljhH2DxeXlPc8Xl5T3AqcMcIm8lrCuN9bTxeXlPc8Xl5T3BYir4zaf2n0j5k8Xl5T3IvWm6yjL1kGgAAAAAAAAAGZ/lHv8A40zP8o9/8BZn2vbuS5w9avfG9ZvZy3pXzdbgW44517l9vdKw9762VN++d7OMAROeE4EzhOyYoqceM38YJU47LrbuBbzvfERyhdaOOGeGSV8xPKFr+XGP8AuP+Fxx3s1wvCNtLWfGIgFvGuF2zGlhM7Yi1qbj0pJ0fDEbYigaut5fqkxM36b8is+MRHyC3HbiXHPLilZcIqeVERVYZbbn4BoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGdHLn8y0zo5c/mWgAAAAAASZ9r27kucPWvWN6zezHfG9Knrdf4DUzTM6XCc6Jue15lTXvE/ALccePAuEmMZwu+MxXcmJ2c7rnvAvPDIud8THDYtTc8dqVN3URn7gXhGc4WXjvirKnDbhEZ7d5ETFbcKzBbwuNuReET7e6VlwucN8lcrie4LreuGeGRfvtwKz4wlTGWOEdAW/iy444xaVMVWOFbiImK9K6gXjHH7/00svePkqYrhfU0svePkGgAAAGZnGrrb6zuaZm90TE9AW5uuF+5M1vSpituFExM9r68QLxjjGa3H72JETGrwip6EaNbMttz8At+vdNbC8sa9CIm92+pz9iImI9594/wC5rZsqY9Vv19diVOOUXWHpJMTN+ud9KAvO9k8sIXGZmsK90qcYwx7UVnhcTsngC3lee6EvLCcSsIy28M90lThtqZ69gJnHht98lv1TVu7mbnjyKnG9sRHviC3HPLiXHPLilfx4RjyoqcI2Rt30C3lxmi44517pU4Rum7Kwj1vrYLE3eGUp/afSPmVjC/W0/tPpHzINAAAAAAAAAAMznFY5/40zP8o9/8AvS3df0Xpbuv6WZmMoSJwuaiPUC9Ld1/Relu6/onSirW43gl6W7r+i9Ld1/SxOMxurqkzVfajeBelu6/ovS3df0szEZyXG8EvS3df0Xpbuv6W4urxLj/AAEvS3df0Xpbuv6W43kTEzMbgS9Ld1/Relu6/oubqIvC81iYmuP+Zgl6W7r+i9Ld1/S3G/gsTeQM3pbuv6L0t3X9FzeWF1x9S5uqjn+gL0t3X9F6W7r+luMrxNaLmNwJelu6/ovS3df0a0VMxsLm6iIyicwL0t3X9F6W7r+l1oq5w2FxvBL0t3X9F6W7r+luLq8S4urxBL0t3X9F6W7r+luMrNaMeAJelu6/ovS3df0txO3IiYnKQS9Ld1/Relu6/pdaKmsahIn52elgXpbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAM3pbuv6L0t3X9NAMaMzWW/bxngt6W7r+jRy5/MlzeEYRNTv9QL0t3X9F6W7r+i5xqMuK60VE7wS9Ld1/Relu6/pbiNpcRtzBL0t3X9F6W7r+iJussb6LcTlIJelu6/ovS3df0txlaXjXXjsAvS3df0Xpbuv6W4jaXE7QS9Ld1/Relu6/pbicpLjDjkCXpbuv6L0t3X9LcbyJib4Al6W7r+i9Ld1/SxN8PuBcY0CXpbuv6L0t3X9GtOEzGE8d63F1eIJelu6/ovS3df0TpRsxrPnReNcLAvS3df0Xpbuv6NaKiZwtbjeCXpbuv6SZmstsbePosTv3zBpZe8fIF6W7r+i9Ld1/TQDN6W7r+i9Ld1/TQDN6W7r+i9Ld1/RMzhEZyXOGGM3nwAvS3df0Xpbuv6WJzvCsy4zsEvS3df0Xpbuv6W4ztNbOqqIgC9Ld1/Relu6/pbiNpMxGcgl6W7r+i9Ld1/RMzGMRExht3rdZ1AJelu6/ovS3df0txv2X7JM1F52Belu6/ovS3df0txVpM5VjYF6W7r+i9Ld1/SxOd4UXGdgl6W7r+i9Ld1/RrY8Ku/TMjSuIwzmgL0t3X9F6W7r+luLq8UnSiprOO9AXpbuv6IvWm4rCOO2WrZ/tPpHzINAAAAAAAAAAMz/KPf8AxpmcJjbnl7As5T6SlTWjhlnHt/hfl0uncvy6XTuCVNTNbYmiYmbwnGqy6rfl0uncvy6XTuBEYz7FTMzs2exfl0uncvy6XTuBETcXsiYSprR4Tfyt+XS6dy/LpdO4JU1Vbbv3vmVOMVnpXeyrW/LpdO5fl0uncEmJrS4zh0WP5TxroX5dLp3L8ul07gYxMzV4cEqYqc8Zma4rfl0uncvy6XTuCVOeP8pnZePRqI9cZ21/iX5dLp3L8ul07gmN5VN4zGVNV4onhKX5dLp3L8ul07glTUxWc3ewxvSwzqty35dLp3L8ul07glTjhP8AGsaKx25RlNLfl0uncvy6XTuCTFVV1F5Z9SIxjPbnW1b8ul07l+XS6dwTGLirubvYVOWOd4VXdb8ul07l+XS6dwSpqf8A1fUx8WGeMblvy6XTuX5dLp3Bmpm88ttb1znKvDPyt+WeUdyJrLRnlHcEiMduEVjVdCYnZxy6ftb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwaGb8ul07l+XS6dwNHLn8yk3eWN4TGVcTRnDKdu7fPFb8ul07gauM3ee/NJjHbVVhX+rfl0uncvy6XTuBEVP/AM0kRMVNXhXVb8ul07l+XS6dwSInDDKNLqVPh4XfJb8ul07l+XS6dwZ/GKyn7S1MxM7Zm69MsVw/GeUdy/LpdO4JU+LDOI+Cpw/8zHRb8ul07l+XS6dwSpmsKrtWBET4YrLNb8ul07l+XS6dwSImtHhOPUqamKznPhK35dLp3L8ul07gVMTvuK3eiRE7pqpzrD0lb8ul07l+XS6dwI0cIu7jfOSRE5Ted7K9d635dLp3L8ul07gRGExvtmprjc9Ypq/LpdO5fl0uncDKbq4qkiJiY4RPyt+XS6dy/LpdO4JETE3xnlO2F0svePkvy6XTukzhlOcbt/qDYzfl0uncvy6XTuDQzfl0uncvy6XTuBpcYuOsSlT4bvC7xx4Lfl0uncvy6XTuBOjhhviZ3zzSvXOM62ei35dLp3L8ul07gkxOP/zPrRMTOthnELfl0uncvy6XTuBU+LjEVyTK8LuI9qjat+XS6dzCc9GeUdwKvRj2Ju9uWys+PAvyz07l+XS6dwSYmYiKyj7C1MzeVR655l+XS6dy/LpdO4JU1VThOExnRUzXrPCa9tq35dLp3L8ul07gTo4TWeHvXqlXE57M638Fvy6XTuX5dLp3A0omar0n0krxcM/fIvy6XTuX5dLp3BKnCKym72fZKnVmNt/6t+XS6dy/LpdO4ERVx13+vE/tPpHzJfl0uncib0pwmMIz9ZBoAAAAAAAAABmf5R7/AONMz/KPf/AW8uKszs9f8knGt144f4DQxWHveWHLcbI2YzsuOXHYDaXjRGW7NnHCcM744/r4BsYmMNLDb2JjOvx2eoNjGeUbJvCvSDOvSfiAbSJtmI/jhsx5Lo5Aa3Ca34enq0xU1tq5uOF8+JWM+uGF+lSDYxhjcY3h/lSVjN791zwqQbGN87tK+kX0Ky95nC8Z+0DaRN86Z3bYx2f5zXR2+sg0JcfeBf31BRLLj/QUSy4+egKJf31LBRLj/SwUS4+eigAAAAAAAAAAAAAAAAzo5c/mWmdHLn8y0AAAAAAAAAAAkzSpOWVgRN54TBE3fBm5qaucqnjPZYuJjKqrDhkDQxEYaOHryPbDW/zuDYxvmMrieWck4366PyDVxEWXjURe3YzMfyw2R/q5zhNYf7xBbVmYqvW5mcUjZ/6n4kGpn5pNLL3j5TdhjeOH+rpZe8fINAAAAAAAAAAAAAAAAM3jlhOETxx+w0xGcVeeMbgW5yqendpP7e3+s7Y/9bvmeINs622prfh/1Iz4XNeu2ffZ+yIuMZmscMN/MGxidvrGzHZjZO3drRfpUA1eM8KT+0+kfMkZzXA/tPpHzINAAAAAAAAAAMzNTHv/AI0zP8o9/wDANaPsT2NaPsT2aS4q9gJrR9iexrR9iey3FXsLionfkCa0fYnsa0fYnstxVl7N/wDgJrR9iexrR9iey3FXsNaOPKQTWj7E9jWj7E9lvCyJiQTWj7E9jWj7E9luKvYa0ceUgmtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDGjpRXPZO+eC60fYnsaOXP5loGdaPsT2NaPsT2aAZ1o+xPY1o+xPZoBnWj7E9jWj7E9mgGdaPsT2NaPsT2aAZ1o+xPY1o+xPZdaJ+5+ia0ceUga0fYnsa0fYns0AzrR9iexrR9ieyzNGtAJrR9iexrR9iezQDOtH2J7GtH2J7NTNYyAzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsk6UV7xsnf6Ns6WXvHyBrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYns0AzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsa0fYnsRpRP3ODWjjykDWj7E9jWj7E9mgGdaPsT2NaPsT2WZr3mk1o48pA1o+xPY1o+xPZoBnWj7E9jWj7E9luLrbKgzrR9iexrR9iezQDOtH2J7GtH2J7NAM60fYnsRN6U+kfMtM/2n0j5kGgAAAAAAAAAGZ/lHv/jTM5x7/wCAaW7f8bWdmlFVtj3buN8FxvjoDHl2Z+2fyRhqzOVV7t3G+C43x0Bif7TGWHTNqcZiscJW43xzLjfHQHPLRvZMY+u9uf6+sfC3G+Ohcb4A0sp9Gc9WtnxTVxvjmXG+OgMf1mNuOHuu2cawjc1cb46Fxw6AuzP3S43lxvguN8dALjeXG+C43x0LjfHQC43wXG8uN8dC43x0AuN5cby43x0LjfHQC43wXG8uN8dC43x0AuN8FxvLjfHQuN8dALjfBcby43x0LjfHQC43x/wuN/EuN8dC43x0AuN8KlxvjoXG+OYKJcb45lxvjmCiXG+OZcb45golxvjmXG+OYKJcb45lxvjmCiXG+OZcb45golxvjmXG+OYKJcb45lxvjmCiXG+OZcb45golxvjmXG+OYJo5c/mWmdGYrONvzK3G+OYKJcb45lxvjmCiXG+OZcb45golxvjmXG+OYKJcb45lxvjmDMZxGcY1vj7kv9p9IXDfHMuN8AxH9ccZnHHnhwMIif8A1WfHbuhu43x0LjfHQGNk+sbbW4jWvf8A41ccOhcb46AzGExeHh/1Px3VOczGN727jfHQuOHQGcfDGe2a3Rlmmysq0o5S3cb46FxvjoDEx/LPDLGdy77msIrGtmfNq43x0LjfHQGYnHH8UjGr/HfxbuN8dC43x0BiP6TPHpk1pZe8fK3G+OiaUxWcZx8g0Jcb45lxvjmCiXG+OZcb45golxvjmXG+OYKJcb45lxvjmCpOUlxvjmXG+OYMxnEZ4YTtj1Xbpe3wuEbY5lxvgGY/rU3M548MfRIqI999b89zdxvjoXHDoDH/APccWp/lHpK3G+Ohcb4BiZx/+qzx5bl/twvruauOHQuN8dAYm5uYjbhPoud/+YmGrjfBcb46Az+O+Yn4sj+tTjOePPk1cb46FxvjoDETho4433NkTj/Ks9lt3HDoXG+OgJo14vXof2n0j5lbjfHRI/lPpHzINAAAAAAAAAAMznHv/jTM/wAo9/8AAWo3R0KjdHJJz0fX/DSmcIjbuz6gtRujkVG6OTONe/C5j4LmoxnObyifsbQaqN0cjwxnXRIxrHf9n0NLKQPD5ei1HDok/wBf/UJNXMZRq4+oNeGcq6FRujkzGExExHCY7LM9Iv32AtRw6FRujkz8xMcM84amLgDw8OhUboSP4xsrFIw37I7c/wBA1Ubo5FRujkoCVG6ORUbo5KAlRujkVG6OSgJUbo5FRujkoCVG6ORUbo5KAlRujkVG6OSgJUbo5FRujkoCVG6ORUbo5KAlRujkVG6OSgJUbo5FRujkoCVG6ORUbo5KAlRujkVG6OSgJUbo5FRujkoCVG6ORUbo5KAlRujkVG6OSgJUbo5FRujkoCVG6ORUbo5KAzoxFZRt+ZWo3RyTRy5/MtAlRujkVG6OSgJUboTw1eFey6WW7JictLDHC6yBvwzlXQqN0cmcbuqqJ9yJnPHGJzrdsBqo3RyKjdGPBmJnw43cT8WfjN3c/wCA1UboKjdHJmJmdXGr1uhc4Re2Yv0BrwxnUcjwzlU8kjGJvGpmEy0dGsLqLBqo3RhwKjdHJnGJ0qnHw51/yy6ic73Tnj8g1Ubo6FRujkzGFxwvHDGM8+Zc7ZnKd1T6TANeGd3QqN0cmYiZjRwqqmyJmccc+FV82DVRujoVG6OjOMxOO+vaUv8AtvuOmHWAbqN0dCo3RyZxwi6qCJmaxrCekg1UTsjkmlEVlGcfKRONZRc+/BdLL3j5BajdHIqN0clASo3RyKjdHJQEqN0cio3RyUBKjdHIqN0clASo3RyKjdHJQEqN0cio3RyUBKjdHIqN0clASo3RyKjdHJQEqN0cio3RyUBKjdHIqN0clASo3RyKjdHJQEqN0cio3RyUBKjdHJI/lPpHzKxe6k/tPpHzINAAAAAAAAAAMz/KPf8AxpmYuYvj/gLMROZUZUmrG75NWN3yC1GVFRlSauju6yasbvkFqMMMslzZ1Y3fJqxu+QWYicyojYmrG75NWN3yCxERlBMX8Y5TCasbvk1Y3fILEcI9lZ1Y3fJqxu+QaSou9qasbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDQzqxu+TVjd8gaOXP5lpjR0YrLf8yurG75BoZ1Y3fJqxu+QazSoqk1Y3fJqxu+QaSo3Jqxu+TVjd8gtRhwyKjcmro7vk1Y3fILUcv8ASYwwrO8U1Y3fJq6O7rILEVHqVFVsTVjd8mrG75BajcVG7imrG75NWN3yDVJUbk1Y3fJqxu+QaSou6xTVjd8mrG75BqkqKqsE1Y3fJqxu+QWYic1qGdWN3yasbvkFqOt+6aWXvHyauju6yk6MVltj5BsZ1Y3fJqxu+QaGdWN3yasbvkGhnVjd8mrG75BoZ1Y3fJqxu+QaGdWN3yasbvkGhnV0d3yasbvkGhnVjd8mrG75BoZ1dHd1k1Y3fINDOrG75NWN3yDQzqxu+TVjd8g0M6sbvk1Y3fINDOrG75NWN3yDTP8AafSPmTVjd8kREaU1uj5kGgAAAAAAAAAGZ/lHv/jTM/yj3/wDS2bcckjDW2ZYTs/61MX7bjVjnt2gxM3GlE7K2Vt3LOlMXw2VPWcoXVjHPGr9idGJvPHMEmZ8WWC3MzNVhWe21qMeOZqxx48QZnSm54cJm+WTaVHGPRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZ0cufzLTOjlz+ZaAAAAAABiIqYvCccdmkzGUTVY5++5uNGvbLgascfS8ASdKYn3rKfnKy61v/AEurHHO/ddWOt+4M60+9xGVZ8C5i4wu4iPddWOOcT7wtRjxroCTMxGNZxET+jWwm9mU1MXzXVjnt2leudgzoznF3hfvt6lzN3WU4VMTHdqo+8TVjjlQMRGVRMThc7OPqutPWqqed5Nxhgleu+rwBmbmJywy9pS8Z0tmMcov5bqsPuKasVWwEi8IisIub4lzNVWMfEtTF749CoiuEUDOjONcZmeexdLL3j5Wo62mll7x8g0AAAAAAAATkAMREXUxU17aRUXpYZVPRqIrju4QVnO8EucMsem71SJms9vH7LUaMRvwy4Jqxxzv09AS7rhpRG7oTEa0YbJa1Y4537lY2DN1uq6qp+d/Bbm69/buascc791qPe7v7sBiZxu8qit+9qZm5qsItaiq+4lR0oEucLqpiZ9KxImcLqp6LUYcMDViN+GXAEua0Z3zXylzhOFTNLqxxwm4WowjdNgmjeNztk/tPpHzKxFXxT+0+kfMg0AAAAAAAAAAkxdZ4blAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZ1eM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8zV4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPMrjPNoBmuM8yuM82gGa4zzK4zzaAZrjPNYit8+qgAAAAAAAAAAAM6Wz/1ANDGzSnbtv49C5xrZETlwBsti5m9lRfOEi8Kz1P9B0GYm54VHOUmZ8VTlw4WDYxMzs3XVXzJ0p51XuDYkzURvmYhmZmLjbFY+oNjE3WlE44RJM1rV5eoNjEzMXtqI64LEzePOq9gaGNKIuMM5xKjWiKwr/QbGM4mN2lhE7eCxVzhU7tnrANDMzOMxs2b0z0r4RIN5DMxjGU1s/1nDw4TMY4bfsA6DGMXhVzERGdfdxc9Yi5is+ANjFzFxtuIifVJuNbbhGwHQYmZ8WOXDgtzjWFRzwsGhiamImsZpdtRUYXkDQ5xM1Hvc1e1Zm4iJnPOt0A2MRM6uGcTX75Ezcb/ABRsqfSYBsYyuYiorLfPsXOPpd1WINjE4VM8esJ5d8xP+z1gHQYucZ2XVe9E3MaW6LgGxnRm/bCtvq0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkxftNqAlRN8cJKjHjmoCasdKz2FVlupQEiKjqmrcze2tvy0Ak6MSlYxujJoBJizVjmoCTETfHAqMeNdFASox44ERW/3lQEq/YmIn/tKAlRVEREftQEnRifufqVjfsoCTF8J3lRhwy91ASYsqOt5qAlRjx/w1Yx454qAlRjxzSY3bqzmOe9oBKwiN1dCYiVATVjlxKiOVKAlRz/wqOt+6gCascd2agJMRMVJUXe1QE1Yu/fhfoVGPHNQEqM/ZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASZqsJm9ysz/KPf/AL8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6d2gGb8ul07l+XS6dy72TnWxYm74TMAl+XS6dy/LpdO6zMR7kzUWCX5dLp3L8ul07rE41UwoM35dLp3L8ul07tJE3jAJfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0unc1uE9O7TOll7x8gX5dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07tAM35dLp3L8ul07rM18ETwr1BL8ul07l+XS6d2gGb8ul07l+XS6dzWywmpyk1s8JqM5Avy6XTuX5dLp3J0q2Twya6Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvy6XTu0Azfl0uncvhPTu0k5T6AueIkZR6QoAAAAAAAAAAAADM/yj3/AMaZmamPf/AaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2A0YzxnOWfb+07Lr2a1o+xPY1o+xPYGdnppbtno1pZYbJiTWj7E9jWj7E9gLvKNk45YpH9ajKMcK2d11o+xPY1o+xPYEjOIq89lTHrsldHL5NaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BpnSy94+TWj7E9knSiveNk7/AEBsZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYGhnWj7E9jWj7E9gaGdaPsT2NaPsT2BoZ1o+xPY1o+xPYDSyj1gmMNsxcX6GtH2J7GtH2J7AzO2oww/bcxhMRuTWj7E9jWj7E9gS5wq7wiYrns/0nbVxPSf8XWj7E9jWj7E9gJ/r6w0zrR9iexrR9iewNDOtH2J7GtH2J7A0M60fYnsa0fYnsDQzrR9iexrR9iewNDOtH2J7GtH2J7A0M60fYnsa0fYnsDQzrR9iexrR9iewNDOtH2J7GtH2J7A0M60fYnsa0fYnsDQzrR9iexrR9iewNJOU+ia0fYnsTpRU9p7AsZR6QqRlHpHwoAAAAAAAAAAAADM/yj3/AMaZn+Ue/wDgLMxBE2mlno+pOyJm7n0j3Boc7wvdMx7LuucJiZzrEGxiJ/jjheljw2Jn/wDlIOn+DnP9vXRWcNar2fsG0uLrazFa2E4VvvaTHims4iJj7xBqJv2mlc4nCeOlvrme/wDes9lbwdBzmP5Z4ZYyTdzjWEVczHvG8HQTZj2NKajjOEe4ETE5F417sxhNVVx1g0omZqN0g1E3kXFX9wIm43bK3MRdTjvwoG7jpfsa0ceUsxno/wDnssZ6XrHwC60ceUmtDOj/AOoznDDeRMRE3vm43/8AQavGi79sGf7YYYRsXR2+oLcXEbyZiPtsTc3MRllPotxd3U17TANXGe/IuKtnCa/rONTs+yl+mGlFzG3iDcTEmtG/76szjOG6euRExUR6RW2wau/YuKtm6jS3zNR7kYTVVcdYBrWid/KSNKJ38pSP7f8AqU0co8UemANa0fcuZM1mxcRlNxf8Zzza0qwvDHPdILExJExOWxm6vKZ2THHYRhMYVcVszgF1o+xK60cuEsxEzo1cV1zMb0qrP/AauMuFlxjwz92aqYiJ/r/qTlp7f4/4DetEYf5Jcc92LON6VVlHwn41NYTjIOkTbOll7x8rGWd8U0svePkGpmsUib38pTS/jJNxE3N+mHXEGhz/ACiN0TFTeJdxeyZiPYHQc5/tU4YfJM/yqdkfIOnAYnCY9JI/rxifgG0mYiuLEf1xxvHH/GtKLnRj1+AW8aVzvGbzjRr9m/8A83hNg6DFYxGOMXOMpjWjuxzmtu8HQSMs7+7zCI4AXF1tgma95piLipmNuM4bfsNaWz/1ALeNF41uTRwuNsdeKY601NZbAauOte6a0ceUs7v/AG1/aPSQXWjjykuPsM/20sYjLdu4rdaU3OcRUgtxhxyLxrbVszjq1hjP/Vi9bGb8P+gszEZkzEMzjNVdRj7myLwmJq90xvBq45ETE/aZu7vh4o+7DO4wnDOM/QGtaJNaIZmYmNGI3x7URMRrXvn3gGri64X7FxcxthnbeUan+pFxUzG3GfUGtaOPKV1o48pT+3/z/qbdLxRGPAGriP8AkqxOczE1O2JylqMo2AoAAAAAAACTlPoqTlPoBGUekKkZR6QoAAAAAAAAAAAADM/yj3/xpmf5R7/4DRhPFnSz0Y2X/wASaiJrOow/0GsOCszERq1vr2NHKfWQaTDgmjt9ZSNuET4pz/4DWHAmt9MxETrXvmPYmIqNuMYgsREY3ezY1h7szno+/wAJUaszOeM3tsG8DBzxu9saMT672tHG/UGkw20xM4zO6q/1rPS34Ye4NDGGEbNab7E1ETWdZf6DeAxMRGrW+I9j+ul7g2mHBjG7jZoxhvjasVMaXrPwDeAzo5R6NAVG4AAAAoAAAAAAACo3AAAAAAAAAAVAAM6WXvHy0zpZe8fINAAAAAAAAzWN3fJoACoAAAAAAAAAAACgAAAAAAAAAAACoAAAAAAAAAAABJyn0VJyn0AjKPSFSMo9IUAAAAAAAAAAAABmf5R7/wCNMzFzHv8A4DUxeaVEe6ascecmrHHnILERBqx9me6ascecmrHHnILqx9me5qx9me6ascecmrHHnILMRJUJqxx5yascecg1WXBNWN330TVjjzk1Y485BqsbSIiMk1Y485NWOPOQWoyKjkmrHHnJqxx5yC1FVWBERH201Y485NWOPOQWIiDVj72TVjjzk1Y485BqsbSIiMtqascecmrHHnINZDOrHHnJqxx5yDQzqxx5ykxlnnvndINjOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0zpZe8fJqxx5ykxFbc42zvBsZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzk1Y485BoZ1Y485NWOPOQaGdWOPOTVjjzkGhnVjjzlJionPnINjOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0M6scecmrHHnINDOrHHnJqxx5yDQzqxx5yascecg0k5T6Jqxx5yToxU585BYyj0hUjKPSPhQAAAAAAAAAAAAGZ/lHv8A40zP8o9/8A0tnrsSJrW4VUTOTUxdbKTVjHPHb6AmtNTlhW/aTM1pRNZROC6ueM410WYu+MUBE36bGbmNKZ2YX7xm1VTe8rPiDMTUbM5zNacMs5hdXLGcMjV+bBNacZwwmpz6E6WM5Yc5a1cJjfNlcZi8wPRQAAAAAAAAAAAZnPR9f8lpmc9H1/yQWZqJlnR2xd/vPq1MXzsqM4w9AZjGav8Aj1/4YzE/+p5bl1Yw4fZ5mrHW/cDRrGrjhOxmc9LCZyqpyw9W4isc5TVxnGYvMEmcIi89vyTN6Mb7iGtWOlJqx1ieQJdzo78bTRm6ics/X/jdRd7U1cIjdlINAAAAAAAAAAAAM6WXvHy0zpZe8fIGl/GUjCdsYZTOfWWpi4orfMyDMaWOzG8uHysTOF1UmrljOGS1lwBnRnCIjZmaV3FcfdY0arh1WsYncDN4zMbozNbPLD1XVjHiaueM4xQF6V1hle1NbLKLi8WqxvhSauVTMVhYLE3FqAAAAAAAAAAACaX8Z9FTS/jPoCsRON3/ACvDdWTU4xRqx6V/gMzhOreE9P8AuxdsxH44GrGPHb93LUbdsUDMZxnE9JNLOM5wnL/sNVxmaysmLm7oGYmtGfWa4boIy0ou6icfZdWOt+s8V1Y9MJjAGLmqnhMcYnsXjMb5jHdh/rU6MTEcFqMeIKEAAAAAAAAAAACTlPoqTlPoBGUekKkZR6QoAAAAAAAAAAAADM5xjWf+NMz/ACj3/wAAqfynp2Kn8p6didkbzHRuc46gVP5T07FT+U9OxM1fCLNacMM+IFT+U9OxU/lPTsa3K6v9GtwwiasCp/KenYqfynp2ImbngaUzlHrPpHcCp/KenYqfynp2WZww25e6YzMxcxVAVP5T07FT+U9Oy41jmxrTqzvq4ngDVT+U9OxU/lPTsXnhdZtAzU/lPTsVP5T07NAM1P5T07FT+U9OzQDNT+U9OxU/lPTs0AzU/lPTsVP5T07NAM1P5T07JMThjOfDdLbM56Pr/kgVP5T07FT+U9Oy6U1G7GIvckTM3ETlWPqBU/lPTsVP5T07ETnjcRt+UufFM7riNwLU/lPTsVP5T07GMTGN3E57zGJjG8MQKn8p6dip/KenZImfDN5zVbC5wm85qtlXQLU/lPTsVP5T07Jc4zeU1WyrpZuNuN4QBU/lPTsVP5T07JM541WUb1nK7n0jfyAqfynp2Kn8p6dibiMZnLZvSZnVu9gLU/lPTsVP5T07E3hnxr0IxjCZzxvP0Aqfynp2Kn8p6djR544TwaBmp/KenYqfynp2aAZqfynp2Kn8p6dmgGan8p6dkmJrOc43b22dLL3j5Aqfynp2Kn8p6dlmaiZKmNt77/wEqfynp2Kn8p6djWy4mthdcOoFT+U9OxU/lPTsa3DGrnGDW3ReFgVP5T07FT+U9OxczMbpi1mcMM5wgEqfynp2Kn8p6diJwx2Z+xjhF1cTM9gKn8p6dip/KenZYvbN7t/uzEzc3ldR6gtT+U9OxU/lPTskThG2ZtqJsEqfynp2Kn8p6dmgGan8p6dip/KenZoBmp/KenYqfynp2aAZqfynp2Kn8p6dmgGan8p6dk0ompxno2ml/GfQEqfynp2Kn8p6dlnKfRmJxjG7jlILU/lPTsVP5T07GNxF3himNxF3O3d7AtT+U9OxU/lPTslzne2q2VdLNxtxmcI2UBU/lPTsVP5T07JMz4pvLKC5m8aqI+LBan8p6dip/KenZJnC7rDCt6zM6t3sgCp/KenYqfynp2NK8M9t0l5YzU3czn6AtT+U9OxU/lPTslzWf9qvgXNTV54b6Ban8p6dip/KenZLqJxm8MJW8JzutsfAFT+U9OxU/lPTsR6zdZS0DNT+U9OxU/lPTs0AzU/lPTsVP5T07NAM1P5T07ExNT4p6dmknKfQCMo9I+FSMo9IUAAAAAAAAAAAABmf5R7/AONMzdxXHP2BZi63xklXdznyg8Xl5T3PF5eU9wNWZu5zislrGJ3J4vLynueLy8p7gauOyrvLHmauExvm+p4vLynueLy8p7gsRjM701YmZmcTxeXlPc8Xl5T3AiKrdF179lqbmYnPNPF5eU9zxeXlPcFrCknRuIjdtPF5eU9zxeXlPcCpxqc88PhYivSk8Xl5T3PF5eU9waGfF5eU9zxeXlPcGhnxeXlPc8Xl5T3BoZ8Xl5T3PF5eU9waGfF5eU9zxeXlPcGmZz0fX/JPF5eU90nWwyz47p4g3LNYTU4ztPF5eU9zxeXlPcCIwqarl/pqxjxijxeXlPc8Xl5T3Aqds5RUYERMbY44Yz1PF5eU9zxeXlPcCNHLHCMjV44XdHi8vKe54vLynuBq8cJm6Km7uOGGXU8Xl5T3PF5eU9wWYv8A3DHnsJjGN0bE8Xl5T3PF5eU9wWYnZKV4aPF5eU9zxeXlPcFmJwqcuSas1V5zc8TxeXlPc8Xl5T3BYvbXtFKz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDTOll7x8ni8vKe6TrVszjfv8AUGpi4oqds5bsOaeLy8p7ni8vKe4EaM4Y4RO41cIjjfWzxeXlPc8Xl5T3AmMbw94ta+KTxeXlPc8Xl5T3AqqxyilmLmLyjYni8vKe54vLynuBq7spq4+71mMpjOE8Xl5T3PF5eU9wWI3zdpq58Zv0PF5eU9zxeXlPcDVqqnGFiK27bnini8vKe54vLynuDQz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDQz4vLynueLy8p7g0ml/GfRPF5eU900tapy69wbZiNu3ZhgeLhynueLy8p7gRExtjjhj8lThc3WPH3PF5eU9zxeXlPcDV44XdFTczccso5ni8vKe54vLynuBOjnjhOZMZ1NXhJ4vLynueLy8p7gVOycKrHFZjCk8Xl5T3PF5eU9wWb2T2SsK43jH+Hi8vKe54vLynuBq4RWcTfuVOOOMzZ4vLynueLy8p7gat3c4zXtRU4zM41WGFHi8vKe54vLynuCxE3czeFKz4vLynueLy8p7g0M+Ly8p7ni8vKe4NDPi8vKe54vLynuDSTlPoni8vKe5OtU5cp7gsZR6QqRlHpHwoAAAAAAAAAAAADM/yj3/xpmf5R7/4BM1XGdpE53s2xtJiZqtk7UqccousI4dwa1oxzwz90nSwmsJjfCas45RdbdyzEzfGIjqC3fskzMa3Cq9yIrDYTEzrcar2AuambicMo/wCyRM53Exw2LWGGE+iVN3URndbbAidLCcMdnD1aZrSwjDDbw9GgAAAAAAAAAAAAGZz0fX/JaZnPR9f8kFmar1iCZm64Exce9pETdzuoCLuYuMK2ftNaajLGZhqIxmd9M1NRlhMyBrTU5TVVOyb7Lcxd41F/4mrOOUXWGzBambvC4qALmM8cL/REzcXWMcipnPDCv2RE3F1hHMCJm5iawoubjLHZGxaxmd9JU3F1hOe8CNK5zjOuMpeMxcRjWRU5YVd2sxM3GFTt3A0AAAAAAAAAAzpZe8fLTOll7x8gszUTKRM3VxMVs2fKzFxMJU3eEVE5AutHHuRpRNZ45YMxE3HC9t3gtT4eGYGjNxF5yszjEb7ZjRmK6/41MYxO6wSJmaxj0r9pEzO7PLaujFRGVpUzu/8AW0FuZuqww9V2X0Spi6rHH0XGt8goAAAAAAAAAAACaX8Z9FTS/jPoBOETPBLw0eMx1WcYrfCVOETWFe9AY3VxleX7JmY1uER1WsYngkxM63Gq9gImbziYq8NnWSJnC6qehU3jUYTltsiJwiaqOoJc4Tsmaouc8Kuq96sqcIwqJuypywq7v3ugW5uIwqb9cIJmY3cI2ysxjE7r+EmJm4w4TuAnSxq4jfZM45xGF7yYnGqm4rEqYqqnCgagSIqIhQAAAAAAAAEnKfRUnKfQCMo9IVIyj0hQAAAAAAAAAAAAGZu4mIur21uaAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0TrTWGU3n+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9F6W7r+mgGb0t3X9E607Nsbf00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/ovS3df00Azelu6/onWmJiuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0Xpbuv6aAZvS3df0eLd1/TQCRlHooAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAvYAAXjQAcAALMwAAAL2AAABfXIAAAC7AAAAAAAAAAAAABLiFAAABLicpgFAibAAABLirBRLjfCgAACRMTlKgAWACRN5AoAAAAAAAAAAZgAGQAXeJewAAALxoAAAAAAAAAAAAAAAAAAAAAAASYuOseqgMbL26Ux7QTMxcXlU9Wqiq2FRlQH9q4f6zMzjUzh6V+2oiIygqJzgGbm5xyiJr2IvDOpzy6bW6SojYCTetV1hfVImZqcc8cqr5b4pUZ0DNzUTeelVe5c1OP8AauqzoxhW+JWo3Azc41eE1sruXN54XWFTHpO1qozoqM6BjKNL1r4xW5iJ9s6wx4NVG7PMqNwJH8pxvCPlJwnSnhbUREZQVGe0Ei7jG7hNKZicPx5Y5tVEbF/4DEzx/rf7LmNt+GZ92qjdsr2WoBjbo43cT8JE1ETsqeexuo3JMZRhUYgTcaPGkxurnGL2NlAxczEYzdTlX+pc+GdtT/1uo3FQDNzhETM4XcVc81x1cc1qNyg5x/THf8Lc5cZjZeHRqojYVG7iBF7d/DL2ZubjGameFcs24qMkqNwMRcRE3tqvdbmrvbVe9U1Ubiou6xBm5uuPTP8AREzOOOfCq+bbrbtSou6xBJziLq7+Eucrn+VYVctTFzHCyoyoGbnPdpVPp+jHw4zjc9lmMKioic2q6ZAxc1dz/Kvay5m6vCa2V3aqP9KjOgZucZucNKq91j+Wl7fC1H+lRd7QZmZuYjOamP8AfguZx2XER/rfFKgGJy0/WP8AFm4uL/rbVRuzKj/PYGcfFjOERPRqMYi9sFRzUGY/tsxn4SMKjCYmPhtIiIygEm7q6wtmMtGMcpyrfxbmInOCo3ZAzrTERM7YmPfYY75yxqrvfW5ayjCoxWYic4BJnw3wJjKquMonc1wSripx4gzh4cKxknDWrLDntaqNxUVVYAzMzF+kfJN1N3Vba/xqo3FRuzBNujWe30pLm4xmpvd03NRERlBUbgYxiMNulS41pX7XV9GqjHDPMrCowjaCT/GfRMbiLnK2ygYuau9tV71Rc1M3OGlXVqou6xKj/QSM5i7ySc9P0/yW0qNwM3MVjfhmeRF4Z1MY3XSm6SojKATHWq8KvqkTM1OOeOVd2+KVGdAzF4Teez/IImZqccc8q9trVRnRUZ0DMTM6uOd/KZ1j/aY/bWrGG6Lw9VqKqsASdmy5q2Zy0ovKuux0zSoqqwAn+M+ks1jo4z/FtKiAZiZ8P/10Imbi5nH0mJ9JjJqo5f6VEbAZnCb8s/JjxqY4dKbSojYDFfwxn7C3M3nnWyu7VRuKjOgSLxx2zFNAAAAAAAAAAAAAAAAAAAAkzVVnM0qTFgzMzU5XEx1MYnSyyi11cJjHHbtWs+MVIMzpbt0Tje3ZgtzM4VlE4mrumYwr2Wsb4UDOtl14faLxiax1ZldWMeK1HSgZ1s7rK+Ppj8rEzM+2y/8ATV33OFY7liK2zIJMzG7K/tZFzM4VVRPNZi9sxeEkRXKI5AzrTV4Y4Rn1XWmpyzzxruurFVu5lcZzuwZ1p4XcRt2rMzG7LjUmrG+c4nksxe2ccwJmotnWz9YiOONS1WFexqxhwBn/APuF0dv/AKlajrfuRFe82DMTMRGVXXHM1uV1tv13Lq8Zq7ritcZ30BM5RGcszd6OV3Ppk1MWVlnhiCXNbLuk1p4XdbV1fXOzVjjnfuBc45YRj60mtPDKJ27fQmJxq8eMV7rq8ZjCsNoLM4X9xS5i7rK4Wrik1c7mZuK9gImbqaxi8CZm5iKyxtaxid0UTFzdzGzAGYmoiOF43/hdzE+WfldXKpmKwtajjlQM608MrjP7KxNzwq59ZKrG5moNGK95sCZm5qsKJ0vTK+PT5KuZziJrLaascYwrADWz9ImPf9pc45YVv3LWMbo2rWfHME1pjOsrwTWnhlM7erVR0pK4zlQFzhljFwaN1FrWXCKIits4faBNLZ67GZy0s6wq/VurrgTFxQJpZJdXhGER1amLiiYib410BNaYu6wi8ORjrY1ls9VmInlREVN3M4ViCTMxuyv7XymMzcV/GM2pi9sxeEpq8ZjCvYC5mqrK8eRrZXunnBq5VcVhhuXViq3AzrThldXt5LM3ozPBZi8bmJ4FYUCRMxUTWMYeya08MpnC9nyur6zhXsavGcq9gLnC6xicvRNGbitkRi1UYcIr/DVjDhFe3EGYmcIiv43tXWmaqsYvHksREe0UkxVVeG6YvqCxNxc8ejNzOrM1jLWjFRimrljOGUAkaUz7zxvsRM1N1nX3/Iaqts1u2Jq8Zzv0kEu49JjeXWt/65cV1Y3znE8lr1zsCJvd7KlVtnO54qAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkzXptUnIEvPdG3iXGds1OrG+JiaJiZuarCMPSbBq4j5LjezMTN4bK6rMZYT7Zgt4WkTM1OFe6xerxpIioyxrqC3E5SmtjEb4Sp3TlMY1mRExq4bKngCxpXW8jSu911tSImtHhOPUqan/wBX1BZmonfBeMxPCI90mJnWwziKJj+XtXtAN30GdHZv0rloAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJmudYKzpbP/AFALE3smPVWZjCLmZi8fT22M76yuK/2gdEiYmZjcThGGxmLir9J9/wBg1rRV8a42TNRbEYeLOpnDdG+GtL+PL5BbquJcelszFTo4zOO30TCovfP+g6Dntm8JvDCb4VwXC5vO8N/D2BqJu+EzHImtrFYTO3W/1rSyqM5wBYmJi4VjGJmJwuNnBI2+mcX1jeDoOeya3ZxcdN6/+fxn9e4NjGFTX4zf74pP/wDmKu55A3cXW1WNsb50eqRs343hN+8g6Dno5x744xPu6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACXBcAollgoICiWWCiWWCiWWCiXwLBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZj2zL4tAJsTg0AkJsloBN/wB2G5QGTNoBNqY5tAM8/wDDHd2aAZxypcY4qAmJRn6KCbj2UBIUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEsAPYVAUEBRLxJAtWaWgBQEhQBPYUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASVAZndCx1ACDMUEKUAAAAAAAAAAABLBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASdiNAMjQDKqAgoCCgIKAgoCCgJGcqAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXeQAJcYcclAAAAAC9iTMRnIKF7PcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZ0pw9cGgHO6jSiLjC4/1Z2Rf9W6SojKAYj+mO/4W5wi9sxe3DJqojYVG4GbnK/7VfsbdK5moiGqjcVG4GMYi7nGY25QuMc42xMxebVRugqMqgEj+Wl7JO2YrjE92oiIygmInOAZvd+MTHMy2zPhmWq+KSNH0yrCKBMYrGcYmZ5EXcYzjE7ftN1HJKiNkAxGWjF53/wAW5yuf5VfCmqjdBUbgZm4mrnGq+J7tpWN7slAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABiJmF1mBWfXUc11iLWxLhUUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEUAQsFEssFEskFEvIsFBAUQBRJyAUSy8wUSyMgUTGQFEssFEssFBNoKJfyWCiXiSCiXkWCgkgomw2AoigAAAAAgKCROQKJfyWCiWbgUToAon+HEFE9zcCjN5qCiFgoll8AUSzsCibCwUSy+AKIoAAAAOQCshYApcoA3rLcOdqQuug53LWsRa0JcKigAAAAAAAAAAAAAAAAAAAAAAAAAJ7HZQEr/AEnb7KAhuUBKxMclAEUBMT2UBJyKUBmlrPioCV9tYAExgxUBK+bNqgJX+lKAJWKgJuMclATaKAlYmOSgCKAgoCcT/ZUAAAAAAASslASvmylAShQErMUBKKUBClASilAQ5qAlZehSgJRXxSgJQoCFYKAAAAAAA5gNMIUoKgoCAIBYApaANazVw5gXXUc1uSLWxnWW4RaoAAAAAAAAAAAAAAAAAAAJ7WWUUBiTs9SigC5+SlATbgqUBt9FAEy2e5ZRQBf6KWugJZiqUBjmZlFAmPWWkpQZ3zxL+ZaSgLk2lKCd1SlAAAAAAAAAAAAAAAABJIUAZvpm0AnFMcmgE4EKAzsn1lZ2+igJuO60Ak9jf6LQCdk3erQCb+Bu4qUDOzPFdvIpQTZdm9aKBOxBSgnucVooE7JuloAAAABzAaYAAAAAAEUBKFBUFAQKECwAVblkBvWW4c7CF11HNbki1sZ1l1oSFxRLhRQAAAAAAAAAEtU3+qdwaGd67JBUvC12JQCs7vc7g0JtTd7g0Mm/0BoACcEMcTcBZZnyMwVLVNnqBZZmm8GhFAAAAAAAAAAAAAAAAAAABAVL27FTGqAD4AWBCgL6hjhwALCvkAvIxNkHsBiqT0UAAAAAAAAAAAAAAAEuN4MANMAAAAAAAAAAAAAAAAIUoKgoCCoBYUAogDVyuswWh63rQtw5qQuug5rckWtGLOtK6xC4uJfCTWguEUuC43qlQCiVCavGQaGaneeLgDQzeluNadwNDOtwk1oBoTWjeXG8FCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEuN4KJcb01oBoZ1oNbgDQxrcDWkK2OetKXO8iV1LchYV0uN6a0MBCt6ya3BkBdaUud4AACKAqAAAAAAAAAAAAAAAAAAAAAAAAAACKAlFKCoKAhagIqFApcpQDVyuswIet6y60OdhC66XCuYRa6JUbmC53kK3qxuTVhLk1pPS4urxTV4rrGsenias7ytL7LWtBcB4z4uKXpfYdBBz1pXWlsBjWk1uDVRuKjcDOtwNbg1qwmrAemtwNaDVg1eIemtHE1oTV4mrxU9XWg1oTV4mrPAPV1oNaGdWTVkPWtaDWhnVk1ZBrWg1oZqUqQb1oNaGKkqQb1oNaGKkoG9aDWhiigb1uCa3Bmiga1uBrcGakqQa1uBrSzUlSC60mtJUmrIGtO9LneurJqyCXI1qzwNWQZGtXiavEGRvV4mrARgb1YNWAjA6VG4qNxSOY60FI5VJU7nUCOerJqy3cFwHjOrxNXiutBrHp4asGrCaxrSelxqo3KxcoQr/2Q=="
+    }
   },
   "variableSchema": {
     "variables": [
       {
         "id": "current_date",
-        "label": "Date",
+        "label": "Current Date",
         "type": "date",
-        "defaultValue": "2026-11-04",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$CurrentDate",
+        "required": false,
+        "group": "Dates",
         "order": 0,
         "bindings": [
           {
-            "nodeId": "n_9_2bd4ecdd",
+            "nodeId": "n_var_1_1_current_date",
             "field": "text"
           }
         ]
       },
       {
-        "id": "customer_name",
-        "label": "Customer Name",
+        "id": "customer_name_new_line",
+        "label": "Customer Name New Line",
         "type": "text",
-        "defaultValue": "Mahesh Patil",
-        "required": true,
-        "group": "Customer Details",
+        "defaultValue": "$CustomerNameNewLine",
+        "required": false,
+        "group": "Document fields",
         "order": 1,
         "bindings": [
           {
-            "nodeId": "n_5_f42cb712",
+            "nodeId": "n_var_1_2_customer_name_new_line",
             "field": "text"
           }
         ]
@@ -446,43 +791,43 @@
         "id": "customer_address",
         "label": "Customer Address",
         "type": "textarea",
-        "defaultValue": "Row House No. 12, Sector 20, Kharghar, Navi Mumbai",
-        "required": true,
-        "group": "Customer Details",
+        "defaultValue": "$CustomerAddress",
+        "required": false,
+        "group": "Document fields",
         "order": 2,
         "bindings": [
           {
-            "nodeId": "n_6_a3fe6c74",
+            "nodeId": "n_var_1_3_customer_address",
             "field": "text"
           }
         ]
       },
       {
         "id": "customer_email",
-        "label": "Email",
+        "label": "Customer Email",
         "type": "email",
-        "defaultValue": "patil.mahesh@rediffmail.com",
+        "defaultValue": "$CustomerEmail",
         "required": false,
-        "group": "Contact Details",
+        "group": "Document fields",
         "order": 3,
         "bindings": [
           {
-            "nodeId": "n_7_62d40e1c",
+            "nodeId": "n_var_1_4_customer_email",
             "field": "text"
           }
         ]
       },
       {
         "id": "customer_phone",
-        "label": "Mobile",
+        "label": "Customer Phone",
         "type": "phone",
-        "defaultValue": "9820512345",
+        "defaultValue": "$CustomerPhone",
         "required": false,
-        "group": "Contact Details",
+        "group": "Document fields",
         "order": 4,
         "bindings": [
           {
-            "nodeId": "n_8_b1f85c0b",
+            "nodeId": "n_var_1_5_customer_phone",
             "field": "text"
           }
         ]
@@ -491,62 +836,62 @@
         "id": "installment_name",
         "label": "Installment Name",
         "type": "text",
-        "defaultValue": "Plinth Level",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$InstallmentName",
+        "required": false,
+        "group": "Document fields",
         "order": 5,
         "bindings": [
           {
-            "nodeId": "n_a_866ff9b7",
+            "nodeId": "n_var_1_6_installment_name",
             "field": "text"
           },
           {
-            "nodeId": "n_j_b7a20873",
+            "nodeId": "n_var_1_12_installment_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_name",
-        "label": "Flat No.",
+        "label": "Unit Name",
         "type": "text",
-        "defaultValue": "302",
-        "required": true,
-        "group": "Property Details",
+        "defaultValue": "$UnitName",
+        "required": false,
+        "group": "Document fields",
         "order": 6,
         "bindings": [
           {
-            "nodeId": "n_a_866ff9b7",
+            "nodeId": "n_var_1_7_unit_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_floor",
-        "label": "Floor",
-        "type": "text",
-        "defaultValue": "3rd Floor",
-        "required": true,
-        "group": "Property Details",
+        "label": "Unit Floor",
+        "type": "number",
+        "defaultValue": "$UnitFloor",
+        "required": false,
+        "group": "Document fields",
         "order": 7,
         "bindings": [
           {
-            "nodeId": "n_a_866ff9b7",
+            "nodeId": "n_var_1_8_unit_floor",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_without_tds_final",
-        "label": "Total Payment Due",
+        "label": "Amount Without Tds Final",
         "type": "currency",
-        "defaultValue": 525000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$AmountWithoutTdsFinal",
+        "required": false,
+        "group": "Amounts",
         "order": 8,
         "bindings": [
           {
-            "nodeId": "n_b_9023b91a",
+            "nodeId": "n_var_1_9_amount_without_tds_final",
             "field": "text"
           }
         ]
@@ -555,88 +900,88 @@
         "id": "previous_slabs_amount",
         "label": "Previous Slabs Amount",
         "type": "currency",
-        "defaultValue": 1000000,
+        "defaultValue": "$PreviousSlabsAmount",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 9,
         "bindings": [
           {
-            "nodeId": "n_h_50cd2154",
+            "nodeId": "n_var_1_10_previous_slabs_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "previous_slabs_gst_amount",
-        "label": "Previous Slabs GST",
+        "label": "Previous Slabs Gst Amount",
         "type": "currency",
-        "defaultValue": 50000,
+        "defaultValue": "$PreviousSlabsGstAmount",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 10,
         "bindings": [
           {
-            "nodeId": "n_i_42a9a86a",
+            "nodeId": "n_var_1_11_previous_slabs_gst_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "latest_slab_amount",
-        "label": "Current Slab Amount",
+        "label": "Latest Slab Amount",
         "type": "currency",
-        "defaultValue": 500000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$LatestSlabAmount",
+        "required": false,
+        "group": "Amounts",
         "order": 11,
         "bindings": [
           {
-            "nodeId": "n_k_8e6f891f",
+            "nodeId": "n_var_1_13_latest_slab_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "latest_slab_gst_amount",
-        "label": "Current Slab GST",
+        "label": "Latest Slab Gst Amount",
         "type": "currency",
-        "defaultValue": 25000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$LatestSlabGstAmount",
+        "required": false,
+        "group": "Amounts",
         "order": 12,
         "bindings": [
           {
-            "nodeId": "n_l_d5fc4d25",
+            "nodeId": "n_var_1_14_latest_slab_gst_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "total_percentage",
-        "label": "Total Amount Due %",
+        "label": "Total Percentage",
         "type": "percent",
-        "defaultValue": 30,
+        "defaultValue": "$TotalPercentage",
         "required": false,
-        "group": "Financial Details",
+        "group": "Document fields",
         "order": 13,
         "bindings": [
           {
-            "nodeId": "n_m_32c88234",
+            "nodeId": "n_var_1_15_total_percentage",
             "field": "text"
           }
         ]
       },
       {
         "id": "pending_amount_as_per_work",
-        "label": "Pending Flat Cost As Per Work",
+        "label": "Pending Amount As Per Work",
         "type": "currency",
-        "defaultValue": 1500000,
+        "defaultValue": "$PendingAmountAsPerWork",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 14,
         "bindings": [
           {
-            "nodeId": "n_n_867b5897",
+            "nodeId": "n_var_1_16_pending_amount_as_per_work",
             "field": "text"
           }
         ]
@@ -645,28 +990,28 @@
         "id": "pending_tax_as_per_work",
         "label": "Pending Tax As Per Work",
         "type": "currency",
-        "defaultValue": 75000,
+        "defaultValue": "$PendingTaxAsPerWork",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 15,
         "bindings": [
           {
-            "nodeId": "n_o_79a90dff",
+            "nodeId": "n_var_1_17_pending_tax_as_per_work",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_paid",
-        "label": "Amount Received",
+        "label": "Amount Paid",
         "type": "currency",
-        "defaultValue": 1000000,
+        "defaultValue": "$AmountPaid",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 16,
         "bindings": [
           {
-            "nodeId": "n_q_c5ead8c6",
+            "nodeId": "n_var_1_18_amount_paid",
             "field": "text"
           }
         ]
@@ -675,96 +1020,96 @@
         "id": "tax_paid",
         "label": "Tax Paid",
         "type": "currency",
-        "defaultValue": 50000,
+        "defaultValue": "$TaxPaid",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 17,
         "bindings": [
           {
-            "nodeId": "n_r_22192534",
+            "nodeId": "n_var_1_19_tax_paid",
             "field": "text"
           }
         ]
       },
       {
         "id": "total_due_amount",
-        "label": "Amount Due",
+        "label": "Total Due Amount",
         "type": "currency",
-        "defaultValue": 500000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$TotalDueAmount",
+        "required": false,
+        "group": "Amounts",
         "order": 18,
         "bindings": [
           {
-            "nodeId": "n_t_7ce8fbb1",
+            "nodeId": "n_var_1_20_total_due_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "total_tax_amount",
-        "label": "Total Tax Due",
+        "label": "Total Tax Amount",
         "type": "currency",
-        "defaultValue": 25000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$TotalTaxAmount",
+        "required": false,
+        "group": "Amounts",
         "order": 19,
         "bindings": [
           {
-            "nodeId": "n_u_11e3c9ff",
+            "nodeId": "n_var_1_21_total_tax_amount",
             "field": "text"
           },
           {
-            "nodeId": "n_10_016b3851",
+            "nodeId": "n_var_1_24_total_tax_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "pending_tds_as_per_work",
-        "label": "TDS @ 1%",
+        "label": "Pending Tds As Per Work",
         "type": "currency",
-        "defaultValue": 5000,
+        "defaultValue": "$PendingTdsAsPerWork",
         "required": false,
-        "group": "Financial Details",
+        "group": "Amounts",
         "order": 20,
         "bindings": [
           {
-            "nodeId": "n_w_5707d6c3",
+            "nodeId": "n_var_1_22_pending_tds_as_per_work",
             "field": "text"
           },
           {
-            "nodeId": "n_11_5ee7e121",
+            "nodeId": "n_var_1_25_pending_tds_as_per_work",
             "field": "text"
           }
         ]
       },
       {
         "id": "balance_as_per_work",
-        "label": "Balance Flat Cost",
+        "label": "Balance As Per Work",
         "type": "currency",
-        "defaultValue": 495000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$BalanceAsPerWork",
+        "required": false,
+        "group": "Amounts",
         "order": 21,
         "bindings": [
           {
-            "nodeId": "n_z_15a54bd2",
+            "nodeId": "n_var_1_23_balance_as_per_work",
             "field": "text"
           }
         ]
       },
       {
         "id": "due_date",
-        "label": "Due Date (15 Days)",
+        "label": "Due Date",
         "type": "date",
-        "defaultValue": "2026-11-19",
+        "defaultValue": "$DueDate",
         "required": false,
-        "group": "Document Details",
+        "group": "Dates",
         "order": 22,
         "bindings": [
           {
-            "nodeId": "n_1f_97940431",
+            "nodeId": "n_var_1_26_due_date",
             "field": "text"
           }
         ]

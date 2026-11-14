@@ -25,7 +25,7 @@ import { readFile, removeFile, writeGenerated, writeUpload } from "../storage";
 import { detectVariablesWithAi, reconstructWithAi } from "./ai";
 import { AppError } from "./errors";
 import { extractPdf } from "./pdf-extract";
-import { pagesToDefinition } from "./layout";
+import { pagesToDefinition, pagesToExactDefinition } from "./layout";
 import { renderPdf } from "./pdfmake";
 
 function titleFrom(filename: string): string {
@@ -81,10 +81,10 @@ export async function convertUpload(db: DB, user: User, uploadId: string, mode: 
   if (!upload) throw new AppError(404, "NOT_FOUND", "That upload could not be found. Please upload the file again.");
   const buffer = readFile(upload.stored_path);
   if (upload.kind === "pdf") {
-    if (mode !== "standard" && mode !== "ai") {
-      throw new AppError(400, "MODE", "Choose standard extraction or AI reconstruction for a PDF.");
+    if (mode !== "standard" && mode !== "ai" && mode !== "exact") {
+      throw new AppError(400, "MODE", "Choose standard extraction, exact PDF layout, or AI reconstruction for a PDF.");
     }
-    const extracted = await extractPdf(buffer);
+    const extracted = await extractPdf(buffer, { renderPages: mode === "exact" });
     if (mode === "ai") {
       const ai = await reconstructWithAi(extracted.pages);
       return createDraft(db, user, {
@@ -93,6 +93,23 @@ export async function convertUpload(db: DB, user: User, uploadId: string, mode: 
         definition: ai.definition,
         variables: ai.variables,
         warnings: ai.warnings,
+        originalPath: upload.stored_path,
+        originalName: upload.original_name,
+      });
+    }
+    if (mode === "exact") {
+      const exact = pagesToExactDefinition(extracted.pages);
+      const prepared = prepareDefinition(exact.definition);
+      if (prepared.errors.length) {
+        throw new AppError(422, "RECONSTRUCTION_FAILED", "The PDF could not be turned into an exact document definition.", prepared.errors);
+      }
+      const variables = syncBindings(prepared.definition, exact.variables);
+      return createDraft(db, user, {
+        name: titleFrom(upload.original_name),
+        sourceType: "pdf",
+        definition: prepared.definition,
+        variables,
+        warnings: [...exact.warnings, ...prepared.warnings],
         originalPath: upload.stored_path,
         originalName: upload.original_name,
       });

@@ -163,7 +163,6 @@ function readVariables(body: { variables?: unknown; variableSchema?: unknown }):
 
 export function createApp(db: DB) {
   const app = express();
-  app.set("trust proxy", 1);
   app.disable("x-powered-by");
   app.use((_req, res, next) => {
     res.setHeader("X-Content-Type-Options", "nosniff");
@@ -180,9 +179,7 @@ export function createApp(db: DB) {
     const origin = req.headers.origin;
     if (!origin) return next();
     const host = `${req.protocol}://${req.get("host")}`;
-    const cleanOrigin = origin.replace(/^https?:\/\//, "");
-    const cleanHost = (req.get("host") || "").replace(/^https?:\/\//, "");
-    if (origin === host || cleanOrigin === cleanHost || origins.includes(origin)) return next();
+    if (origin === host || origins.includes(origin)) return next();
     return res.status(403).json({ error: { code: "ORIGIN", message: "This request was blocked." } });
   });
   app.use((req, _res, next) => {
@@ -193,7 +190,7 @@ export function createApp(db: DB) {
 
   const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: MAX_UPLOAD_BYTES, files: 1 } });
 
-  app.get(["/healthz", "/api/health"], (_req, res) => {
+  app.get("/api/health", (_req, res) => {
     res.json({ ok: true });
   });
 

@@ -2,313 +2,692 @@
   "documentDefinition": {
     "content": [
       {
-        "columns": [
-          {
-            "stack": [
-              {
-                "text": "{{project_by}}",
-                "bold": true,
-                "fontSize": 12,
-                "color": "#0f172a",
-                "_nodeId": "n_3_78890c15"
-              },
-              {
-                "text": "{{sub_company_address}}",
-                "fontSize": 8.5,
-                "color": "#475569",
-                "_nodeId": "n_4_c6ba6ce9"
-              },
-              {
-                "text": "Contact : {{sub_company_landline}}",
-                "fontSize": 8.5,
-                "_nodeId": "n_5_3bd66644"
-              },
-              {
-                "text": "PAN : {{sub_company_pan}}",
-                "bold": true,
-                "fontSize": 8.5,
-                "_nodeId": "n_6_d1bb05ee"
-              }
-            ],
-            "width": "*",
-            "_nodeId": "n_2_db4b3fa8"
-          },
-          {
-            "stack": [
-              {
-                "text": "Project : {{project_name}}",
-                "bold": true,
-                "fontSize": 11,
-                "_nodeId": "n_8_03762b8c"
-              },
-              {
-                "text": "{{site_address}}",
-                "fontSize": 8.5,
-                "color": "#475569",
-                "_nodeId": "n_9_8165b424"
-              },
-              {
-                "text": "Rera No.: {{rera}}",
-                "bold": true,
-                "fontSize": 8.5,
-                "_nodeId": "n_a_5e0657aa"
-              },
-              {
-                "text": "GST : {{sub_company_gst}}",
-                "bold": true,
-                "fontSize": 8.5,
-                "_nodeId": "n_b_226cceb8"
-              }
-            ],
-            "width": 220,
-            "alignment": "right",
-            "_nodeId": "n_7_cb376f62"
-          }
-        ],
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_1_7ebd017c"
+        "image": "page_1",
+        "width": 595.28,
+        "height": 841.89,
+        "_nodeId": "n_1_bd367e8f"
       },
       {
         "canvas": [
-          {}
-        ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_c_5681319c"
-      },
-      {
-        "columns": [
           {
-            "text": "Date: {{payment_date}}",
-            "bold": true,
-            "_nodeId": "n_e_ffb8ad9c"
-          },
-          {
-            "text": "RECEIPT",
-            "style": "receiptTitle",
-            "_nodeId": "n_f_6fc779ee"
-          },
-          {
-            "text": "Receipt No.: {{receipt_number}}",
-            "alignment": "right",
-            "bold": true,
-            "_nodeId": "n_g_40848bbd"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 63,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          14
-        ],
-        "_nodeId": "n_d_f453378d"
+        "absolutePosition": {
+          "x": 39,
+          "y": 105.63281199999994
+        },
+        "_nodeId": "n_2_9185ef17"
       },
       {
-        "stack": [
+        "text": "{{project_by}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 40,
+          "y": 106.63281199999994
+        },
+        "_nodeId": "n_var_1_1_project_by"
+      },
+      {
+        "canvas": [
           {
-            "text": "Received with the thanks from {{customer_name}}",
-            "bold": true,
-            "fontSize": 11,
-            "_nodeId": "n_i_ec7fe11f"
-          },
-          {
-            "text": "Basic: ₹ {{amount_without_tax}} + GST: ₹ {{tax_amount}} = Total: ₹ {{amount_for_paid}}",
-            "color": "#334155",
-            "margin": [
-              0,
-              4,
-              0,
-              4
-            ],
-            "_nodeId": "n_j_af8bc82a"
-          },
-          {
-            "text": "a sum of {{amount_in_words}} on account of amount received against Unit No.: {{unit_wing}}- {{unit_name}}",
-            "color": "#334155",
-            "_nodeId": "n_k_7adbf7ac"
-          },
-          {
-            "text": "₹{{amount_paid}}",
-            "style": "amountBanner",
-            "_nodeId": "n_l_f065ffe1"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 81,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_h_da7f7c89"
+        "absolutePosition": {
+          "x": 477.340547,
+          "y": 105.77840300000003
+        },
+        "_nodeId": "n_3_a3ddbf02"
       },
       {
-        "stack": [
+        "text": "{{project_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 478.340547,
+          "y": 106.77840300000003
+        },
+        "_nodeId": "n_var_1_2_project_name"
+      },
+      {
+        "canvas": [
           {
-            "text": "Cheque/ D.D. No./ RTGS : {{cheque_number}} Dated : {{cheque_date}}",
-            "bold": true,
-            "_nodeId": "n_n_f1a1ba06"
-          },
-          {
-            "text": "Bank Name: {{bank_name}}",
-            "_nodeId": "n_o_242e03f2"
-          },
-          {
-            "text": "Remark: {{remark}}",
-            "italics": true,
-            "color": "#475569",
-            "_nodeId": "n_p_8260f69b"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 106,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          16
-        ],
-        "_nodeId": "n_m_f4631ec1"
+        "absolutePosition": {
+          "x": 39,
+          "y": 124.83984399999997
+        },
+        "_nodeId": "n_4_3da0d4f7"
       },
       {
-        "columns": [
+        "text": "{{sub_company_address}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 40,
+          "y": 125.83984399999997
+        },
+        "_nodeId": "n_var_1_3_sub_company_address"
+      },
+      {
+        "canvas": [
           {
-            "text": "Cheques are subject to realisation",
-            "fontSize": 8.5,
-            "italics": true,
-            "color": "#64748b",
-            "margin": [
-              0,
-              40,
-              0,
-              0
-            ],
-            "_nodeId": "n_r_ba43901d"
-          },
-          {
-            "stack": [
-              {
-                "text": "For {{project_by}}",
-                "bold": true,
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  36
-                ],
-                "_nodeId": "n_t_3c7974d3"
-              },
-              {
-                "text": "Authorised Signatory",
-                "style": "signatory",
-                "_nodeId": "n_u_1dbf3065"
-              }
-            ],
-            "alignment": "right",
-            "width": 180,
-            "_nodeId": "n_s_14ba73e1"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 64,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          20
-        ],
-        "_nodeId": "n_q_b1a5e18b"
+        "absolutePosition": {
+          "x": 494.992891,
+          "y": 124.98543399999994
+        },
+        "_nodeId": "n_5_482bd69d"
       },
       {
-        "text": "This is an auto- generated Payment Receipt.",
-        "alignment": "center",
-        "fontSize": 8.5,
-        "italics": true,
-        "color": "#94a3b8",
-        "_nodeId": "n_v_77fad925"
+        "text": "{{site_address}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 495.992891,
+          "y": 125.98543399999994
+        },
+        "_nodeId": "n_var_1_4_site_address"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 128,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 90.175781,
+          "y": 141.41406199999994
+        },
+        "_nodeId": "n_6_267175b4"
+      },
+      {
+        "text": "{{sub_company_landline}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 91.175781,
+          "y": 142.41406199999994
+        },
+        "_nodeId": "n_var_1_5_sub_company_landline"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 36,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 522.979219,
+          "y": 141.55965300000003
+        },
+        "_nodeId": "n_7_ea005ba4"
+      },
+      {
+        "text": "{{rera}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 523.979219,
+          "y": 142.55965300000003
+        },
+        "_nodeId": "n_var_1_6_rera"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 104,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 71.361328,
+          "y": 160.47656199999994
+        },
+        "_nodeId": "n_8_0a1a9a4c"
+      },
+      {
+        "text": "{{sub_company_pan}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 72.361328,
+          "y": 161.47656199999994
+        },
+        "_nodeId": "n_var_1_7_sub_company_pan"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 101,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 457.565156,
+          "y": 160.62215300000003
+        },
+        "_nodeId": "n_9_0444d303"
+      },
+      {
+        "text": "{{sub_company_gst}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 458.565156,
+          "y": 161.62215300000003
+        },
+        "_nodeId": "n_var_1_8_sub_company_gst"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 69.478516,
+          "y": 201.89168399999994
+        },
+        "_nodeId": "n_a_d95c00ad"
+      },
+      {
+        "text": "{{payment_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 70.478516,
+          "y": 202.89168399999994
+        },
+        "_nodeId": "n_var_1_9_payment_date"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 95,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 458.934297,
+          "y": 201.74715300000003
+        },
+        "_nodeId": "n_b_7af60c42"
+      },
+      {
+        "text": "{{receipt_number}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 459.934297,
+          "y": 202.74715300000003
+        },
+        "_nodeId": "n_var_1_10_receipt_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 96,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 207.892578,
+          "y": 239.15340300000003
+        },
+        "_nodeId": "n_c_1cc03595"
+      },
+      {
+        "text": "{{customer_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 208.892578,
+          "y": 240.15340300000003
+        },
+        "_nodeId": "n_var_1_11_customer_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 115,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 88.525391,
+          "y": 268.215903
+        },
+        "_nodeId": "n_d_d2298a6c"
+      },
+      {
+        "text": "{{amount_without_tax}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 89.525391,
+          "y": 269.215903
+        },
+        "_nodeId": "n_var_1_12_amount_without_tax"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 73,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 248.826172,
+          "y": 268.215903
+        },
+        "_nodeId": "n_e_03649605"
+      },
+      {
+        "text": "{{tax_amount}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 249.826172,
+          "y": 269.215903
+        },
+        "_nodeId": "n_var_1_13_tax_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 95,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 362.837891,
+          "y": 268.215903
+        },
+        "_nodeId": "n_f_8138b5f0"
+      },
+      {
+        "text": "{{amount_for_paid}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 363.837891,
+          "y": 269.215903
+        },
+        "_nodeId": "n_var_1_14_amount_for_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 83,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 85.503906,
+          "y": 297.42293399999994
+        },
+        "_nodeId": "n_g_a85131a0"
+      },
+      {
+        "text": "{{amount_in_words}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 86.503906,
+          "y": 298.42293399999994
+        },
+        "_nodeId": "n_var_1_15_amount_in_words"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 54,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 382.745117,
+          "y": 297.42293399999994
+        },
+        "_nodeId": "n_h_2cc8d778"
+      },
+      {
+        "text": "{{unit_wing}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 383.745117,
+          "y": 298.42293399999994
+        },
+        "_nodeId": "n_var_1_16_unit_wing"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 55,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 432.40332,
+          "y": 297.42293399999994
+        },
+        "_nodeId": "n_i_737f251c"
+      },
+      {
+        "text": "{{unit_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 433.40332,
+          "y": 298.42293399999994
+        },
+        "_nodeId": "n_var_1_17_unit_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 78,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 54,
+          "y": 339.99715299999997
+        },
+        "_nodeId": "n_j_e045a1f6"
+      },
+      {
+        "text": "{{amount_paid}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 55,
+          "y": 340.99715299999997
+        },
+        "_nodeId": "n_var_1_18_amount_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 164.640625,
+          "y": 380.204184
+        },
+        "_nodeId": "n_k_e3da46e2"
+      },
+      {
+        "text": "{{cheque_number}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 165.640625,
+          "y": 381.204184
+        },
+        "_nodeId": "n_var_1_19_cheque_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 289.339844,
+          "y": 380.204184
+        },
+        "_nodeId": "n_l_bd5d2de6"
+      },
+      {
+        "text": "{{cheque_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 290.339844,
+          "y": 381.204184
+        },
+        "_nodeId": "n_var_1_20_cheque_date"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 106.808594,
+          "y": 402.77840299999997
+        },
+        "_nodeId": "n_m_67838b2a"
+      },
+      {
+        "text": "{{bank_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 107.808594,
+          "y": 403.77840299999997
+        },
+        "_nodeId": "n_var_1_21_bank_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 44,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 83.033203,
+          "y": 427.985434
+        },
+        "_nodeId": "n_n_3bb5dcc6"
+      },
+      {
+        "text": "{{remark}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 84.033203,
+          "y": 428.985434
+        },
+        "_nodeId": "n_var_1_22_remark"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 53,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 505.505586,
+          "y": 447.704184
+        },
+        "_nodeId": "n_o_44d8a454"
+      },
+      {
+        "text": "{{project_by}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 506.505586,
+          "y": 448.704184
+        },
+        "_nodeId": "n_var_1_23_project_by"
       }
     ],
-    "pageSize": "A4",
+    "pageSize": {
+      "width": 595.28,
+      "height": 841.89
+    },
     "pageMargins": [
-      40,
-      40,
-      40,
-      40
+      0,
+      0,
+      0,
+      0
     ],
     "defaultStyle": {
       "fontSize": 10,
       "font": "Roboto",
-      "color": "#1e293b",
-      "lineHeight": 1.3
+      "color": "#0f172a"
     },
-    "styles": {}
+    "images": {
+      "page_1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCATvA30DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EADAQAQACAAIJBAICAwEBAQEAAAABESExAhJBUWFxgaHRUpGx8CLBQuEyYnLxgqKy/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8A6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADOls/6j9mN47IwjfbVX0xSsb3AzF4TU3vvCelrV3jOcxGOVLqx/V4exUT+8c+YMzczWM1EZTXXMx/G98/DUxE/wBYFRhwBn/Xj2z/AKMZvCc5iMarpbVRd7cion91OfMEzmp2RGHGeRo5Tzn5Wo/8wIisgZm8dG8b7Z/0Xdzu0e7VY3tyKjHjn1BmsdHlvndBWGlOOEztaqMOGRUY8c+oGcdGP4xzj5dEqO9gmUzXpmd+MJF4TU7Lm845W1WN9DVj+rw9gTSy9vmCvyr/AF38Wpi8Er4oGdkxj/lUb+VmWtGX43ne9qo731Kj3ipxBnLVnHGrx4JGdZRrTjvnc3WXDIqMt+IMznOcxwnLo1GMb8Co4++fNQc8tGee/i1WMRjWM55rUVX3eTFgzOEaUXlVcLWYxjGcbvGVqKrfmtbdwMxnMbq+Cc7icaxidzVZ8UnRiee8GPThX5Y825q4vPYVFVWBERAMX+E8/wBrN3tmK2TjHRdWFnRiQYnHVxmbXPWxnDLhxaqMOGROjE/cwYxnVzxibKw0sZwusW6jDhkVGPHMGLmdWMcrwmrJuou4/KKxxpuow4ZFR3vqDMxjEcJSJ/KLzi4lusb3FRd7QY4xeeczn0XOdLGcK28F1Y+ytRjxzBjZozc3cbTGZnPDCKmqbqKiNxOjEgRdReagAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACTF7+k0CjOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veTV46XvINDOrx0veViK39ZsFAAAAAAAAAAAAAAAAAAAAAAAAAAAAGdLZjWPkjPCZmKxveDQzfCauvsF51F1mDQl49L+wl5YYSDQOc3eEzn6v1sB0E2MRjt/LbE7twOgxpXlGeft5XWwid4NDOtN1U3zg1sL41XEGhnWzuKmIs1sInfMR7g0M62eGWaTM3o1lPfD9A2MXMa0ccOpc1oxtup6Zg2MTOGlV4TvLm9HDZOANjOthMzhWFF41MVuBoZ1vxuvt0XOtMbK+yDQxX5RF6WV5rdbJmtv3MGhnWy3TtWJuLyBRmdKLiLjbbWywBiri5mYmeOHss7Ly2zH3IGhmI43HPH3SIxnGcJjbO4Gwc9K9kzn6v0DoJGX933YjHbWleU5VuB0GNKKxuc965ZXN/cwaGdbCZrKcYWJuZrKNoKMRM3eyZmI/Xut4zERYNDOthdTW8vGoi6zBoZ1suJOlV4ZV3BoZ1sYis8jRmZu98/wDgNCTNbJnlBE3v6goxMVMYzjO9brCLmc8Z/YNDE6U1cYTGE8GrndN/doKMTNxH/UQ1vw/sFGNLOLwj9rGEYzfHgDQxozN1O2LhdbPDKakGhnWxjDPKTW21NRtBoS8a4Wmtw20DQzrTjhjDMzOrF4YxjewHQZioudaZrjZrZXFXkDQzrXeGV48mf43rTe677A6DNzumcLLvVzx+4g0MTNxNRhlbUZRygFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJvCtk2mMzdVUT3aAYqcMMYmMbzWYnHDlMTXu0AzU3/8ANdSLwiuc+GgBmqm425+YaAGMZqJjGKm2wGdW5mZuN1TsTVmq2XExybAZr8r2VXdNWa461xxbAZqZm5wwrelaVRFZTG1sBmp/LjdJU/jhdRj7NgMzH5ROzb0K/K9n7loBiprS4zgtTejNVUTbQDGrP5c7hcZmJmKq9t5tAOdaVatdb4tVOtdYTHs0AzX5ROykmJucLvKby6NgMVMxEZRWPNqLrHNQGdWLicMLaAGKmqq904LjERtqMYaAZiMZmqvZ+1iMZ4+FAGZjG46/d7QAxNzhMY531bAZ0ouMN8GlEzWFxuumgGIiYicM59oKmImI6ftsBjVwwmb54WsRNzM7YhoBip1a2/2uMTMxF3xqmgGNWYiNsxNz1KmdbDOtu5sBmpvR4XfsRExeG2ZtoBJi9sxykiK39VAZmLrhNkxN3EXhVNAMas1O+ZuiYmamrwyva2AxqzVV/K+jWOPZQGZuMc43JqzVb5ueEbmwGNWpiYua3zsKmtKN8zTYDNT+PDP2SpiJ0aw33v4NgM1MTcReFbkqcP8Aq2wGam54xSVNRFZTHs2AkxcTCVM1cVWOebQDMRNTxme5EVEYRbQDExN5XGzHIiJ/HhM22AxU1MVnttqMoUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASZrZMqAzc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3kufTPby0Azc+me3lY5UoAAAAAAAAAAAAAAAAAAAAAAAAAAAABdZiTs/WaaOU85zBbjK1vuzGcYTnt2cpSL/GKnCce4NXG+Fu8mawjDb+5WM56fAFxleJeNYYM7Jis5z5+Goznp+wSZm6iMc+izNRddE0uMcp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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//9k="
+    }
   },
   "variableSchema": {
     "variables": [
       {
         "id": "project_by",
-        "label": "Company / Developer",
+        "label": "Project By",
         "type": "text",
-        "defaultValue": "Gurukrupa Realcon Developers Pvt. Ltd.",
-        "required": true,
-        "group": "Company Details",
+        "defaultValue": "$ProjectBy",
+        "required": false,
+        "group": "Document fields",
         "order": 0,
         "bindings": [
           {
-            "nodeId": "n_3_78890c15",
+            "nodeId": "n_var_1_1_project_by",
             "field": "text"
           },
           {
-            "nodeId": "n_t_3c7974d3",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "sub_company_address",
-        "label": "Company Address",
-        "type": "textarea",
-        "defaultValue": "Gurukrupa Heights, Ghatkopar East, Mumbai - 400077",
-        "required": false,
-        "group": "Company Details",
-        "order": 1,
-        "bindings": [
-          {
-            "nodeId": "n_4_c6ba6ce9",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "sub_company_landline",
-        "label": "Contact No.",
-        "type": "phone",
-        "defaultValue": "+91-22-25123456",
-        "required": false,
-        "group": "Contact Details",
-        "order": 2,
-        "bindings": [
-          {
-            "nodeId": "n_5_3bd66644",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "sub_company_pan",
-        "label": "Company PAN",
-        "type": "text",
-        "defaultValue": "AABCG1234F",
-        "required": false,
-        "group": "Company Details",
-        "order": 3,
-        "bindings": [
-          {
-            "nodeId": "n_6_d1bb05ee",
+            "nodeId": "n_var_1_23_project_by",
             "field": "text"
           }
         ]
@@ -317,13 +696,28 @@
         "id": "project_name",
         "label": "Project Name",
         "type": "text",
-        "defaultValue": "Marina Enclave",
-        "required": true,
-        "group": "Project Details",
-        "order": 4,
+        "defaultValue": "$ProjectName",
+        "required": false,
+        "group": "Document fields",
+        "order": 1,
         "bindings": [
           {
-            "nodeId": "n_8_03762b8c",
+            "nodeId": "n_var_1_2_project_name",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_address",
+        "label": "Sub Company Address",
+        "type": "textarea",
+        "defaultValue": "$SubCompanyAddress",
+        "required": false,
+        "group": "Document fields",
+        "order": 2,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_3_sub_company_address",
             "field": "text"
           }
         ]
@@ -332,73 +726,103 @@
         "id": "site_address",
         "label": "Site Address",
         "type": "textarea",
-        "defaultValue": "Jankalyan Nagar, Malad West, Mumbai - 400095",
+        "defaultValue": "$SiteAddress",
         "required": false,
-        "group": "Project Details",
-        "order": 5,
+        "group": "Document fields",
+        "order": 3,
         "bindings": [
           {
-            "nodeId": "n_9_8165b424",
+            "nodeId": "n_var_1_4_site_address",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_landline",
+        "label": "Sub Company Landline",
+        "type": "text",
+        "defaultValue": "$SubCompanyLandline",
+        "required": false,
+        "group": "Document fields",
+        "order": 4,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_5_sub_company_landline",
             "field": "text"
           }
         ]
       },
       {
         "id": "rera",
-        "label": "RERA No.",
+        "label": "Rera",
         "type": "text",
-        "defaultValue": "P51800004567",
+        "defaultValue": "$Rera",
         "required": false,
-        "group": "Project Details",
+        "group": "Document fields",
+        "order": 5,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_6_rera",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "sub_company_pan",
+        "label": "Sub Company Pan",
+        "type": "text",
+        "defaultValue": "$SubCompanyPan",
+        "required": false,
+        "group": "Document fields",
         "order": 6,
         "bindings": [
           {
-            "nodeId": "n_a_5e0657aa",
+            "nodeId": "n_var_1_7_sub_company_pan",
             "field": "text"
           }
         ]
       },
       {
         "id": "sub_company_gst",
-        "label": "GSTIN",
-        "type": "text",
-        "defaultValue": "27AABCG1234F1Z2",
+        "label": "Sub Company Gst",
+        "type": "currency",
+        "defaultValue": "$SubCompanyGst",
         "required": false,
-        "group": "Company Details",
+        "group": "Amounts",
         "order": 7,
         "bindings": [
           {
-            "nodeId": "n_b_226cceb8",
+            "nodeId": "n_var_1_8_sub_company_gst",
             "field": "text"
           }
         ]
       },
       {
         "id": "payment_date",
-        "label": "Date",
+        "label": "Payment Date",
         "type": "date",
-        "defaultValue": "2026-11-04",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$PaymentDate",
+        "required": false,
+        "group": "Dates",
         "order": 8,
         "bindings": [
           {
-            "nodeId": "n_e_ffb8ad9c",
+            "nodeId": "n_var_1_9_payment_date",
             "field": "text"
           }
         ]
       },
       {
         "id": "receipt_number",
-        "label": "Receipt No.",
+        "label": "Receipt Number",
         "type": "text",
-        "defaultValue": "GRD/2026/512",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$ReceiptNumber",
+        "required": false,
+        "group": "Document fields",
         "order": 9,
         "bindings": [
           {
-            "nodeId": "n_g_40848bbd",
+            "nodeId": "n_var_1_10_receipt_number",
             "field": "text"
           }
         ]
@@ -407,58 +831,103 @@
         "id": "customer_name",
         "label": "Customer Name",
         "type": "text",
-        "defaultValue": "Pooja Mehta",
-        "required": true,
-        "group": "Customer Details",
+        "defaultValue": "$CustomerName",
+        "required": false,
+        "group": "Document fields",
         "order": 10,
         "bindings": [
           {
-            "nodeId": "n_i_ec7fe11f",
+            "nodeId": "n_var_1_11_customer_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_without_tax",
-        "label": "Basic Amount",
+        "label": "Amount Without Tax",
         "type": "currency",
-        "defaultValue": 850000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$AmountWithoutTax",
+        "required": false,
+        "group": "Amounts",
         "order": 11,
         "bindings": [
           {
-            "nodeId": "n_j_af8bc82a",
+            "nodeId": "n_var_1_12_amount_without_tax",
             "field": "text"
           }
         ]
       },
       {
         "id": "tax_amount",
-        "label": "GST Amount",
+        "label": "Tax Amount",
         "type": "currency",
-        "defaultValue": 42500,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$TaxAmount",
+        "required": false,
+        "group": "Amounts",
         "order": 12,
         "bindings": [
           {
-            "nodeId": "n_j_af8bc82a",
+            "nodeId": "n_var_1_13_tax_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_for_paid",
-        "label": "Total Amount",
+        "label": "Amount For Paid",
         "type": "currency",
-        "defaultValue": 892500,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$AmountForPaid",
+        "required": false,
+        "group": "Amounts",
         "order": 13,
         "bindings": [
           {
-            "nodeId": "n_j_af8bc82a",
+            "nodeId": "n_var_1_14_amount_for_paid",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "amount_in_words",
+        "label": "Amount In Words",
+        "type": "currency",
+        "defaultValue": "$AmountInWords",
+        "required": false,
+        "group": "Amounts",
+        "order": 14,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_15_amount_in_words",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_wing",
+        "label": "Unit Wing",
+        "type": "text",
+        "defaultValue": "$UnitWing",
+        "required": false,
+        "group": "Document fields",
+        "order": 15,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_16_unit_wing",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "unit_name",
+        "label": "Unit Name",
+        "type": "text",
+        "defaultValue": "$UnitName",
+        "required": false,
+        "group": "Document fields",
+        "order": 16,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_17_unit_name",
             "field": "text"
           }
         ]
@@ -467,88 +936,43 @@
         "id": "amount_paid",
         "label": "Amount Paid",
         "type": "currency",
-        "defaultValue": 892500,
-        "required": true,
-        "group": "Financial Details",
-        "order": 14,
-        "bindings": [
-          {
-            "nodeId": "n_l_f065ffe1",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "amount_in_words",
-        "label": "Amount in Words",
-        "type": "text",
-        "defaultValue": "Rupees Eight Lakh Ninety Two Thousand Five Hundred Only",
-        "required": true,
-        "group": "Financial Details",
-        "order": 15,
-        "bindings": [
-          {
-            "nodeId": "n_k_7adbf7ac",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "unit_wing",
-        "label": "Wing",
-        "type": "text",
-        "defaultValue": "Wing C",
+        "defaultValue": "$AmountPaid",
         "required": false,
-        "group": "Property Details",
-        "order": 16,
-        "bindings": [
-          {
-            "nodeId": "n_k_7adbf7ac",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "unit_name",
-        "label": "Unit No.",
-        "type": "text",
-        "defaultValue": "1103",
-        "required": true,
-        "group": "Property Details",
+        "group": "Amounts",
         "order": 17,
         "bindings": [
           {
-            "nodeId": "n_k_7adbf7ac",
+            "nodeId": "n_var_1_18_amount_paid",
             "field": "text"
           }
         ]
       },
       {
         "id": "cheque_number",
-        "label": "Cheque / RTGS / UTR No.",
+        "label": "Cheque Number",
         "type": "text",
-        "defaultValue": "ICIC00088921",
-        "required": true,
-        "group": "Bank Details",
+        "defaultValue": "$ChequeNumber",
+        "required": false,
+        "group": "Document fields",
         "order": 18,
         "bindings": [
           {
-            "nodeId": "n_n_f1a1ba06",
+            "nodeId": "n_var_1_19_cheque_number",
             "field": "text"
           }
         ]
       },
       {
         "id": "cheque_date",
-        "label": "Dated",
+        "label": "Cheque Date",
         "type": "date",
-        "defaultValue": "2026-11-03",
-        "required": true,
-        "group": "Bank Details",
+        "defaultValue": "$ChequeDate",
+        "required": false,
+        "group": "Dates",
         "order": 19,
         "bindings": [
           {
-            "nodeId": "n_n_f1a1ba06",
+            "nodeId": "n_var_1_20_cheque_date",
             "field": "text"
           }
         ]
@@ -557,13 +981,13 @@
         "id": "bank_name",
         "label": "Bank Name",
         "type": "text",
-        "defaultValue": "ICICI Bank, Ghatkopar",
-        "required": true,
-        "group": "Bank Details",
+        "defaultValue": "$BankName",
+        "required": false,
+        "group": "Document fields",
         "order": 20,
         "bindings": [
           {
-            "nodeId": "n_o_242e03f2",
+            "nodeId": "n_var_1_21_bank_name",
             "field": "text"
           }
         ]
@@ -571,14 +995,14 @@
       {
         "id": "remark",
         "label": "Remark",
-        "type": "text",
-        "defaultValue": "11th Slab RCC milestone payment",
+        "type": "textarea",
+        "defaultValue": "$Remark",
         "required": false,
-        "group": "Document Details",
+        "group": "Document fields",
         "order": 21,
         "bindings": [
           {
-            "nodeId": "n_p_8260f69b",
+            "nodeId": "n_var_1_22_remark",
             "field": "text"
           }
         ]

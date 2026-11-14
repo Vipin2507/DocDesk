@@ -29,6 +29,7 @@ Set `ADMIN_EMAIL` and `ADMIN_PASSWORD` (at least 8 characters) before the first 
 ## What it does
 
 - Upload a text PDF or a pure JSON file. JavaScript is rejected and never executed.
+- Exact PDF layout keeps each original page as the visual background and overlays editable fields on `$MergeToken` values from the text layer. Rebuild the sample demand/receipt masters with `npm run masters:rebuild`.
 - Standard extraction reads text positions, page size, and simple tables, then says clearly that the reconstruction is approximate.
 - AI reconstruction and AI variable detection call OpenAI or Anthropic only when a server key is configured. Invalid model output is discarded.
 - Scanned pages with no text layer are sent through OCR when the canvas runtime can render them.
@@ -56,45 +57,6 @@ See `.env.example`.
 | `AI_MAX_PAGES` | Pages sent to a model, default 4 |
 
 AI keys are read only on the server.
-
-## Deploying to Render (render.com)
-
-This project is pre-configured and ready for one-click deployment on [Render](https://render.com).
-
-### Option 1: Automatic Blueprint (`render.yaml`) - 100% Free
-1. Push your repository to GitHub or GitLab.
-2. In the Render Dashboard, click **New +** > **Blueprint**.
-3. Connect your repository. Render will automatically read `render.yaml` and configure:
-   - **Plan**: `Free` ($0/mo, no payment or credit card required)
-   - **Build Command**: `npm install && npm run build`
-   - **Start Command**: `npm start`
-   - **Health Check**: `/healthz`
-   - **Default Admin**: `admin@buildesk.local` / `Buildesk123!`
-4. Click **Apply**. Render will deploy your free service.
-
-### Option 2: Manual Web Service (Native Node)
-1. In Render Dashboard, click **New +** > **Web Service**.
-2. Select your repository with runtime **Node**.
-3. Set the following settings:
-   - **Build Command**: `npm install && npm run build`
-   - **Start Command**: `npm start`
-   - **Health Check Path**: `/healthz`
-4. Add Environment Variables:
-   - `NODE_ENV`: `production`
-   - `PORT`: `10000`
-   - `ADMIN_EMAIL`: `admin@buildesk.local`
-   - `ADMIN_PASSWORD`: (your chosen admin password, 8+ characters)
-   - `SESSION_SECRET`: (a random secret string)
-   - `DATA_DIR`: `/var/data` (if using a persistent disk) or `./data` (if using free tier)
-5. *(Optional for Starter plan)* Add a **Disk**:
-   - **Name**: `document-data`
-   - **Mount Path**: `/var/data`
-   - **Size**: 1 GB
-
-### Option 3: Docker Deployment
-A production-ready multi-stage `Dockerfile` is included.
-1. In Render, select **Docker** as the runtime.
-2. Render will build the container using `Dockerfile`, copy client assets, bundle the backend, and run the health check.
 
 ## Roles
 

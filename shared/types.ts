@@ -105,4 +105,4 @@ export interface DocumentBundle {
 
 export const MAX_UPLOAD_BYTES = 20 * 1024 * 1024;
 export const MAX_PDF_PAGES = 50;
-export const MAX_IMAGE_BYTES = 2 * 1024 * 1024;
+export const MAX_IMAGE_BYTES = 6 * 1024 * 1024;

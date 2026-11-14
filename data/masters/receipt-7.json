@@ -2,351 +2,483 @@
   "documentDefinition": {
     "content": [
       {
-        "text": "LMP GROUP RITA PALACE",
-        "style": "companyTitle",
-        "_nodeId": "n_1_726e7a65"
+        "image": "page_1",
+        "width": 595.28,
+        "height": 841.89,
+        "_nodeId": "n_1_7f69bf12"
       },
       {
-        "text": "RECEIPT",
-        "style": "receiptTitle",
-        "_nodeId": "n_2_0a9a67c1"
-      },
-      {
-        "columns": [
+        "canvas": [
           {
-            "stack": [
-              {
-                "text": "Flat No: {{unit_name}} on Floor: {{unit_floor}}",
-                "bold": true,
-                "_nodeId": "n_5_16e3e357"
-              },
-              {
-                "text": "in Building: RITA PALACE Wing: {{unit_wing}}",
-                "_nodeId": "n_6_6afe7629"
-              },
-              {
-                "text": "Project on {{site_address}}",
-                "color": "#334155",
-                "_nodeId": "n_7_ba774bdb"
-              }
-            ],
-            "width": "*",
-            "_nodeId": "n_4_af41054b"
-          },
-          {
-            "stack": [
-              {
-                "text": "Receipt No. : {{receipt_number}}",
-                "bold": true,
-                "_nodeId": "n_9_006356b9"
-              },
-              {
-                "text": "Date : {{payment_date}}",
-                "_nodeId": "n_a_d6b1f9f6"
-              }
-            ],
-            "width": 160,
-            "alignment": "right",
-            "_nodeId": "n_8_49e75f3b"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 55,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_3_92ab64ab"
-      },
-      {
-        "stack": [
-          {
-            "text": "Received with thanks from : {{customer_name}} {{remark}} ₹{{amount_paid}}",
-            "bold": true,
-            "fontSize": 10.5,
-            "_nodeId": "n_c_9916fe7f"
-          },
-          {
-            "text": "the sum of : {{amount_in_words}}",
-            "italics": true,
-            "color": "#334155",
-            "margin": [
-              0,
-              4,
-              0,
-              4
-            ],
-            "_nodeId": "n_d_772f91e7"
-          },
-          {
-            "text": "by as under as per details",
-            "color": "#64748b",
-            "fontSize": 8.5,
-            "_nodeId": "n_e_88c5966a"
-          }
-        ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_b_d306fd6b"
-      },
-      {
-        "table": {
-          "headerRows": 1,
-          "widths": [
-            100,
-            120,
-            90,
-            "*"
-          ],
-          "body": [
-            [
-              {
-                "text": "Amount",
-                "style": "tableHeader",
-                "alignment": "right",
-                "_nodeId": "n_g_404395e8"
-              },
-              {
-                "text": "Chq/ RTGS No.",
-                "style": "tableHeader",
-                "_nodeId": "n_h_76d1be58"
-              },
-              {
-                "text": "Date",
-                "style": "tableHeader",
-                "_nodeId": "n_i_78efcaab"
-              },
-              {
-                "text": "Name of Bank / Branch",
-                "style": "tableHeader",
-                "_nodeId": "n_j_05afaaa1"
-              }
-            ],
-            [
-              {
-                "text": "₹{{amount_paid}}",
-                "style": "tableCell",
-                "bold": true,
-                "alignment": "right",
-                "_nodeId": "n_k_b328dad7"
-              },
-              {
-                "text": "{{cheque_number}}",
-                "style": "tableCell",
-                "_nodeId": "n_l_f1ec7c94"
-              },
-              {
-                "text": "{{cheque_date}}",
-                "style": "tableCell",
-                "_nodeId": "n_m_c61877f6"
-              },
-              {
-                "text": "{{bank_name}}",
-                "style": "tableCell",
-                "_nodeId": "n_n_81a33311"
-              }
-            ]
-          ]
+        "absolutePosition": {
+          "x": 55.889648,
+          "y": 189.37109399999997
         },
-        "layout": "lightHorizontalLines",
-        "margin": [
-          0,
-          0,
-          0,
-          14
-        ],
-        "_nodeId": "n_f_df4a17ea"
+        "_nodeId": "n_2_f08bf271"
       },
       {
-        "text": "Subject to Realisation of Cheque",
-        "fontSize": 8.5,
-        "italics": true,
-        "color": "#64748b",
-        "margin": [
-          0,
-          0,
-          0,
-          16
-        ],
-        "_nodeId": "n_o_72a072fb"
+        "text": "{{unit_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 56.889648,
+          "y": 190.37109399999997
+        },
+        "_nodeId": "n_var_1_1_unit_name"
       },
       {
-        "columns": [
+        "canvas": [
           {
-            "text": "",
-            "_nodeId": "n_q_05792d09"
-          },
-          {
-            "stack": [
-              {
-                "text": "For LMP GROUP RITA PALACE,",
-                "bold": true,
-                "_nodeId": "n_s_f71eedd4"
-              },
-              {
-                "text": "Account department",
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  30
-                ],
-                "_nodeId": "n_t_3a819abd"
-              }
-            ],
-            "alignment": "right",
-            "width": 190,
-            "_nodeId": "n_r_35fda679"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          16
-        ],
-        "_nodeId": "n_p_1cd33553"
+        "absolutePosition": {
+          "x": 157.398438,
+          "y": 189.37109399999997
+        },
+        "_nodeId": "n_3_30f72d17"
       },
       {
-        "text": "This is auto generated receipt it doesn't require stamp",
-        "style": "footerText",
-        "italics": true,
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_u_c750f17b"
+        "text": "{{unit_floor}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 158.398438,
+          "y": 190.37109399999997
+        },
+        "_nodeId": "n_var_1_2_unit_floor"
       },
       {
-        "text": "Off: Kahan Bhavan, L.T.road, Behind Diamond Cinema, next to Purohit Hospital , Borivali west Mumbai-92\n98200 49360 | Email: lmpgroup.rpchsl@gmail.com",
-        "style": "footerText",
-        "_nodeId": "n_v_46b13865"
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 51,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 167.647461,
+          "y": 201.08984399999997
+        },
+        "_nodeId": "n_4_9bb1f2dd"
+      },
+      {
+        "text": "{{unit_wing}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 168.647461,
+          "y": 202.08984399999997
+        },
+        "_nodeId": "n_var_1_3_unit_wing"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 423.711914,
+          "y": 199.37109399999997
+        },
+        "_nodeId": "n_5_3c8f8412"
+      },
+      {
+        "text": "{{receipt_number}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 424.711914,
+          "y": 200.37109399999997
+        },
+        "_nodeId": "n_var_1_4_receipt_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 64,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 66.69043,
+          "y": 212.80859399999997
+        },
+        "_nodeId": "n_6_e38d3391"
+      },
+      {
+        "text": "{{site_address}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 67.69043,
+          "y": 213.80859399999997
+        },
+        "_nodeId": "n_var_1_5_site_address"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 433.204102,
+          "y": 211.08984399999997
+        },
+        "_nodeId": "n_7_a869cfe8"
+      },
+      {
+        "text": "{{payment_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 434.204102,
+          "y": 212.08984399999997
+        },
+        "_nodeId": "n_var_1_6_payment_date"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 44,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 24,
+          "y": 250.96484399999997
+        },
+        "_nodeId": "n_8_c0210329"
+      },
+      {
+        "text": "{{remark}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 25,
+          "y": 251.96484399999997
+        },
+        "_nodeId": "n_var_1_7_remark"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 105.292,
+          "y": 250.96484399999997
+        },
+        "_nodeId": "n_9_bcea3fdf"
+      },
+      {
+        "text": "{{amount_paid}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 106.292,
+          "y": 251.96484399999997
+        },
+        "_nodeId": "n_var_1_8_amount_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 317.500992,
+          "y": 247.96484399999997
+        },
+        "_nodeId": "n_a_1035cc45"
+      },
+      {
+        "text": "{{customer_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 318.500992,
+          "y": 248.96484399999997
+        },
+        "_nodeId": "n_var_1_9_customer_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 83,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 247.632828,
+          "y": 271.40234399999997
+        },
+        "_nodeId": "n_b_64a150a7"
+      },
+      {
+        "text": "{{amount_in_words}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 248.632828,
+          "y": 272.40234399999997
+        },
+        "_nodeId": "n_var_1_10_amount_in_words"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 197.584,
+          "y": 337.99609399999997
+        },
+        "_nodeId": "n_c_b5340fc9"
+      },
+      {
+        "text": "{{amount_paid}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 198.584,
+          "y": 338.99609399999997
+        },
+        "_nodeId": "n_var_1_11_amount_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 266.584,
+          "y": 337.99609399999997
+        },
+        "_nodeId": "n_d_5c02b011"
+      },
+      {
+        "text": "{{cheque_number}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 267.584,
+          "y": 338.99609399999997
+        },
+        "_nodeId": "n_var_1_12_cheque_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 59,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 456.932,
+          "y": 337.99609399999997
+        },
+        "_nodeId": "n_e_3a7773d9"
+      },
+      {
+        "text": "{{bank_name}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 457.932,
+          "y": 338.99609399999997
+        },
+        "_nodeId": "n_var_1_13_bank_name"
       }
     ],
-    "pageSize": "A4",
+    "pageSize": {
+      "width": 595.28,
+      "height": 841.89
+    },
     "pageMargins": [
-      40,
-      40,
-      40,
-      40
+      0,
+      0,
+      0,
+      0
     ],
     "defaultStyle": {
-      "fontSize": 9.5,
+      "fontSize": 10,
       "font": "Roboto",
-      "color": "#1e293b",
-      "lineHeight": 1.3
+      "color": "#0f172a"
     },
-    "styles": {}
+    "images": {
+      "page_1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCATvA30DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EADAQAQACAAQFAwUBAAIDAQEBAAABEQIhMVESQWFxkSKBobHB0eHwMkJSYnLxgrLC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/AOgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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"
+    }
   },
   "variableSchema": {
     "variables": [
       {
-        "id": "receipt_number",
-        "label": "Receipt No.",
+        "id": "unit_name",
+        "label": "Unit Name",
         "type": "text",
-        "defaultValue": "LMP/REC/2026/088",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$UnitName",
+        "required": false,
+        "group": "Document fields",
         "order": 0,
         "bindings": [
           {
-            "nodeId": "n_9_006356b9",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "payment_date",
-        "label": "Date",
-        "type": "date",
-        "defaultValue": "2026-11-04",
-        "required": true,
-        "group": "Document Details",
-        "order": 1,
-        "bindings": [
-          {
-            "nodeId": "n_a_d6b1f9f6",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "unit_name",
-        "label": "Flat No.",
-        "type": "text",
-        "defaultValue": "503",
-        "required": true,
-        "group": "Property Details",
-        "order": 2,
-        "bindings": [
-          {
-            "nodeId": "n_5_16e3e357",
+            "nodeId": "n_var_1_1_unit_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_floor",
-        "label": "Floor",
-        "type": "text",
-        "defaultValue": "5th",
-        "required": true,
-        "group": "Property Details",
-        "order": 3,
+        "label": "Unit Floor",
+        "type": "number",
+        "defaultValue": "$UnitFloor",
+        "required": false,
+        "group": "Document fields",
+        "order": 1,
         "bindings": [
           {
-            "nodeId": "n_5_16e3e357",
+            "nodeId": "n_var_1_2_unit_floor",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_wing",
-        "label": "Wing",
+        "label": "Unit Wing",
         "type": "text",
-        "defaultValue": "A",
-        "required": true,
-        "group": "Property Details",
-        "order": 4,
+        "defaultValue": "$UnitWing",
+        "required": false,
+        "group": "Document fields",
+        "order": 2,
         "bindings": [
           {
-            "nodeId": "n_6_6afe7629",
+            "nodeId": "n_var_1_3_unit_wing",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "receipt_number",
+        "label": "Receipt Number",
+        "type": "text",
+        "defaultValue": "$ReceiptNumber",
+        "required": false,
+        "group": "Document fields",
+        "order": 3,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_4_receipt_number",
             "field": "text"
           }
         ]
       },
       {
         "id": "site_address",
-        "label": "Project Site Address",
+        "label": "Site Address",
         "type": "textarea",
-        "defaultValue": "Rita Palace, Harsha Park, Chandravarkar Road, Borivali West, Mumbai - 400092",
-        "required": true,
-        "group": "Project Details",
-        "order": 5,
+        "defaultValue": "$SiteAddress",
+        "required": false,
+        "group": "Document fields",
+        "order": 4,
         "bindings": [
           {
-            "nodeId": "n_7_ba774bdb",
+            "nodeId": "n_var_1_5_site_address",
             "field": "text"
           }
         ]
       },
       {
-        "id": "customer_name",
-        "label": "Customer Name",
-        "type": "text",
-        "defaultValue": "Ketan Shah",
-        "required": true,
-        "group": "Customer Details",
-        "order": 6,
+        "id": "payment_date",
+        "label": "Payment Date",
+        "type": "date",
+        "defaultValue": "$PaymentDate",
+        "required": false,
+        "group": "Dates",
+        "order": 5,
         "bindings": [
           {
-            "nodeId": "n_c_9916fe7f",
+            "nodeId": "n_var_1_6_payment_date",
             "field": "text"
           }
         ]
@@ -354,14 +486,14 @@
       {
         "id": "remark",
         "label": "Remark",
-        "type": "text",
-        "defaultValue": "against Brickwork & Plaster milestone",
+        "type": "textarea",
+        "defaultValue": "$Remark",
         "required": false,
-        "group": "Document Details",
-        "order": 7,
+        "group": "Document fields",
+        "order": 6,
         "bindings": [
           {
-            "nodeId": "n_c_9916fe7f",
+            "nodeId": "n_var_1_7_remark",
             "field": "text"
           }
         ]
@@ -370,77 +502,77 @@
         "id": "amount_paid",
         "label": "Amount Paid",
         "type": "currency",
-        "defaultValue": 1188000,
-        "required": true,
-        "group": "Financial Details",
-        "order": 8,
+        "defaultValue": "$AmountPaid",
+        "required": false,
+        "group": "Amounts",
+        "order": 7,
         "bindings": [
           {
-            "nodeId": "n_c_9916fe7f",
+            "nodeId": "n_var_1_8_amount_paid",
             "field": "text"
           },
           {
-            "nodeId": "n_k_b328dad7",
+            "nodeId": "n_var_1_11_amount_paid",
+            "field": "text"
+          }
+        ]
+      },
+      {
+        "id": "customer_name",
+        "label": "Customer Name",
+        "type": "text",
+        "defaultValue": "$CustomerName",
+        "required": false,
+        "group": "Document fields",
+        "order": 8,
+        "bindings": [
+          {
+            "nodeId": "n_var_1_9_customer_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_in_words",
-        "label": "Amount in Words",
-        "type": "text",
-        "defaultValue": "Rupees Eleven Lakh Eighty Eight Thousand Only",
-        "required": true,
-        "group": "Financial Details",
+        "label": "Amount In Words",
+        "type": "currency",
+        "defaultValue": "$AmountInWords",
+        "required": false,
+        "group": "Amounts",
         "order": 9,
         "bindings": [
           {
-            "nodeId": "n_d_772f91e7",
+            "nodeId": "n_var_1_10_amount_in_words",
             "field": "text"
           }
         ]
       },
       {
         "id": "cheque_number",
-        "label": "Chq / RTGS No.",
+        "label": "Cheque Number",
         "type": "text",
-        "defaultValue": "BARBN2026110298",
-        "required": true,
-        "group": "Bank Details",
+        "defaultValue": "$ChequeNumber",
+        "required": false,
+        "group": "Document fields",
         "order": 10,
         "bindings": [
           {
-            "nodeId": "n_l_f1ec7c94",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "cheque_date",
-        "label": "Date",
-        "type": "date",
-        "defaultValue": "2026-11-02",
-        "required": true,
-        "group": "Bank Details",
-        "order": 11,
-        "bindings": [
-          {
-            "nodeId": "n_m_c61877f6",
+            "nodeId": "n_var_1_12_cheque_number",
             "field": "text"
           }
         ]
       },
       {
         "id": "bank_name",
-        "label": "Bank / Branch",
+        "label": "Bank Name",
         "type": "text",
-        "defaultValue": "Bank of Baroda, Borivali West",
-        "required": true,
-        "group": "Bank Details",
-        "order": 12,
+        "defaultValue": "$BankName",
+        "required": false,
+        "group": "Document fields",
+        "order": 11,
         "bindings": [
           {
-            "nodeId": "n_n_81a33311",
+            "nodeId": "n_var_1_13_bank_name",
             "field": "text"
           }
         ]

@@ -2,294 +2,640 @@
   "documentDefinition": {
     "content": [
       {
-        "columns": [
-          {
-            "stack": [
-              {
-                "text": "{{project_by}}",
-                "bold": true,
-                "fontSize": 13,
-                "color": "#0f172a",
-                "_nodeId": "n_3_257a50c3"
-              },
-              {
-                "text": "Contact : {{sub_company_landline}}",
-                "fontSize": 9,
-                "color": "#475569",
-                "_nodeId": "n_4_f68b1c10"
-              }
-            ],
-            "width": "*",
-            "_nodeId": "n_2_9ec39acb"
-          },
-          {
-            "text": "Rera No.: {{rera}}",
-            "alignment": "right",
-            "bold": true,
-            "fontSize": 9.5,
-            "width": 180,
-            "_nodeId": "n_5_d861fa7d"
-          }
-        ],
-        "margin": [
-          0,
-          0,
-          0,
-          8
-        ],
-        "_nodeId": "n_1_04a2dd7d"
+        "image": "page_1",
+        "width": 595.28,
+        "height": 841.89,
+        "_nodeId": "n_1_da50b3ab"
       },
       {
         "canvas": [
-          {}
-        ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_6_c1037a0b"
-      },
-      {
-        "columns": [
           {
-            "text": "Date: {{payment_date}}",
-            "bold": true,
-            "_nodeId": "n_8_ce3179e9"
-          },
-          {
-            "text": "RECEIPT",
-            "style": "receiptTitle",
-            "_nodeId": "n_9_61792e01"
-          },
-          {
-            "text": "Receipt No.: {{receipt_number}}",
-            "alignment": "right",
-            "bold": true,
-            "_nodeId": "n_a_30618a64"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 36,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          14
-        ],
-        "_nodeId": "n_7_9b7ec3be"
+        "absolutePosition": {
+          "x": 522.979219,
+          "y": 111.13281199999994
+        },
+        "_nodeId": "n_2_2a1e5ce0"
       },
       {
-        "stack": [
+        "text": "{{rera}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 523.979219,
+          "y": 112.13281199999994
+        },
+        "_nodeId": "n_var_1_1_rera"
+      },
+      {
+        "canvas": [
           {
-            "text": "Received with thanks from {{customer_name}}",
-            "bold": true,
-            "fontSize": 11,
-            "_nodeId": "n_c_f716567d"
-          },
-          {
-            "text": "Basic: ₹{{amount_without_tax}} {{tds_payment_type}} + GST: ₹{{tax_amount}} = Total: ₹{{amount_for_paid}}",
-            "color": "#334155",
-            "margin": [
-              0,
-              4,
-              0,
-              4
-            ],
-            "_nodeId": "n_d_02bb4d59"
-          },
-          {
-            "text": "a sum of {{amount_in_words}} against Unit No.: {{unit_wing}}- {{unit_name}} On {{unit_floor}} Floor",
-            "color": "#334155",
-            "_nodeId": "n_e_e6dd9fdb"
-          },
-          {
-            "text": "₹{{amount_for_paid}}",
-            "style": "amountBanner",
-            "_nodeId": "n_f_0dd863ed"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 63,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          12
-        ],
-        "_nodeId": "n_b_261322ae"
+        "absolutePosition": {
+          "x": 39,
+          "y": 122.29947900000002
+        },
+        "_nodeId": "n_3_4b24806a"
       },
       {
-        "stack": [
+        "text": "{{project_by}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 40,
+          "y": 123.29947900000002
+        },
+        "_nodeId": "n_var_1_2_project_by"
+      },
+      {
+        "canvas": [
           {
-            "text": "Cheque/ D.D. No./ RTGS : {{cheque_number}} Dated : {{cheque_date}}",
-            "bold": true,
-            "_nodeId": "n_h_30e8ac6a"
-          },
-          {
-            "text": "Bank Name: {{bank_name}}",
-            "_nodeId": "n_i_aba37e73"
-          },
-          {
-            "text": "Remark: {{remark}}",
-            "italics": true,
-            "color": "#475569",
-            "_nodeId": "n_j_04efed50"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 128,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          16
-        ],
-        "_nodeId": "n_g_99e8cbd6"
+        "absolutePosition": {
+          "x": 90.175781,
+          "y": 146.36197900000002
+        },
+        "_nodeId": "n_4_a6ee4890"
       },
       {
-        "columns": [
+        "text": "{{sub_company_landline}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 91.175781,
+          "y": 147.36197900000002
+        },
+        "_nodeId": "n_var_1_3_sub_company_landline"
+      },
+      {
+        "canvas": [
           {
-            "text": "Cheques are subject to realisation",
-            "fontSize": 8.5,
-            "italics": true,
-            "color": "#64748b",
-            "margin": [
-              0,
-              40,
-              0,
-              0
-            ],
-            "_nodeId": "n_l_e0df58fe"
-          },
-          {
-            "stack": [
-              {
-                "text": "For {{project_by}}",
-                "bold": true,
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  36
-                ],
-                "_nodeId": "n_n_8440349c"
-              },
-              {
-                "text": "Authorised Signatory",
-                "style": "signatory",
-                "_nodeId": "n_o_febc502a"
-              }
-            ],
-            "alignment": "right",
-            "width": 180,
-            "_nodeId": "n_m_41d9c26f"
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
           }
         ],
-        "margin": [
-          0,
-          0,
-          0,
-          20
-        ],
-        "_nodeId": "n_k_7e69f54b"
+        "absolutePosition": {
+          "x": 69.478516,
+          "y": 187.63150999999993
+        },
+        "_nodeId": "n_5_7925c9a7"
       },
       {
-        "text": "This is an auto- generated Payment Receipt.",
-        "alignment": "center",
-        "fontSize": 8.5,
-        "italics": true,
-        "color": "#94a3b8",
-        "_nodeId": "n_p_d8e27377"
+        "text": "{{payment_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 70.478516,
+          "y": 188.63150999999993
+        },
+        "_nodeId": "n_var_1_4_payment_date"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 95,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 458.934297,
+          "y": 187.48697900000002
+        },
+        "_nodeId": "n_6_ed035f9f"
+      },
+      {
+        "text": "{{receipt_number}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 459.934297,
+          "y": 188.48697900000002
+        },
+        "_nodeId": "n_var_1_5_receipt_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 96,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 188.017578,
+          "y": 224.89322900000002
+        },
+        "_nodeId": "n_7_f569b694"
+      },
+      {
+        "text": "{{customer_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 189.017578,
+          "y": 225.89322900000002
+        },
+        "_nodeId": "n_var_1_6_customer_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 115,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 79.279297,
+          "y": 253.95572900000002
+        },
+        "_nodeId": "n_8_afeacba6"
+      },
+      {
+        "text": "{{amount_without_tax}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 80.279297,
+          "y": 254.95572900000002
+        },
+        "_nodeId": "n_var_1_7_amount_without_tax"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 73,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 335.873047,
+          "y": 253.95572900000002
+        },
+        "_nodeId": "n_9_dcd8c898"
+      },
+      {
+        "text": "{{tax_amount}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 336.873047,
+          "y": 254.95572900000002
+        },
+        "_nodeId": "n_var_1_8_tax_amount"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 95,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 449.884766,
+          "y": 253.95572900000002
+        },
+        "_nodeId": "n_a_25f99397"
+      },
+      {
+        "text": "{{amount_for_paid}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 450.884766,
+          "y": 254.95572900000002
+        },
+        "_nodeId": "n_var_1_9_amount_for_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 98,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 93.804688,
+          "y": 283.018229
+        },
+        "_nodeId": "n_b_f7677bd0"
+      },
+      {
+        "text": "{{amount_in_words}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 94.804688,
+          "y": 284.018229
+        },
+        "_nodeId": "n_var_1_10_amount_in_words"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 64,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 282.212891,
+          "y": 283.018229
+        },
+        "_nodeId": "n_c_0e90f5d9"
+      },
+      {
+        "text": "{{unit_wing}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 283.212891,
+          "y": 284.018229
+        },
+        "_nodeId": "n_var_1_11_unit_wing"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 341.802734,
+          "y": 283.018229
+        },
+        "_nodeId": "n_d_78648da7"
+      },
+      {
+        "text": "{{unit_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 342.802734,
+          "y": 284.018229
+        },
+        "_nodeId": "n_var_1_12_unit_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 60,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 422.914063,
+          "y": 283.018229
+        },
+        "_nodeId": "n_e_08ca0420"
+      },
+      {
+        "text": "{{unit_floor}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 423.914063,
+          "y": 284.018229
+        },
+        "_nodeId": "n_var_1_13_unit_floor"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 95,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 49,
+          "y": 328.08072899999996
+        },
+        "_nodeId": "n_f_85a8a4b3"
+      },
+      {
+        "text": "{{amount_for_paid}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 50,
+          "y": 329.08072899999996
+        },
+        "_nodeId": "n_var_1_14_amount_for_paid"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 80,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 164.640625,
+          "y": 368.28776
+        },
+        "_nodeId": "n_g_ab4eb20c"
+      },
+      {
+        "text": "{{cheque_number}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 165.640625,
+          "y": 369.28776
+        },
+        "_nodeId": "n_var_1_15_cheque_number"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 65,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 289.339844,
+          "y": 368.28776
+        },
+        "_nodeId": "n_h_20f7a87d"
+      },
+      {
+        "text": "{{cheque_date}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 290.339844,
+          "y": 369.28776
+        },
+        "_nodeId": "n_var_1_16_cheque_date"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 70,
+            "h": 15,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 106.808594,
+          "y": 390.86197899999996
+        },
+        "_nodeId": "n_i_23997f65"
+      },
+      {
+        "text": "{{bank_name}}",
+        "fontSize": 12,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 107.808594,
+          "y": 391.86197899999996
+        },
+        "_nodeId": "n_var_1_17_bank_name"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 44,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 83.033203,
+          "y": 416.06901
+        },
+        "_nodeId": "n_j_77a140f2"
+      },
+      {
+        "text": "{{remark}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 84.033203,
+          "y": 417.06901
+        },
+        "_nodeId": "n_var_1_18_remark"
+      },
+      {
+        "canvas": [
+          {
+            "type": "rect",
+            "x": 0,
+            "y": 0,
+            "w": 53,
+            "h": 13,
+            "color": "#ffffff",
+            "lineColor": "#ffffff"
+          }
+        ],
+        "absolutePosition": {
+          "x": 505.505586,
+          "y": 435.78776
+        },
+        "_nodeId": "n_k_059e129b"
+      },
+      {
+        "text": "{{project_by}}",
+        "fontSize": 10,
+        "color": "#0f172a",
+        "absolutePosition": {
+          "x": 506.505586,
+          "y": 436.78776
+        },
+        "_nodeId": "n_var_1_19_project_by"
       }
     ],
-    "pageSize": "A4",
+    "pageSize": {
+      "width": 595.28,
+      "height": 841.89
+    },
     "pageMargins": [
-      40,
-      40,
-      40,
-      40
+      0,
+      0,
+      0,
+      0
     ],
     "defaultStyle": {
       "fontSize": 10,
       "font": "Roboto",
-      "color": "#1e293b",
-      "lineHeight": 1.3
+      "color": "#0f172a"
     },
-    "styles": {}
+    "images": {
+      "page_1": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCATvA30DASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EAC8QAQACAAQDCAIDAAMBAQAAAAABESExUZECQWESImJxgaHR4bHBMkLwUnLxgrL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABgRAQADAQAAAAAAAAAAAAAAAAABESEx/9oADAMBAAIRAxEAPwDoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/9k="
+    }
   },
   "variableSchema": {
     "variables": [
       {
         "id": "rera",
-        "label": "RERA No.",
+        "label": "Rera",
         "type": "text",
-        "defaultValue": "P51800001234",
-        "required": true,
-        "group": "Project Details",
+        "defaultValue": "$Rera",
+        "required": false,
+        "group": "Document fields",
         "order": 0,
         "bindings": [
           {
-            "nodeId": "n_5_d861fa7d",
+            "nodeId": "n_var_1_1_rera",
             "field": "text"
           }
         ]
       },
       {
         "id": "project_by",
-        "label": "Developer / Company Name",
+        "label": "Project By",
         "type": "text",
-        "defaultValue": "Dimple Realtors Pvt. Ltd.",
-        "required": true,
-        "group": "Company Details",
+        "defaultValue": "$ProjectBy",
+        "required": false,
+        "group": "Document fields",
         "order": 1,
         "bindings": [
           {
-            "nodeId": "n_3_257a50c3",
+            "nodeId": "n_var_1_2_project_by",
             "field": "text"
           },
           {
-            "nodeId": "n_n_8440349c",
+            "nodeId": "n_var_1_19_project_by",
             "field": "text"
           }
         ]
       },
       {
         "id": "sub_company_landline",
-        "label": "Contact / Landline",
-        "type": "phone",
-        "defaultValue": "+91-22-28901234",
+        "label": "Sub Company Landline",
+        "type": "text",
+        "defaultValue": "$SubCompanyLandline",
         "required": false,
-        "group": "Contact Details",
+        "group": "Document fields",
         "order": 2,
         "bindings": [
           {
-            "nodeId": "n_4_f68b1c10",
+            "nodeId": "n_var_1_3_sub_company_landline",
             "field": "text"
           }
         ]
       },
       {
         "id": "payment_date",
-        "label": "Date",
+        "label": "Payment Date",
         "type": "date",
-        "defaultValue": "2026-11-04",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$PaymentDate",
+        "required": false,
+        "group": "Dates",
         "order": 3,
         "bindings": [
           {
-            "nodeId": "n_8_ce3179e9",
+            "nodeId": "n_var_1_4_payment_date",
             "field": "text"
           }
         ]
       },
       {
         "id": "receipt_number",
-        "label": "Receipt No.",
+        "label": "Receipt Number",
         "type": "text",
-        "defaultValue": "DR/REC/2026/104",
-        "required": true,
-        "group": "Document Details",
+        "defaultValue": "$ReceiptNumber",
+        "required": false,
+        "group": "Document fields",
         "order": 4,
         "bindings": [
           {
-            "nodeId": "n_a_30618a64",
+            "nodeId": "n_var_1_5_receipt_number",
             "field": "text"
           }
         ]
@@ -298,167 +644,152 @@
         "id": "customer_name",
         "label": "Customer Name",
         "type": "text",
-        "defaultValue": "Rajesh Sharma",
-        "required": true,
-        "group": "Customer Details",
+        "defaultValue": "$CustomerName",
+        "required": false,
+        "group": "Document fields",
         "order": 5,
         "bindings": [
           {
-            "nodeId": "n_c_f716567d",
+            "nodeId": "n_var_1_6_customer_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_without_tax",
-        "label": "Basic Amount",
+        "label": "Amount Without Tax",
         "type": "currency",
-        "defaultValue": 693000,
-        "required": true,
-        "group": "Financial Details",
+        "defaultValue": "$AmountWithoutTax",
+        "required": false,
+        "group": "Amounts",
         "order": 6,
         "bindings": [
           {
-            "nodeId": "n_d_02bb4d59",
-            "field": "text"
-          }
-        ]
-      },
-      {
-        "id": "tds_payment_type",
-        "label": "TDS Note / Breakup",
-        "type": "text",
-        "defaultValue": "(Net of TDS)",
-        "required": false,
-        "group": "Financial Details",
-        "order": 7,
-        "bindings": [
-          {
-            "nodeId": "n_d_02bb4d59",
+            "nodeId": "n_var_1_7_amount_without_tax",
             "field": "text"
           }
         ]
       },
       {
         "id": "tax_amount",
-        "label": "GST Amount",
+        "label": "Tax Amount",
         "type": "currency",
-        "defaultValue": 35000,
-        "required": true,
-        "group": "Financial Details",
-        "order": 8,
+        "defaultValue": "$TaxAmount",
+        "required": false,
+        "group": "Amounts",
+        "order": 7,
         "bindings": [
           {
-            "nodeId": "n_d_02bb4d59",
+            "nodeId": "n_var_1_8_tax_amount",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_for_paid",
-        "label": "Total Amount Received",
+        "label": "Amount For Paid",
         "type": "currency",
-        "defaultValue": 728000,
-        "required": true,
-        "group": "Financial Details",
-        "order": 9,
+        "defaultValue": "$AmountForPaid",
+        "required": false,
+        "group": "Amounts",
+        "order": 8,
         "bindings": [
           {
-            "nodeId": "n_d_02bb4d59",
+            "nodeId": "n_var_1_9_amount_for_paid",
             "field": "text"
           },
           {
-            "nodeId": "n_f_0dd863ed",
+            "nodeId": "n_var_1_14_amount_for_paid",
             "field": "text"
           }
         ]
       },
       {
         "id": "amount_in_words",
-        "label": "Amount in Words",
-        "type": "text",
-        "defaultValue": "Rupees Seven Lakh Twenty Eight Thousand Only",
-        "required": true,
-        "group": "Financial Details",
-        "order": 10,
+        "label": "Amount In Words",
+        "type": "currency",
+        "defaultValue": "$AmountInWords",
+        "required": false,
+        "group": "Amounts",
+        "order": 9,
         "bindings": [
           {
-            "nodeId": "n_e_e6dd9fdb",
+            "nodeId": "n_var_1_10_amount_in_words",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_wing",
-        "label": "Wing",
+        "label": "Unit Wing",
         "type": "text",
-        "defaultValue": "B",
+        "defaultValue": "$UnitWing",
         "required": false,
-        "group": "Property Details",
-        "order": 11,
+        "group": "Document fields",
+        "order": 10,
         "bindings": [
           {
-            "nodeId": "n_e_e6dd9fdb",
+            "nodeId": "n_var_1_11_unit_wing",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_name",
-        "label": "Unit No.",
+        "label": "Unit Name",
         "type": "text",
-        "defaultValue": "804",
-        "required": true,
-        "group": "Property Details",
-        "order": 12,
+        "defaultValue": "$UnitName",
+        "required": false,
+        "group": "Document fields",
+        "order": 11,
         "bindings": [
           {
-            "nodeId": "n_e_e6dd9fdb",
+            "nodeId": "n_var_1_12_unit_name",
             "field": "text"
           }
         ]
       },
       {
         "id": "unit_floor",
-        "label": "Floor",
-        "type": "text",
-        "defaultValue": "8th",
-        "required": true,
-        "group": "Property Details",
-        "order": 13,
+        "label": "Unit Floor",
+        "type": "number",
+        "defaultValue": "$UnitFloor",
+        "required": false,
+        "group": "Document fields",
+        "order": 12,
         "bindings": [
           {
-            "nodeId": "n_e_e6dd9fdb",
+            "nodeId": "n_var_1_13_unit_floor",
             "field": "text"
           }
         ]
       },
       {
         "id": "cheque_number",
-        "label": "Cheque / D.D. / RTGS No.",
+        "label": "Cheque Number",
         "type": "text",
-        "defaultValue": "SBI092837192",
-        "required": true,
-        "group": "Bank Details",
-        "order": 14,
+        "defaultValue": "$ChequeNumber",
+        "required": false,
+        "group": "Document fields",
+        "order": 13,
         "bindings": [
           {
-            "nodeId": "n_h_30e8ac6a",
+            "nodeId": "n_var_1_15_cheque_number",
             "field": "text"
           }
         ]
       },
       {
         "id": "cheque_date",
-        "label": "Dated",
+        "label": "Cheque Date",
         "type": "date",
-        "defaultValue": "2026-11-02",
-        "required": true,
-        "group": "Bank Details",
-        "order": 15,
+        "defaultValue": "$ChequeDate",
+        "required": false,
+        "group": "Dates",
+        "order": 14,
         "bindings": [
           {
-            "nodeId": "n_h_30e8ac6a",
+            "nodeId": "n_var_1_16_cheque_date",
             "field": "text"
           }
         ]
@@ -467,13 +798,13 @@
         "id": "bank_name",
         "label": "Bank Name",
         "type": "text",
-        "defaultValue": "State Bank of India, Borivali",
-        "required": true,
-        "group": "Bank Details",
-        "order": 16,
+        "defaultValue": "$BankName",
+        "required": false,
+        "group": "Document fields",
+        "order": 15,
         "bindings": [
           {
-            "nodeId": "n_i_aba37e73",
+            "nodeId": "n_var_1_17_bank_name",
             "field": "text"
           }
         ]
@@ -481,14 +812,14 @@
       {
         "id": "remark",
         "label": "Remark",
-        "type": "text",
-        "defaultValue": "Part Payment against Flat 804",
+        "type": "textarea",
+        "defaultValue": "$Remark",
         "required": false,
-        "group": "Document Details",
-        "order": 17,
+        "group": "Document fields",
+        "order": 16,
         "bindings": [
           {
-            "nodeId": "n_j_04efed50",
+            "nodeId": "n_var_1_18_remark",
             "field": "text"
           }
         ]

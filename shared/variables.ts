@@ -420,17 +420,7 @@ export function syncBindings(definition: DocumentDefinition, variables: Variable
   visit(definition.footer);
   return variables.map((variable) => {
     if (variable.type === "lineItems" || variable.type === "image") return variable;
-    let list = found.get(variable.id);
-    if (!list || list.length === 0) {
-      const normVar = variable.id.toLowerCase().replace(/[^a-z0-9]/g, "");
-      for (const [key, b] of found.entries()) {
-        if (key.toLowerCase().replace(/[^a-z0-9]/g, "") === normVar) {
-          list = b;
-          break;
-        }
-      }
-    }
-    return { ...variable, bindings: list ?? [] };
+    return { ...variable, bindings: found.get(variable.id) ?? [] };
   });
 }
 

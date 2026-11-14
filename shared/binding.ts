@@ -8,12 +8,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export function validateValues(variables: VariableDefinition[], values: Record<string, unknown>): FieldError[] {
   const errors: FieldError[] = [];
   for (const variable of variables) {
-    let value = values[variable.id];
-    if (value === undefined) {
-      const normVar = variable.id.toLowerCase().replace(/[^a-z0-9]/g, "");
-      const altKey = Object.keys(values).find((k) => k.toLowerCase().replace(/[^a-z0-9]/g, "") === normVar);
-      if (altKey) value = values[altKey];
-    }
+    const value = values[variable.id];
     const empty =
       value == null ||
       value === "" ||
@@ -110,27 +105,10 @@ export function resolveDocument(
   const withText = mapDocument(rendered, (node) => {
     if (typeof node.text !== "string") return node;
     const text = node.text.replace(PLACEHOLDER_RE, (token, id: string) => {
-      const normalizedId = id.toLowerCase().replace(/[^a-z0-9]/g, "");
-      const variable =
-        byId.get(id) ||
-        byId.get(id.toLowerCase()) ||
-        Array.from(byId.values()).find(
-          (v) =>
-            v.id.toLowerCase().replace(/[^a-z0-9]/g, "") === normalizedId ||
-            v.label.toLowerCase().replace(/[^a-z0-9]/g, "") === normalizedId,
-        );
+      const variable = byId.get(id);
       if (!variable) return options.strict ? token : `[missing: ${id}]`;
-      let value = values[id] ?? values[variable.id];
-      if (value === undefined) {
-        const matchingKey = Object.keys(values).find(
-          (k) =>
-            k.toLowerCase().replace(/[^a-z0-9]/g, "") === normalizedId ||
-            k.toLowerCase().replace(/[^a-z0-9]/g, "") === variable.id.toLowerCase().replace(/[^a-z0-9]/g, ""),
-        );
-        value = matchingKey ? values[matchingKey] : undefined;
-      }
-      const finalVal = value ?? (options.strict ? "" : variable.defaultValue);
-      return formatVariableValue(variable.type, finalVal).slice(0, 5000);
+      const value = values[id] ?? (options.strict ? "" : variable.defaultValue);
+      return formatVariableValue(variable.type, value).slice(0, 5000);
     });
     return { ...node, text };
   });
