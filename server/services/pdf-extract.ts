@@ -116,37 +116,69 @@ async function readImages(page: PdfPage): Promise<PageImage[]> {
   return images;
 }
 
+type OcrWord = { text: string; bbox: { x0: number; y0: number; x1: number; y1: number } };
+
+function wordsFromOcrData(data: {
+  words?: OcrWord[];
+  blocks?: { paragraphs?: { lines?: { words?: OcrWord[] }[] }[] }[];
+}): OcrWord[] {
+  if (Array.isArray(data.words) && data.words.length) return data.words;
+  const nested: OcrWord[] = [];
+  for (const block of data.blocks ?? []) {
+    for (const paragraph of block.paragraphs ?? []) {
+      for (const line of paragraph.lines ?? []) {
+        for (const word of line.words ?? []) {
+          if (word?.text?.trim() && word.bbox) nested.push(word);
+        }
+      }
+    }
+  }
+  return nested;
+}
+
 async function ocrPage(page: PdfPage): Promise<Glyph[]> {
   try {
     const canvasPkg = await import("@napi-rs/canvas");
-    const scale = 2;
+    const scale = 2.5;
     const viewport = page.getViewport({ scale });
     const canvas = canvasPkg.createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height));
     const context = canvas.getContext("2d");
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
     const factory = {
       create(w: number, h: number) {
         const next = canvasPkg.createCanvas(w, h);
-        return { canvas: next, context: next.getContext("2d") };
+        const ctx = next.getContext("2d");
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, w, h);
+        return { canvas: next, context: ctx };
       },
-      reset(pair: { canvas: { width: number; height: number } }, w: number, h: number) {
+      reset(pair: { canvas: { width: number; height: number }; context: { fillStyle: string; fillRect: (x: number, y: number, w: number, h: number) => void } }, w: number, h: number) {
         pair.canvas.width = w;
         pair.canvas.height = h;
+        pair.context.fillStyle = "#ffffff";
+        pair.context.fillRect(0, 0, w, h);
       },
       destroy(pair: { canvas: { width: number; height: number } }) {
         pair.canvas.width = 0;
         pair.canvas.height = 0;
       },
     };
-    await page.render({ canvasContext: context, viewport, canvasFactory: factory }).promise;
+    await page.render({
+      canvasContext: context,
+      viewport,
+      canvasFactory: factory,
+      intent: "print",
+      background: "rgb(255,255,255)",
+    }).promise;
     const png = canvas.toBuffer("image/png");
     const { createWorker } = await import("tesseract.js");
     const worker = await createWorker("eng");
     try {
-      const result = await worker.recognize(png);
-      const data = result.data as {
-        words?: { text: string; bbox: { x0: number; y0: number; x1: number; y1: number } }[];
-      };
-      return (data.words ?? [])
+      // tesseract.js v6 only fills nested blocks when output options request them.
+      const result = await worker.recognize(png, {}, { text: true, blocks: true });
+      const words = wordsFromOcrData(result.data as { words?: OcrWord[]; blocks?: { paragraphs?: { lines?: { words?: OcrWord[] }[] }[] }[] });
+      return words
         .filter((word) => word.text.trim())
         .map((word) => ({
           text: `${word.text} `,
@@ -155,7 +187,7 @@ async function ocrPage(page: PdfPage): Promise<Glyph[]> {
           width: Math.max(1, (word.bbox.x1 - word.bbox.x0) / scale),
           height: Math.max(1, (word.bbox.y1 - word.bbox.y0) / scale),
           fontSize: Math.max(8, (word.bbox.y1 - word.bbox.y0) / scale),
-          fontName: "",
+          fontName: "ocr",
         }));
     } finally {
       await worker.terminate();
@@ -256,11 +288,13 @@ export async function extractPdf(
   }
   await doc.destroy();
   const letters = pages.reduce((sum, page) => sum + page.glyphs.map((glyph) => glyph.text).join("").replace(/\s/g, "").length, 0);
-  if (letters < 8) {
+  const hasPageRenders = pages.some((page) => Boolean(page.pageRender));
+  // Exact mode can still keep scanned pages as backgrounds even when OCR is thin.
+  if (letters < 8 && !(withRender && hasPageRenders)) {
     throw new AppError(
       422,
       "SCANNED_PDF",
-      "This PDF has no text layer and OCR could not read it. Upload a text-based PDF, configure an AI vision provider, or start from PDFMake JSON.",
+      "This PDF has no text layer and OCR could not read it. Use Exact layout for a scanned visual copy, upload a text-based PDF, configure an AI vision provider, or start from PDFMake JSON.",
     );
   }
   return { pages, pageCount: doc.numPages };

@@ -63,10 +63,15 @@ const KNOWN_MERGE_FIELDS = [
   "AmountInWords",
   "AmountForPaid",
   "CustomerAddress",
+  "CustomerContact",
   "CustomerEmail",
   "CustomerPhone",
+  "CustomerPan",
   "CustomerName",
+  "CarpetAreaInSqFt",
+  "CarpetAreaInSqMt",
   "CurrentDate",
+  "BookingDate",
   "EffectiveDate",
   "FinalAmount",
   "InstallmentName",
@@ -75,6 +80,7 @@ const KNOWN_MERGE_FIELDS = [
   "ProjectAddress",
   "ProjectName",
   "ProjectBy",
+  "ProjectRera",
   "ReceiptNumber",
   "SiteAddress",
   "SubCompanyAddress",
@@ -107,6 +113,24 @@ const KNOWN_MERGE_FIELDS = [
   "Rera",
   "Wing",
 ].sort((a, b) => b.length - a.length);
+
+/** Fold OCR lookalikes so `$CarpetArealnSqFt` still maps to CarpetAreaInSqFt. */
+function foldToken(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]/g, "").replace(/[il1|]/g, "i").replace(/0/g, "o");
+}
+
+const KNOWN_MERGE_FOLDED = new Map(KNOWN_MERGE_FIELDS.map((name) => [foldToken(name), name]));
+
+function resolveMergeField(raw: string): string | null {
+  const cleaned = raw.replace(/^\$/, "");
+  if (!cleaned) return null;
+  if (KNOWN_MERGE_FIELDS.includes(cleaned)) return cleaned;
+  const folded = KNOWN_MERGE_FOLDED.get(foldToken(cleaned));
+  if (folded) return folded;
+  // Accept unfamiliar PascalCase merge fields from new templates.
+  if (/^[A-Z][A-Za-z0-9]{2,}$/.test(cleaned)) return cleaned;
+  return null;
+}
 
 interface Line {
   y: number;
@@ -259,25 +283,32 @@ interface TokenHit {
 function findTokensOnPage(page: PageLayout, pageIndex: number): TokenHit[] {
   const lines = clusterLines(page.glyphs);
   const hits: TokenHit[] = [];
+  const seen = new Set<string>();
   for (const line of lines) {
     const parts: { text: string; glyph: Glyph }[] = [];
     for (const glyph of line.glyphs) {
       parts.push({ text: glyph.text, glyph });
     }
     const joined = parts.map((part) => part.text).join("");
-    if (!joined.includes("$")) continue;
+    // OCR often turns `$UnitName` into `SUnitName`; still recover known fields.
+    if (!/[\$Ss][A-Za-z]/.test(joined)) continue;
     const charToGlyph: Glyph[] = [];
     for (const part of parts) {
       for (let index = 0; index < part.text.length; index += 1) charToGlyph.push(part.glyph);
     }
     for (let cursor = 0; cursor < joined.length; cursor += 1) {
-      if (joined[cursor] !== "$") continue;
+      const ch = joined[cursor];
+      if (ch !== "$" && ch !== "S" && ch !== "s") continue;
       const rest = joined.slice(cursor + 1);
-      const field = KNOWN_MERGE_FIELDS.find((name) => rest.startsWith(name));
+      const rawMatch = rest.match(/^[A-Za-z][A-Za-z0-9]{2,}/)?.[0];
+      if (!rawMatch) continue;
+      // Leading "S" is only treated as "$" when OCR mangled a known merge field (e.g. SUnitName).
+      if (ch !== "$" && !KNOWN_MERGE_FOLDED.has(foldToken(rawMatch))) continue;
+      const field = resolveMergeField(rawMatch);
       if (!field) continue;
-      const token = `$${field}`;
+      const rawLen = 1 + rawMatch.length;
       const start = cursor;
-      const end = cursor + token.length;
+      const end = cursor + rawLen;
       const covered = charToGlyph.slice(start, end);
       if (!covered.length) continue;
       const first = covered[0];
@@ -285,6 +316,13 @@ function findTokensOnPage(page: PageLayout, pageIndex: number): TokenHit[] {
       const width = Math.max(24, last.x + last.width - first.x);
       const height = Math.max(first.fontSize, ...covered.map((glyph) => glyph.height || glyph.fontSize));
       const fontSize = Math.max(...covered.map((glyph) => glyph.fontSize));
+      const token = `$${field}`;
+      const key = `${pageIndex}:${field}:${Math.round(first.x)}:${Math.round(first.y)}`;
+      if (seen.has(key)) {
+        cursor = end - 1;
+        continue;
+      }
+      seen.add(key);
       hits.push({
         token,
         id: slugToken(token),
