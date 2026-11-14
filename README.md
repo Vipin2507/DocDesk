@@ -29,6 +29,8 @@ Required on first boot:
 
 Optional: `DATA_DIR`, `DATABASE_URL`, AI keys. Free Render disks are ephemeral, so uploaded files and SQLite data reset when the instance is replaced.
 
+On first boot the server seeds the 14 committed demand/receipt masters from `data/masters/` into SQLite. The Studio dashboard can still show **0 templates** until you open **Masters** and click **Create document**.
+
 ## Scripts
 
 | Command | Purpose |

@@ -5,6 +5,10 @@ import { prepareDefinition, parseUploadedJson, bundleFrom } from "../../shared/d
 import { normalizeVariableList, syncBindings } from "../../shared/variables";
 import { insertMaster, nowIso, type DB } from "../db";
 
+export function countMasters(db: DB): number {
+  return (db.prepare(`SELECT COUNT(*) AS count FROM document_masters`).get() as { count: number }).count;
+}
+
 export function seedMasters(db: DB, adminUserId?: string) {
   let userId = adminUserId;
   if (!userId) {
@@ -26,9 +30,13 @@ export function seedMasters(db: DB, adminUserId?: string) {
     const jsonFileName = `${master.id.replace(/^master-/, "")}.json`;
     const jsonFilePath = path.join(mastersDir, jsonFileName);
     if (!fs.existsSync(jsonFilePath)) {
-      throw new Error(
-        `Exact master JSON missing for ${master.id}. Run: npx tsx --env-file=.env scripts/rebuild-exact-masters.ts`,
+      console.log(
+        JSON.stringify({
+          level: "warn",
+          message: `Exact master JSON missing for ${master.id}. Run npm run masters:rebuild locally and commit data/masters.`,
+        }),
       );
+      continue;
     }
 
     const parsed = parseUploadedJson(fs.readFileSync(jsonFilePath, "utf8"));

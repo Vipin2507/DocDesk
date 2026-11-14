@@ -3,6 +3,7 @@ import path from "node:path";
 import express from "express";
 import { createApp } from "./app";
 import { countUsers, createUser, openDatabase } from "./db";
+import { countMasters, seedMasters } from "./seeds/masters";
 import { cleanupTemporaryFiles, ensureDirs } from "./storage";
 
 // Optional local .env. Platforms like Render inject env vars directly and do not ship a .env file.
@@ -30,6 +31,21 @@ if (countUsers(db) === 0) {
       JSON.stringify({
         level: "info",
         message: "No users exist. Set ADMIN_EMAIL and ADMIN_PASSWORD (8+ characters) and restart to create an administrator.",
+      }),
+    );
+  }
+}
+
+// Fresh deploys (Render included) start with an empty SQLite file. Load committed master formats once.
+if (countMasters(db) === 0) {
+  try {
+    const seeded = seedMasters(db);
+    console.log(JSON.stringify({ level: "info", message: "Seeded document masters.", count: seeded.length }));
+  } catch (error) {
+    console.log(
+      JSON.stringify({
+        level: "error",
+        message: error instanceof Error ? error.message : "Master seeding failed.",
       }),
     );
   }

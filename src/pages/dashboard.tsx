@@ -169,11 +169,16 @@ export function DashboardPage() {
           <EmptyState
             icon={<FileText className="h-7 w-7" />}
             title="No documents yet"
-            description="Upload a PDF or open a master format. Studio keeps the layout and turns merge fields into editable values."
+            description="Open Masters and create a demand letter or receipt, or upload a PDF. Studio stats fill in after you generate your first document."
             action={
-              <Link to="/document-studio/upload">
-                <Button>Upload a document</Button>
-              </Link>
+              <div className="flex flex-wrap justify-center gap-2">
+                <Link to="/document-studio/masters">
+                  <Button>Browse masters</Button>
+                </Link>
+                <Link to="/document-studio/upload">
+                  <Button tone="ghost">Upload a document</Button>
+                </Link>
+              </div>
             }
           />
         ) : null}
