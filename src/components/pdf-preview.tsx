@@ -32,7 +32,10 @@ export function PdfPreview({
         if (!canvas || !context || cancelled) return;
         canvas.width = viewport.width;
         canvas.height = viewport.height;
-        await current.render({ canvasContext: context, viewport }).promise;
+        context.fillStyle = "#ffffff";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        await current.render({ canvasContext: context, viewport, canvas }).promise;
+        if (cancelled) return;
       } catch {
         if (!cancelled) setError("The preview could not be drawn. You can still download the PDF.");
       }

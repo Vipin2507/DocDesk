@@ -79,7 +79,7 @@ export function EditorPage() {
   const [loadingPreview, setLoadingPreview] = useState(false);
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(1);
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState(1.15);
   const [compare, setCompare] = useState(false);
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");

@@ -1,6 +1,14 @@
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { createRequire } from "node:module";
 import { MAX_PDF_PAGES } from "../../shared/types";
 import type { Glyph, PageImage, PageLayout } from "./layout";
 import { AppError, assertPdf, mapPdfError } from "./errors";
+
+const require = createRequire(import.meta.url);
+const pdfjsRoot = path.dirname(require.resolve("pdfjs-dist/package.json"));
+const standardFontDataUrl = pathToFileURL(path.join(pdfjsRoot, "standard_fonts") + path.sep).href;
+const cMapUrl = pathToFileURL(path.join(pdfjsRoot, "cmaps") + path.sep).href;
 
 interface PdfItem {
   str?: string;
@@ -35,8 +43,13 @@ async function loadDocument(buffer: Buffer): Promise<PdfDocument> {
       data: new Uint8Array(buffer),
       disableWorker: true,
       isEvalSupported: false,
+      // Node + @napi-rs/canvas: path glyphs (disableFontFace) keep embedded fonts readable.
+      // FontFace mode draws .notdef X-boxes for these demand/receipt PDFs.
       useSystemFonts: false,
       disableFontFace: true,
+      standardFontDataUrl,
+      cMapUrl,
+      cMapPacked: true,
       verbosity: 0,
     }).promise;
   } catch (error) {
@@ -152,28 +165,46 @@ async function ocrPage(page: PdfPage): Promise<Glyph[]> {
   }
 }
 
-async function renderPageImage(page: PdfPage, scale = 1.5): Promise<string | undefined> {
+async function renderPageImage(page: PdfPage, scale = 3): Promise<string | undefined> {
   try {
     const canvasPkg = await import("@napi-rs/canvas");
     const viewport = page.getViewport({ scale });
-    const canvas = canvasPkg.createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height));
+    const width = Math.ceil(viewport.width);
+    const height = Math.ceil(viewport.height);
+    const canvas = canvasPkg.createCanvas(width, height);
     const context = canvas.getContext("2d");
+    // Avoid transparent/black page backgrounds when PDFs leave the canvas empty.
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, width, height);
     const factory = {
       create(w: number, h: number) {
         const next = canvasPkg.createCanvas(w, h);
-        return { canvas: next, context: next.getContext("2d") };
+        const ctx = next.getContext("2d");
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, w, h);
+        return { canvas: next, context: ctx };
       },
-      reset(pair: { canvas: { width: number; height: number } }, w: number, h: number) {
+      reset(pair: { canvas: { width: number; height: number }; context: { fillStyle: string; fillRect: (x: number, y: number, w: number, h: number) => void } }, w: number, h: number) {
         pair.canvas.width = w;
         pair.canvas.height = h;
+        pair.context.fillStyle = "#ffffff";
+        pair.context.fillRect(0, 0, w, h);
       },
       destroy(pair: { canvas: { width: number; height: number } }) {
         pair.canvas.width = 0;
         pair.canvas.height = 0;
       },
     };
-    await page.render({ canvasContext: context, viewport, canvasFactory: factory }).promise;
-    const jpeg = canvas.toBuffer("image/jpeg", 0.82);
+    await page.render({
+      canvasContext: context,
+      viewport,
+      canvasFactory: factory,
+      intent: "print",
+      background: "rgb(255,255,255)",
+      annotationMode: 0,
+    }).promise;
+    // @napi-rs/canvas JPEG quality is 0–100 (not 0–1). 0.95 was near-worst quality and blurred previews.
+    const jpeg = canvas.toBuffer("image/jpeg", 92);
     return `data:image/jpeg;base64,${jpeg.toString("base64")}`;
   } catch {
     return undefined;
@@ -213,6 +244,7 @@ export async function extractPdf(
   buffer: Buffer,
   options: { renderPages?: boolean } = {},
 ): Promise<{ pages: PageLayout[]; pageCount: number }> {
+  const withRender = Boolean(options.renderPages);
   const doc = await loadDocument(buffer);
   if (doc.numPages > MAX_PDF_PAGES) {
     await doc.destroy();
@@ -220,7 +252,7 @@ export async function extractPdf(
   }
   const pages: PageLayout[] = [];
   for (let pageNumber = 1; pageNumber <= doc.numPages; pageNumber += 1) {
-    pages.push(await readPage(await doc.getPage(pageNumber), pageNumber, Boolean(options.renderPages)));
+    pages.push(await readPage(await doc.getPage(pageNumber), pageNumber, withRender));
   }
   await doc.destroy();
   const letters = pages.reduce((sum, page) => sum + page.glyphs.map((glyph) => glyph.text).join("").replace(/\s/g, "").length, 0);

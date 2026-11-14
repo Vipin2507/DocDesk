@@ -447,7 +447,7 @@ function cleanDataImage(value: string, label: string, warnings: string[]): strin
   }
   const bytes = Math.floor((payload.length * 3) / 4);
   if (bytes > MAX_IMAGE_BYTES) {
-    warnings.push(`Image “${label}” was removed because it is larger than 2 MB.`);
+    warnings.push(`Image “${label}” was removed because it is larger than ${Math.round(MAX_IMAGE_BYTES / (1024 * 1024))} MB.`);
     return null;
   }
   return `${match[0]}${payload}`;

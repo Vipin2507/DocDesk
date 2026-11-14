@@ -36,19 +36,24 @@ if (countUsers(db) === 0) {
   }
 }
 
-// Fresh deploys (Render included) start with an empty SQLite file. Load committed master formats once.
-if (countMasters(db) === 0) {
-  try {
-    const seeded = seedMasters(db);
-    console.log(JSON.stringify({ level: "info", message: "Seeded document masters.", count: seeded.length }));
-  } catch (error) {
-    console.log(
-      JSON.stringify({
-        level: "error",
-        message: error instanceof Error ? error.message : "Master seeding failed.",
-      }),
-    );
-  }
+// Load / refresh committed master formats into SQLite (empty on first boot, updated on redeploy).
+try {
+  const before = countMasters(db);
+  const seeded = seedMasters(db);
+  console.log(
+    JSON.stringify({
+      level: "info",
+      message: before === 0 ? "Seeded document masters." : "Refreshed document masters.",
+      count: seeded.length,
+    }),
+  );
+} catch (error) {
+  console.log(
+    JSON.stringify({
+      level: "error",
+      message: error instanceof Error ? error.message : "Master seeding failed.",
+    }),
+  );
 }
 
 const app = createApp(db);

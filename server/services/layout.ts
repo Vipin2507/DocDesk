@@ -359,14 +359,15 @@ export function pagesToExactDefinition(pages: PageLayout[]): {
     }
     hits.forEach((hit, hitIndex) => {
       const nodeId = `n_var_${pageIndex + 1}_${hitIndex + 1}_${hit.id}`.replace(/[^a-zA-Z0-9_]/g, "_");
+      // Tight cover only over the merge token, so colored table cells stay visible.
       content.push({
         canvas: [
           {
             type: "rect",
             x: 0,
             y: 0,
-            w: Math.ceil(hit.width),
-            h: Math.ceil(hit.height),
+            w: Math.max(18, Math.ceil(hit.width - 1)),
+            h: Math.max(10, Math.ceil(hit.height - 1)),
             color: "#ffffff",
             lineColor: "#ffffff",
           },
@@ -377,7 +378,8 @@ export function pagesToExactDefinition(pages: PageLayout[]): {
         text: `{{${hit.id}}}`,
         fontSize: hit.fontSize,
         color: "#0f172a",
-        absolutePosition: { x: hit.x + 1, y: hit.y + 1 },
+        background: "#ffffff",
+        absolutePosition: { x: hit.x + 0.5, y: hit.y + 0.5 },
         _nodeId: nodeId,
       });
       const existing = variableMap.get(hit.id);

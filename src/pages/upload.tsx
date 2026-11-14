@@ -127,7 +127,7 @@ export function UploadPage() {
             <div className="mt-4 grid gap-3 md:grid-cols-3">
               <article className="rounded-2xl border border-brand/30 bg-brand-soft/50 p-4">
                 <h2 className="font-semibold">Exact PDF layout</h2>
-                <p className="mt-1 text-sm leading-relaxed text-muted">Keep the original page look and overlay editable fields on $merge tokens.</p>
+                <p className="mt-1 text-sm leading-relaxed text-muted">Keeps color, tables, and logos from the original page. Use this for formatted demand letters and receipts.</p>
                 <Button className="mt-4" disabled={busy} onClick={() => convert("exact")}>
                   <ShieldCheck className="h-4 w-4" />
                   Use exact layout
@@ -135,7 +135,7 @@ export function UploadPage() {
               </article>
               <article className="rounded-2xl border border-line p-4">
                 <h2 className="font-semibold">Standard extraction</h2>
-                <p className="mt-1 text-sm leading-relaxed text-muted">Read text, positions, and page size. Layout is approximate.</p>
+                <p className="mt-1 text-sm leading-relaxed text-muted">Text-only rebuild. Colors, logos, and exact table styling will not match the original.</p>
                 <Button className="mt-4" tone="ghost" disabled={busy} onClick={() => convert("standard")}>
                   Extract layout
                 </Button>
